@@ -24,7 +24,7 @@ pulseaudio --start &
 thunar --daemon &
 urxvtd -q -o -f &
 mpd &
-#sxhkd &
+#sxhkd & 
 
 #exec bspwm
 exec herbstluftwm

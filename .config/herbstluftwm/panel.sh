@@ -1,4 +1,13 @@
 #!/bin/sh
+#                                      ██
+#  ██████                             ░██
+# ░██░░░██  ██████   ███████   █████  ░██
+# ░██  ░██ ░░░░░░██ ░░██░░░██ ██░░░██ ░██
+# ░██████   ███████  ░██  ░██░███████ ░██
+# ░██░░░   ██░░░░██  ░██  ░██░██░░░░  ░██
+# ░██     ░░████████ ███  ░██░░██████ ███
+# ░░       ░░░░░░░░ ░░░   ░░  ░░░░░░ ░░░ 
+#
 # For use with herbstluftwm
 # Deps: herbstluftwm, lemonbar, iw, mpc, xtitle, pamixer (if using pulseaudio) 
 
@@ -133,7 +142,7 @@ wrk()
                     echo -n "%{F-}%{B#$altbg}"
                     ;;
                 '!') # urgent tag
-                    echo -n "%{B#$fg}%"
+                    echo -n "%{B#$fg}"
                     ;;
                 *)
                     echo -n "%{B-}%{F-}"

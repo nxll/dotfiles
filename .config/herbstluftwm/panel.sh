@@ -166,7 +166,7 @@ floatbars()
  
     # add all the things
     while true; do
-        buf="$(wrk)$(win)%{r}$(wchat) $(mus) $(net) $(vol) $(dat)$(clk)" 
+        buf="$(wrk)$(win)%{r}$(mus) $(wchat) $(net) $(vol) $(dat)$(clk)" 
         echo $buf
         sleep 0.1
     done | lemonbar -f $glyphs \
@@ -182,7 +182,7 @@ floatbars()
 topbar()
 {
     while true; do
-        buf="$(wrk)$(win)%{r}$(wchat) $(mus) $(net) $(vol) $(dat)$(clk)"
+        buf="$(wrk)$(win)%{r}$(mus) $(wchat) $(net) $(vol) $(dat)$(clk)"
         echo "        ${buf}        "
         sleep 0.1
     done | lemonbar -f $glyphs \

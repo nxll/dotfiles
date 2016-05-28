@@ -1,0 +1,36 @@
+#                            ██                            
+#                           ░██      ██   ██               
+#   █████   ██████  ███████ ░██  ██ ░░██ ██  ██████  █████ 
+#  ██░░░██ ██░░░░██░░██░░░██░██ ██   ░░███  ░░██░░█ ██░░░██
+# ░██  ░░ ░██   ░██ ░██  ░██░████     ░██    ░██ ░ ░██  ░░ 
+# ░██   ██░██   ░██ ░██  ░██░██░██    ██     ░██   ░██   ██
+# ░░█████ ░░██████  ███  ░██░██░░██  ██     ░███   ░░█████ 
+#  ░░░░░   ░░░░░░  ░░░   ░░ ░░  ░░  ░░      ░░░     ░░░░░  
+#
+#  Settings
+background no
+out_to_x no
+own_window no
+out_to_console yes
+update_interval 1.0
+total_run_times 0
+uppercase no
+short_units yes
+use_spacer none
+if_up_strictness address
+double_buffer yes
+#  Output
+TEXT
+%{B-}%{F-}\
+# XTITLE
+%{B\#202020} %{T2}${exec echo -ne "\ue0b1 "}%{T-}%{B\#252525}%{F\#ffffff} ${execpi 1 xtitle} %{F-}%{B-}\
+# MPD
+%{r}${if_mpd_playing}%{A:urxvt -e ncmpcpp:}%{B\#202020}%{F\#ffffff} %{T2}${exec echo -ne "\ue1a6"}%{T-} %{B\#111111}%{F\#ffffff} ${mpd_artist} %{F\#aadb0f}≠%{F\#ffffff} ${mpd_title} %{A}${endif}%{F\#ffffff}\
+# Is WiFi up?
+%{B\#202020} %{T2}${exec echo -ne "\ue048"}%{T-} %{B\#151515} ${if_up wlp8s5}${wireless_essid wlp8s5} ${else}NET_DOWN ${endif}\
+# Pulse Volume Level
+%{B\#202020} %{T2}${exec echo -ne "\ue152"}%{T-} %{B\#151515} ${execpi 250 pulsemixer --get-volume | cut -c 1-2}% \
+# Date
+%{B\#252525}%{A:orage &:} %{T2}${exec echo -ne "\ue265"}%{T-} ${time %a %d/%m/%y} %{A}\
+# Time
+%{B\#303030}%{F\#ffffff} %{T2}${exec echo -ne "\ue015"}%{T-} ${time %H:%M} %{B-}\

@@ -1,0 +1,52 @@
+#  ██     ██      ██           ████                    ██   ██          
+# ░░██   ██      ░██          ░██░                    ░██  ░██          
+#  ░░██ ██       ░██  █████  ██████  ██████   ██   ██ ░██ ██████  ██████
+#   ░░███     ██████ ██░░░██░░░██░  ░░░░░░██ ░██  ░██ ░██░░░██░  ██░░░░ 
+#    ██░██   ██░░░██░███████  ░██    ███████ ░██  ░██ ░██  ░██  ░░█████ 
+#   ██ ░░██ ░██  ░██░██░░░░   ░██   ██░░░░██ ░██  ░██ ░██  ░██   ░░░░░██
+#  ██   ░░██░░██████░░██████  ░██  ░░████████░░██████ ███  ░░██  ██████ 
+# ░░     ░░  ░░░░░░  ░░░░░░   ░░    ░░░░░░░░  ░░░░░░ ░░░    ░░  ░░░░░░  
+
+# FONTS
+urxvt*font: -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-iso10646-1
+urxvt*boldFont: -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-iso10646-1
+
+# COLOURS
+URxvt*foreground: #ffffff
+URxvt*background: #151515
+
+URxvt*color0: #202020
+URxvt*color1: #F8F8F8
+URxvt*color2: #AADB0F
+URxvt*color3: #F7F7F7
+URxvt*color4: #606060
+URxvt*color5: #91BA0D
+URxvt*color6: #E2E2E2
+URxvt*color7: #FFFFFF
+URxvt*color8: #202020
+URxvt*color9: #F8F8F8
+URxvt*color10: #AADB0F
+URxvt*color11: #F7F7F7
+URxvt*color12: #606060
+URxvt*color13: #91BA0D
+URxvt*color14: #E2E2E2
+URxvt*color15: #FFFFFF
+
+# SETTINGS
+URxvt*scrollBar: False
+URxvt*secondaryScroll: True
+URxvt*saveLines: 1000
+URxvt*geometry: 82x22
+URxvt.cursorUnderline: False
+URxvt*cursorColor: #dddddd
+URxvt.cursorBlink: True
+URxvt*underlineColor: #202020
+URxvt*allow_bold: False
+URxvt.internalBorder: 3
+# URxvt.borderColor:   #181818
+URxvt*perl-lib: /usr/lib/urxvt/perl/ 
+
+# CLICKABLE LINKS
+URxvt.perl-ext-common : default,matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1

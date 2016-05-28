@@ -48,13 +48,13 @@ mus()
 
 wchat()
 {   
-     symbol="%{B#$altbg}%{F#$fg}  %{F-}%{B-}"
+    symbol="%{B#$altbg}%{F#$fg}  %{F-}%{B-}"
     
     hilight=$(
     if grep -q "≠" ~/.weechat/highlights.txt ; then
        cat ~/.weechat/highlights.txt
     else
-       echo -n "none"
+       echo -n "No MSG :("
     fi)
    
     echo -n "${symbol} ${hilight}"

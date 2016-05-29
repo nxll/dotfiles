@@ -10,6 +10,7 @@
 #
 # For use with herbstluftwm
 # Deps: herbstluftwm, lemonbar, iw, mpc, xtitle, pamixer (if using pulseaudio) 
+# weechat notifications require hl2file.py
 
 pkill lemonbar
 

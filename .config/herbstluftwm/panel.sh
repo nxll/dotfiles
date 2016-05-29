@@ -61,7 +61,7 @@ wchat()
     symbol="%{B#$altbg}%{F#$fg}  %{F-}%{B-}"
     
     hilight=$(
-    if grep -q "≠" ~/.weechat/highlights.txt ; then
+    if [ -s ~/.weechat/highlights.txt ] ; then
        cat ~/.weechat/highlights.txt
     else
        echo -n "No MSG :("

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#  ██                    ██              ██  ██               
+# ░░                    ░██             ░██ ░██               
+#  ██ ███████   ██████ ██████  ██████   ░██ ░██  █████  ██████
+# ░██░░██░░░██ ██░░░░ ░░░██░  ░░░░░░██  ░██ ░██ ██░░░██░░██░░█
+# ░██ ░██  ░██░░█████   ░██    ███████  ░██ ░██░███████ ░██ ░ 
+# ░██ ░██  ░██ ░░░░░██  ░██   ██░░░░██  ░██ ░██░██░░░░  ░██   
+# ░██ ███  ░██ ██████   ░░██ ░░████████ ███ ███░░██████░███   
+# ░░ ░░░   ░░ ░░░░░░     ░░   ░░░░░░░░ ░░░ ░░░  ░░░░░░ ░░░    
+#
+# Install all my default apps and their extras
+
+# From the core repo
+sudo pacman -S acpi artwiz-fonts aspell atool bspwm compton dmenu dzen2 feh figlet file git gvfs herbstluftwm highlight htop imagemagick iw lxappearance mediainfo mpc mpd mplayer mpv mutt ncmpcpp nitrogen pamixer poppler pulseaudio pulseaudio-alsa qutebrowser ranger rtorrent rxvt-unicode screenfetch scrot sxhkd tar thunar thunar-volman tmux tree unzip vim w3m weechat wget wicd xf86-video-fbdev xf86-video-vesa xorg-server xorg-xfd xorg-xfontsel xorg-xinit xorg-xlsfonts youtube-dl zathura zathura-pdf-poppler zip zsh
+
+# From the AUR
+#packer -S bdf-tewi-git castnow-git colors-git dmenu2 imv jmk-x11-fonts-git lemonbar-git mps mps-youtube oomox-git phallus-fonts-git pulsemixer siji-git termsyn-font xcursor-pixelfun xtitle-git 
+
+echo
+echo "Install complete"
+echo

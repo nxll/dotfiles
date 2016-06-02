@@ -1,6 +1,6 @@
 hi clear
 syntax reset
-let g:colors_name = "sunset"
+let g:colors_name = "fray"
 if &background == "light"
     hi Boolean gui=NONE guifg=#707070 guibg=NONE
     hi ColorColumn gui=NONE guifg=NONE guibg=#f5f5f5

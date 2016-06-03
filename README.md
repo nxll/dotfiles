@@ -1,7 +1,13 @@
 # dotfiles
 Backup all teh dots!
 
-My dotfile repo, basically organized chaos. I am constantly cleaning and updating so these configurations may not be the same as ones you have seen elsewhere but will most likely be improved. Most of my configs are monochrome with color hints, however I try to keep the hint dynamic so I can easily change my colors. I hope you find what you are looking for.
+![screeny](https://i.imgur.com/tplcPnw.png)
+
+My dotfile repo, basically organized chaos. I am constantly cleaning and updating so these configurations may not be the same as ones you have seen elsewhere, but will most likely be improved. Most of my configs are monochrome with color hints, however I try to keep the hint dynamic so I can easily change my colors. I hope you find what you are looking for.
+
+# window managers
+- herbstluftwm [current]
+- bspwm
 
 # configurations
 - urxvt
@@ -18,7 +24,3 @@ My dotfile repo, basically organized chaos. I am constantly cleaning and updatin
 - tmux
 - zsh
 - conky [unused]
-
-# window managers
-- bspwm
-- herbstluftwm [current]

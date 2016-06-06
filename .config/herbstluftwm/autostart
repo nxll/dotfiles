@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 #  ██       ██                         
 # ░██      ░██                         
 # ░██      ░██ ███     ██ ██████████   
@@ -11,8 +12,8 @@
 # fray - nxll
 
 hc() {
-    herbstclient "$@"
-}
+    cmds="$cmds , $@"
+}  
 
 hc emit_hook reload
 
@@ -32,7 +33,7 @@ hc keybind $Mod-x close
 
 hc keybind $Mod-t spawn ${xterm:-urxvt} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-w spawn firefox
-hc keybind $Mod-f spawn thunar
+hc keybind $Mod-f spawn ~/bin/dmenufm
 hc keybind $Mod-p spawn ~/.config/dmenu/dmenu_bind.sh
 
 # media keys
@@ -199,3 +200,5 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
 done
+
+herbstclient chain $cmds&

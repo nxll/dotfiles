@@ -108,17 +108,11 @@ hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma use_index -1 --skip-visible
 
 # layouting
-hc keybind $Mod-r remove
+hc keybind $Mod-r       remove
 hc keybind $Mod-space   floating toggle
 hc keybind $Mod-Shift-f fullscreen toggle
 hc keybind $Mod-Shift-p pseudotile toggle
-# The following cycles through the available layouts within a frame, but skips
-# layouts, if the layout change wouldn't affect the actual window positions.
-# I.e. if there are two windows within a frame, the grid layout is skipped.
-hc keybind $Mod-Shift-s                                                         \
-            or , and . compare tags.focus.curframe_wcount = 2                   \
-                     . cycle_layout +1 vertical horizontal max vertical grid    \
-               , cycle_layout +1
+hc keybind $Mod-Shift-s cycle_layout +1 vertical horizontal grid max
 
 # mouse
 hc mouseunbind --all
@@ -138,30 +132,30 @@ hc keybind $Mod-i           jumpto urgent
 #hc attr theme.floating.reset       1
 hc set frame_border_active_color    '#151515'
 hc set frame_border_normal_color    '#151515'
-hc set frame_bg_normal_color        '#202020'
-hc set frame_bg_active_color        '#252525'
+hc set frame_bg_normal_color        '#252525'
+hc set frame_bg_active_color        '#303030'
 hc set frame_border_width           1
 hc set always_show_frame            0
 hc set frame_bg_transparent         1
 hc set frame_transparent_width      0
 hc set frame_gap                    2
-hc attr theme.active.color          '#303030'
-hc attr theme.normal.color          '#252525'
+hc attr theme.active.color          '#454545'
+hc attr theme.normal.color          '#353535'
 hc attr theme.urgent.color          '#ffffff'
 hc attr theme.inner_width           2
 hc attr theme.outer_width           2
-hc attr theme.inner_color           '#202020'
+hc attr theme.inner_color           '#252525'
 hc attr theme.border_width          6
 hc attr theme.floating.border_width 6
 hc attr theme.floating.outer_width  2
 hc attr theme.floating.inner_width  2
-hc attr theme.floating.inner_color  '#202020'
-hc attr theme.floating.outer_color  '#202020'
-hc attr theme.active.inner_color    '#202020'
-hc attr theme.active.outer_color    '#202020'
-hc attr theme.normal.inner_color    '#202020'
-hc attr theme.normal.outer_color    '#202020'
-hc attr theme.background_color      '#151515'  
+hc attr theme.floating.inner_color  '#252525'
+hc attr theme.floating.outer_color  '#252525'
+hc attr theme.active.inner_color    '#252525'
+hc attr theme.active.outer_color    '#252525'
+hc attr theme.normal.inner_color    '#252525'
+hc attr theme.normal.outer_color    '#252525'
+hc attr theme.background_color      '#202020'  
 hc set window_gap                   0
 hc set frame_padding                0
 hc set smart_window_surroundings    0

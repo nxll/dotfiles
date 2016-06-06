@@ -19,8 +19,8 @@ herbstclient pad $monitor 16;
 
 fg=ffffff
 altfg=808080
-bg=151515
-altbg=202020
+bg=202020
+altbg=303030
 col1=252525
 col2=aadb0f
 

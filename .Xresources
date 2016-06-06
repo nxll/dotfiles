@@ -5,14 +5,12 @@ XTerm*rightScrollBar: false
 XLogo*geometry: 150x150
 Xclock*geometry: 150x150-0-0
 Xclock*background: "#151515"
-! FONTS
-urxvt*font:     -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-iso10646-1
-urxvt*boldFont: -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-iso10646-1
+
 ! COLOURS
-*background: #151515
+*background: #202020
 *foreground: #ffffff
 
-*color0:  #202020
+*color0:  #252525
 *color1:  #F8F8F8
 *color2:  #AADB0F
 *color3:  #F7F7F7
@@ -20,7 +18,7 @@ urxvt*boldFont: -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-is
 *color5:  #91BA0D
 *color6:  #E2E2E2
 *color7:  #FFFFFF
-*color8:  #202020
+*color8:  #252525
 *color9:  #F8F8F8
 *color10: #AADB0F
 *color11: #F7F7F7

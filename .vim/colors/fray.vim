@@ -110,9 +110,9 @@ elseif &background == "dark"
     hi StatusLineNC gui=NONE guifg=#2e2e2e guibg=#121212 ctermfg=234 ctermbg=236
     hi StorageClass gui=NONE guifg=#8f8f8f guibg=NONE ctermfg=248
     hi String gui=NONE guifg=#808080 guibg=NONE ctermfg=7
-    hi TabLine gui=NONE guifg=#303030 guibg=#121212 ctermbg=234 ctermfg=7
-    hi TabLineFill gui=NONE guifg=#808080 guibg=#121212 ctermbg=234 ctermfg=236
-    hi TabLineSel gui=bold guifg=#acdb0f guibg=#141414 ctermfg=74 ctermbg=234
+    hi TabLine gui=NONE guifg=#303030 guibg=#121212 ctermbg=235 ctermfg=7
+    hi TabLineFill gui=NONE guifg=#808080 guibg=#121212 ctermbg=7 ctermfg=234
+    hi TabLineSel gui=bold guifg=#acdb0f guibg=#141414 ctermfg=7 ctermbg=2
     hi Title gui=NONE guifg=#ffffff guibg=NONE ctermbg=234 ctermfg=236
     hi Todo gui=standout guifg=NONE guibg=NONE ctermfg=7
     hi treeDir guifg=#FFFFFF guibg=#191919 ctermfg=74 ctermbg=234

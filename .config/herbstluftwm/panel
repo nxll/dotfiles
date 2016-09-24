@@ -189,19 +189,4 @@ floatbars()
         -g 1920x$height+0+0 | sh &
 }
 
-topbar()
-{
-    while true; do
-        buf="$(wrk)$(win)%{r}$(mus) $(wchat) $(net) $(vol) $(dat)$(clk)"
-        echo "        ${buf}        "
-        sleep 0.1
-    done | lemonbar -f $glyphs \
-        -f $font \
-        -F \#$fg \
-        -B \#$bg \
-        -R \#$fg \
-        -u 3 \
-        -g x$height | sh &
-}
-
 floatbars

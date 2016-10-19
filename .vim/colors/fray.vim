@@ -79,14 +79,14 @@ elseif &background == "dark"
     hi DiffDelete gui=NONE guifg=NONE guibg=#212121
     hi DiffText gui=NONE guifg=NONE guibg=#333333 ctermfg=7
     hi Directory gui=NONE guifg=#acdb0f guibg=#141414 ctermfg=7
-    hi Error gui=NONE guifg=NONE guibg=#171717 ctermfg=7
-    hi ErrorMsg gui=NONE guifg=#2b2b2b guibg=#121212
+    hi Error gui=NONE guifg=NONE guibg=#171717 ctermfg=4 ctermbg=0
+    hi ErrorMsg gui=NONE guifg=#2b2b2b guibg=#121212 ctermfg=4 ctermbg=0
     hi FoldColumn gui=NONE guifg=#616161 guibg=NONE
     hi Folded gui=NONE guifg=#707070 guibg=NONE ctermfg=7
     hi Ignore gui=NONE guifg=NONE guibg=NONE
     hi IncSearch gui=NONE guifg=NONE guibg=#333333
     hi LineNr gui=NONE guifg=#acdb0f guibg=#121212 ctermfg=236 ctermbg=234
-    hi MatchParen gui=NONE guifg=NONE guibg=#333333 ctermfg=7
+    hi MatchParen gui=NONE guifg=NONE guibg=#333333 ctermfg=0 ctermbg=7
     hi ModeMsg gui=NONE guifg=#303030 guibg=#121212 ctermfg=236 ctermbg=234
     hi MoreMsg gui=NONE guifg=#303030 guibg=#121212
     hi NonText gui=NONE guifg=#616161 guibg=#141414 ctermfg=233
@@ -98,7 +98,7 @@ elseif &background == "dark"
     hi PmenuThumb gui=NONE guifg=NONE guibg=#ffffff
     hi Question gui=NONE guifg=NONE guibg=NONE ctermfg=7
     hi Search gui=NONE guifg=NONE guibg=#262626
-    hi SignColumn gui=NONE guifg=#616161 guibg=NONE ctermfg=7
+    hi SignColumn gui=NONE guifg=#616161 guibg=NONE ctermfg=7 ctermbg=NONE
     hi Special gui=NONE guifg=#808080 guibg=NONE ctermfg=4
     hi SpecialKey gui=NONE guifg=#616161 guibg=NONE
     hi SpellBad gui=undercurl guisp=NONE guifg=#545454 guibg=#000000
@@ -115,13 +115,13 @@ elseif &background == "dark"
     hi TabLineSel gui=bold guifg=#acdb0f guibg=#141414 ctermfg=7 ctermbg=2
     hi Title gui=NONE guifg=#ffffff guibg=NONE ctermbg=234 ctermfg=236
     hi Todo gui=standout guifg=NONE guibg=NONE ctermfg=7
-    hi treeDir guifg=#FFFFFF guibg=#191919 ctermfg=74 ctermbg=234
+    hi treeDir guifg=#FFFFFF guibg=#191919 ctermfg=7 ctermbg=234
     hi Type gui=NONE guifg=#8f8f8f guibg=NONE ctermfg=7
     hi Underlined gui=NONE guifg=NONE guibg=NONE ctermfg=7
     hi VertSplit gui=NONE guifg=#333333 guibg=NONE ctermfg=234 ctermbg=NONE
     hi Visual gui=NONE guifg=NONE guibg=#121212 ctermfg=7
     hi VisualNOS gui=NONE guifg=NONE guibg=NONE ctermfg=7
-    hi WarningMsg gui=NONE guifg=#ff0000 guibg=#121212
+    hi WarningMsg gui=NONE guifg=#ff0000 guibg=#121212 ctermfg=4 ctermbg=0
     hi WildMenu gui=NONE guifg=NONE guibg=#141414
     hi lCursor gui=NONE guifg=NONE guibg=NONE
     hi Identifier gui=NONE guifg=NONE guibg=NONE ctermfg=7

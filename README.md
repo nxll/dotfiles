@@ -7,6 +7,7 @@ My dotfile repo, basically organized chaos. I am constantly cleaning and updatin
 
 # window managers
 - herbstluftwm [current]
+- 2bwm
 - bspwm
 
 # configurations

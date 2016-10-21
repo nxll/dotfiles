@@ -1,56 +1,64 @@
-#                               ██████          ██████  ██████ 
-#  ███████   █████  ██████████ ░██░░░██  █████ ░██░░░██░██░░░██
-# ░░██░░░██ ██░░░██░░██░░██░░██░██  ░██ ██░░░██░██  ░██░██  ░██
-#  ░██  ░██░██  ░░  ░██ ░██ ░██░██████ ░██  ░░ ░██████ ░██████ 
-#  ░██  ░██░██   ██ ░██ ░██ ░██░██░░░  ░██   ██░██░░░  ░██░░░  
-#  ███  ░██░░█████  ███ ░██ ░██░██     ░░█████ ░██     ░██     
-# ░░░   ░░  ░░░░░  ░░░  ░░  ░░ ░░       ░░░░░  ░░      ░░     
+#  /$$$$$$$   /$$$$$$$ /$$$$$$/$$$$   /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$ 
+# | $$__  $$ /$$_____/| $$_  $$_  $$ /$$__  $$ /$$_____/ /$$__  $$ /$$__  $$
+# | $$  \ $$| $$      | $$ \ $$ \ $$| $$  \ $$| $$      | $$  \ $$| $$  \ $$
+# | $$  | $$| $$      | $$ | $$ | $$| $$  | $$| $$      | $$  | $$| $$  | $$
+# | $$  | $$|  $$$$$$$| $$ | $$ | $$| $$$$$$$/|  $$$$$$$| $$$$$$$/| $$$$$$$/
+# |__/  |__/ \_______/|__/ |__/ |__/| $$____/  \_______/| $$____/ | $$____/ 
+#                                  | $$                | $$      | $$       
+#                                  | $$                | $$      | $$       
+#                                  |__/                |__/      |__/       
+#
+# PLAYLIST
+song_list_format =         "$0%n $1▒ $4%a $3≠ $0%t $R%b $1▒ $4%l$9"
+now_playing_prefix =       "$b$1"
+now_playing_suffix =       "$/b"
+playlist_display_mode =    "classic" (classic/columns)
+playlist_separate_albums = "no"
 
-# Playlist
-song_list_format = "$0%n $1│ $4%a $3≠ $0%t $R%b $1│ $4%l$9"
-now_playing_prefix = "$b$1"
-now_playing_suffix = "$/b"
-playlist_display_mode = "classic" (classic/columns)
-playlist_separate_albums = "yes"
-
-# Bars
-song_status_format = "$8%a $2%t $5%b {(Disc %d) } $1"
-progressbar_look = "░█ "
-titles_visibility = "no"
-display_bitrate = "no"
-
-# Browser
-browser_playlist_prefix = "$2plist >$9 "
-browser_display_mode = "classic" (classic/columns)
-
-# Visualizer
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "fifo"
-visualizer_type = "spectrum" (spectrum/wave)
-visualizer_look = "░░"
-
-# Colors
-discard_colors_if_item_is_selected = "yes"
-header_window_color = "black"
-volume_color = "cyan"
-state_line_color = "black"
-state_flags_color = "yellow"
-color1 = "default"
-color2 = "green"
-main_window_color = "white"
-main_window_highlight_color = "white"
-alternative_ui_separator_color = black
-progressbar_color = 236
-progressbar_elapsed_color = "black"
+# BARS
+song_status_format =   "$8%a $2%t $5%b {(Disc %d) } $1"
+progressbar_look =     "░█ "
+titles_visibility =    "no"
 statusbar_visibility = "no"
-header_visibility = "no"
-statusbar_color = "black"
-active_column_color = "green"
-visualizer_color = "white"
+header_visibility =    "no"
+display_bitrate =      "no"
 
-# Others
-mpd_music_dir = "~/music"
-mpd_crossfade_time = "5"
-search_engine_display_mode = "columns" (classic/columns)
-clock_display_seconds = "yes"
-autocenter_mode = "yes"
+# BROWSER
+browser_playlist_prefix = "$2plist >$9 "
+browser_display_mode =    "classic" (classic/columns)
+
+# VISUALIZER
+visualizer_fifo_path =   "/tmp/mpd.fifo"
+visualizer_output_name = "fifo"
+visualizer_type =        "spectrum" (spectrum/wave)
+visualizer_look =        "✖✖"
+
+# COLOR SETTINGS
+discard_colors_if_item_is_selected = "yes"
+
+# COLORS
+header_window_color =            black
+volume_color = 	      	         cyan
+state_line_color =    	         black
+state_flags_color =   	         yellow
+color1 =              	         default
+color2 =                         green
+main_window_color =    	         white
+main_window_highlight_color =    white
+alternative_ui_separator_color = black
+active_window_border =           black
+progressbar_color = 		 default
+progressbar_elapsed_color =      236
+statusbar_color = 		 red
+active_column_color =            green
+visualizer_color =               white
+
+# OTHER SETTINGS
+mpd_music_dir =                "~/music"
+mpd_crossfade_time =           "2"
+mouse_support =                "yes"
+search_engine_display_mode =   "columns" (classic/columns)
+clock_display_seconds =        "yes"
+autocenter_mode =              "yes"
+cyclic_scrolling =             "yes"
+ask_before_clearing_playlists= "no"

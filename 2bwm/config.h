@@ -40,7 +40,7 @@ static const bool inverted_colors = true;
  * correct values are:
  * TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, MIDDLE
  * All these are relative to the current window. */
-#define CURSOR_POSITION MIDDLE
+#define CURSOR_POSITION TOP_LEFT
 ///---Borders---///
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size
@@ -50,10 +50,11 @@ static const uint8_t borders[] = {2,6,6,6};
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
-static const char *menucmd[]   = { "/home/nxll/.config/dmenu/dmenu_run", NULL };
+static const char *menucmd[]   = { "interrobang", NULL };
 static const char *terminal[]  = { "urxvt", NULL };
 static const char *browser[]   = { "firefox", NULL };
-static const char *files[]     = { "/home/nxll/bin/dmenufm", NULL };
+static const char *files[]     = { "urxvt", "-e", "ranger", NULL };
+static const char *scr[]       = { "scrot", "/home/nxll/images/screenshots/%d%b2k%y-%H%M%S.png", NULL };
 static const char *toggle[]    = { "mpc", "toggle", NULL };
 static const char *stop[]      = { "mpc", "stop", NULL };
 static const char *next[]      = { "mpc", "next", NULL };
@@ -189,6 +190,7 @@ static key keys[] = {
     {  MOD ,              XK_p,          start,             {.com = menucmd}},
     {  MOD ,              XK_w,          start,             {.com = browser}},
     {  MOD ,              XK_f,          start,             {.com = files}},
+    {  0x000000,          0xff61,        start,             {.com = scr}},
     // Media Keys
     {  0x000000,          0x1008ff14,    start,             {.com = toggle}},
     {  0x000000,          0x1008ff15,    start,             {.com = stop}},

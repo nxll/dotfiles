@@ -1,0 +1,101 @@
+#!/bin/bash
+#
+#    /$$                                              /$$            /$$$$$$          
+#   | $$                                             |__/           /$$__  $$         
+#  /$$$$$$   /$$$$$$/$$$$  /$$   /$$ /$$   /$$        /$$ /$$$$$$$ | $$  \__//$$$$$$  
+# |_  $$_/  | $$_  $$_  $$| $$  | $$|  $$ /$$/       | $$| $$__  $$| $$$$   /$$__  $$ 
+#   | $$    | $$ \ $$ \ $$| $$  | $$ \  $$$$/        | $$| $$  \ $$| $$_/  | $$  \ $$ 
+#   | $$ /$$| $$ | $$ | $$| $$  | $$  >$$  $$        | $$| $$  | $$| $$    | $$  | $$ 
+#   |  $$$$/| $$ | $$ | $$|  $$$$$$/ /$$/\  $$       | $$| $$  | $$| $$    |  $$$$$$/ 
+#    \___/  |__/ |__/ |__/ \______/ |__/  \__//$$$$$$|__/|__/  |__/|__/     \______/  
+#                                            |______/                                 
+# SHOW SYSTEM INFO IN TMUX
+# AUTHOR: nxll <nxll@teknik.io>
+
+#DRAW BAR
+FULL=${FULL-━}
+EMPTY=${EMPTY-┄}
+SIZE=${SIZE-8}
+
+#COLORS
+STATUS="#[fg=colour255,bg=colour234]"
+ICON="#[fg=colour255,bg=colour235]"
+MBCOL="#[fg=colour255,bg=colour236]"
+CCOL="#[fg=colour0,bg=colour2]"
+SEP="#[fg=default,bg=default]"
+
+#VARS
+BAT=/sys/class/power_supply/BAT0
+VOLPERC=$(pamixer --get-vol)
+BATPERC=$(cat $BAT/capacity)
+
+DRAW()
+{
+	perc=$1
+	size=$2
+
+	inc=$(( perc * size / 100 ))
+
+	for v in $(seq 0 $(( size - 1 )))
+	do
+		[ "$v" -le "$inc" ] \
+			&& out="${out}${FULL}" \
+			|| out="${out}${EMPTY}"
+	done
+
+	echo -n "$out"
+}
+
+BATTERY()
+{
+	echo -n "$BATPERC%"
+}
+
+BATBAR()
+{	
+	echo -n "$(DRAW $BATPERC $SIZE)"
+}
+
+VOLUME()
+{
+	echo -n "$VOLPERC%"
+}
+
+VOLBAR()
+{
+	echo -n "$(DRAW $VOLPERC $SIZE)"
+}
+
+MUSIC()
+{
+	SONG="$(mpc current -f "%artist% ≠ %title%")"
+	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
+		if [ "$PLAYING" = "[playing]" ] ; then
+			SYMBOL="$ICON » $STATUS"
+		elif [ $PLAYING = "[paused]" ] ; then
+			SYMBOL="$ICON ✖ $STATUS"
+		fi
+															
+	echo -n "$SYMBOL $SONG"
+}
+
+MUSBAR()
+{	
+	MUSPERC=$(mpc status | sed -n 2p | grep -o '[0-9]*' | tail -1)
+	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
+		if [ "$PLAYING" = "[playing]" ] ; then
+			MBC="$MBCOL"
+		elif [ $PLAYING = "[paused]" ] ; then
+			MBC="$MBCOL"
+		fi
+		
+
+	echo -n "$MBC $(DRAW $MUSPERC $SIZE)"
+}
+
+CLOCK()
+{
+	echo -n "$(date "+%H:%M")"
+}
+
+echo -n "$(MUSIC) $SEP $(MUSBAR) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "

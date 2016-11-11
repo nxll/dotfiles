@@ -14,9 +14,9 @@
 /* Move this many pixels when moving or resizing with keyboard unless the window has hints saying otherwise.
  *0)move step slow   1)move step fast
  *2)mouse slow       3)mouse fast     */
-static const uint16_t movements[] = {20,40,15,400};
+static const uint16_t movements[] = {10,40,15,400};
 /* resize by line like in mcwm -- jmbi */
-static const bool     resize_by_line          = true;
+static const bool     resize_by_line          = false;
 /* the ratio used when resizing and keeping the aspect */
 static const float    resize_keep_aspect_ratio= 1.03;
 ///---Offsets---///
@@ -28,7 +28,7 @@ static const uint8_t offsets[] = {0,0,0,0};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#404040","#303030","#252525","#252525","#404040","#202020","#303030"};
+static const char *colors[] = {"#303030","#202020","#202020","#202020","#303030","#080808","#202020"};
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  * (By changing -DNCOMPTON to -DCOMPTON)
@@ -45,16 +45,17 @@ static const bool inverted_colors = true;
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size
  *3) Resize border size  */
-static const uint8_t borders[] = {2,6,6,6};
+static const uint8_t borders[] = {2,8,2,8};
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
 static const char *menucmd[]   = { "interrobang", NULL };
 static const char *terminal[]  = { "urxvt", NULL };
-static const char *browser[]   = { "firefox", NULL };
+static const char *browser[]   = { "inox", NULL };
 static const char *files[]     = { "urxvt", "-e", "ranger", NULL };
 static const char *scr[]       = { "scrot", "/home/nxll/images/screenshots/%d%b2k%y-%H%M%S.png", NULL };
+static const char *lock[]      = { "/home/nxll/bin/lock/lock.sh", NULL };
 static const char *toggle[]    = { "mpc", "toggle", NULL };
 static const char *stop[]      = { "mpc", "stop", NULL };
 static const char *next[]      = { "mpc", "next", NULL };
@@ -191,6 +192,7 @@ static key keys[] = {
     {  MOD ,              XK_w,          start,             {.com = browser}},
     {  MOD ,              XK_f,          start,             {.com = files}},
     {  0x000000,          0xff61,        start,             {.com = scr}},
+    {  0x000000,          0x1008ff2d,    start,             {.com = lock}},
     // Media Keys
     {  0x000000,          0x1008ff14,    start,             {.com = toggle}},
     {  0x000000,          0x1008ff15,    start,             {.com = stop}},

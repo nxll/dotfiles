@@ -1,29 +1,59 @@
-Xcursor.theme: pixelfun
-Xcursor.size:  16
-XTerm*scrollBar: false
-XTerm*rightScrollBar: false
-XLogo*geometry: 150x150
-Xclock*geometry: 150x150-0-0
-Xclock*background: "#151515"
+!  /$$   /$$                                                                                          
+! | $$  / $$                                                                                          
+! |  $$/ $$/  /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$$
+!  \  $$$$/  /$$__  $$ /$$__  $$ /$$_____/ /$$__  $$| $$  | $$ /$$__  $$ /$$_____/ /$$__  $$ /$$_____/
+!   >$$  $$ | $$  \__/| $$$$$$$$|  $$$$$$ | $$  \ $$| $$  | $$| $$  \__/| $$      | $$$$$$$$|  $$$$$$ 
+!  /$$/\  $$| $$      | $$_____/ \____  $$| $$  | $$| $$  | $$| $$      | $$      | $$_____/ \____  $$
+! | $$  \ $$| $$      |  $$$$$$$ /$$$$$$$/|  $$$$$$/|  $$$$$$/| $$      |  $$$$$$$|  $$$$$$$ /$$$$$$$/
+! |__/  |__/|__/       \_______/|_______/  \______/  \______/ |__/       \_______/ \_______/|_______/ 
+!
+!SETTINGS
+Xcursor.theme: 		pixelfun
+Xcursor.size:  		16
+XTerm*scrollBar: 	false
+XTerm*rightScrollBar: 	false
+XLogo*geometry: 	150x150
+Xclock*geometry: 	150x150-0-0
+Xclock*background: 	#080808
 
-! COLOURS
-*background: #202020
-*foreground: #ffffff
+*font:     -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*boldFont: -kakwa-kakwafont-medium-r-bold--12-120-72-72-c-60-iso8859-1
+*italicFont: -kakwa-kakwafont-medium-r-bold--12-120-72-72-c-60-iso8859-1
 
-*color0:  #252525
+*background: #080808
+*foreground: #FFFFFF
+
+!DEFAULT COLORS
+*color0:  #0C0C0C
 *color1:  #F8F8F8
 *color2:  #AADB0F
 *color3:  #F7F7F7
-*color4:  #606060
+*color4:  #D2D2D2
 *color5:  #91BA0D
 *color6:  #E2E2E2
 *color7:  #FFFFFF
-*color8:  #252525
-*color9:  #F8F8F8
-*color10: #AADB0F
-*color11: #F7F7F7
-*color12: #606060
-*color13: #91BA0D
-*color14: #E2E2E2
+*color8:  #0C0C0C
+*color9:  #F0F0F0
+*color10: #B2E610
+*color11: #E8E8E8
+*color12: #D0D0D0
+*color13: #91BF0D
+*color14: #D9D9D9
 *color15: #FFFFFF
 
+!*color0:  #181818
+!*color1:  #F8F8F8
+!*color2:  #AADB0F
+!*color3:  #F7F7F7
+!*color4:  #404040
+!*color5:  #91BA0D
+!*color6:  #E2E2E2
+!*color7:  #FFFFFF
+!*color8:  #1A1A1A
+!*color9:  #F0F0F0
+!*color10: #B2E610
+!*color11: #E8E8E8
+!*color12: #383838
+!*color13: #77990B
+!*color14: #D9D9D9
+!*color15: #FFFFFF

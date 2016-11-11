@@ -1,52 +1,105 @@
-#  ██     ██      ██           ████                    ██   ██          
-# ░░██   ██      ░██          ░██░                    ░██  ░██          
-#  ░░██ ██       ░██  █████  ██████  ██████   ██   ██ ░██ ██████  ██████
-#   ░░███     ██████ ██░░░██░░░██░  ░░░░░░██ ░██  ░██ ░██░░░██░  ██░░░░ 
-#    ██░██   ██░░░██░███████  ░██    ███████ ░██  ░██ ░██  ░██  ░░█████ 
-#   ██ ░░██ ░██  ░██░██░░░░   ░██   ██░░░░██ ░██  ░██ ░██  ░██   ░░░░░██
-#  ██   ░░██░░██████░░██████  ░██  ░░████████░░██████ ███  ░░██  ██████ 
-# ░░     ░░  ░░░░░░  ░░░░░░   ░░    ░░░░░░░░  ░░░░░░ ░░░    ░░  ░░░░░░  
-
+#  /$$   /$$       /$$            /$$$$$$                    /$$   /$$             
+# | $$  / $$      | $$           /$$__  $$                  | $$  | $$             
+# |  $$/ $$/  /$$$$$$$  /$$$$$$ | $$  \__//$$$$$$  /$$   /$$| $$ /$$$$$$   /$$$$$$$
+#  \  $$$$/  /$$__  $$ /$$__  $$| $$$$   |____  $$| $$  | $$| $$|_  $$_/  /$$_____/
+#   >$$  $$ | $$  | $$| $$$$$$$$| $$_/    /$$$$$$$| $$  | $$| $$  | $$   |  $$$$$$ 
+#  /$$/\  $$| $$  | $$| $$_____/| $$     /$$__  $$| $$  | $$| $$  | $$ /$$\____  $$
+# | $$  \ $$|  $$$$$$$|  $$$$$$$| $$    |  $$$$$$$|  $$$$$$/| $$  |  $$$$//$$$$$$$/
+# |__/  |__/ \_______/ \_______/|__/     \_______/ \______/ |__/   \___/ |_______/ 
+#
 # FONTS
-urxvt*font:     -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-iso10646-1
-urxvt*boldFont: -benis-lemon-abunai-abunai-medium-r-normal--10-110-75-75-m-50-iso10646-1
+urxvt*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+urxvt*boldFont:   -kakwa-kakwafont-medium-r-bold--12-120-72-72-c-60-iso8859-1
+urxvt*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
+#urxvt*font:       -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
+#urxvt*boldFont:   -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
+#urxvt*italicFont: -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
+#urxvt*font:       -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+#urxvt*boldFont:   -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+#urxvt*italicFont: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+#urxvt*font:       -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+#urxvt*boldFont:   -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1 
+#urxvt*italicFont: -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1 
 
 # COLOURS
-URxvt*foreground: #ffffff
-URxvt*background: #202020
+URxvt*foreground: #FFFFFF
+URxvt*background: #080808
 
-URxvt*color0:  #252525
+URxvt*color0:  #0C0C0C
 URxvt*color1:  #F8F8F8
 URxvt*color2:  #AADB0F
 URxvt*color3:  #F7F7F7
-URxvt*color4:  #606060
+URxvt*color4:  #D2D2D2
 URxvt*color5:  #91BA0D
 URxvt*color6:  #E2E2E2
 URxvt*color7:  #FFFFFF
-URxvt*color8:  #252525
-URxvt*color9:  #F8F8F8
-URxvt*color10: #AADB0F
-URxvt*color11: #F7F7F7
-URxvt*color12: #606060
-URxvt*color13: #91BA0D
-URxvt*color14: #E2E2E2
+URxvt*color8:  #0C0C0C
+URxvt*color9:  #F0F0F0
+URxvt*color10: #B2E610
+URxvt*color11: #E8E8E8
+URxvt*color12: #D0D0D0
+URxvt*color13: #91BF0D
+URxvt*color14: #D9D9D9
 URxvt*color15: #FFFFFF
+
+#URxvt*color0:  #0C0C0C
+#URxvt*color1:  #F8C6C8
+#URxvt*color2:  #E5F8C6
+#URxvt*color3:  #F5F8C6
+#URxvt*color4:  #C6ECF8
+#URxvt*color5:  #E8C6F8
+#URxvt*color6:  #C6F8EB
+#URxvt*color7:  #EEEEEE
+#URxvt*color8:  #0C0C0C
+#URxvt*color9:  #F8BABD
+#URxvt*color10: #E0F8BA
+#URxvt*color11: #F4F8BA
+#URxvt*color12: #BAE9F8
+#URxvt*color13: #E4BAF8
+#URxvt*color14: #BAF8E8
+#URxvt*color15: #EEEEEE
+
+#URxvt*color0:  #0C0C0C
+#URxvt*color1:  #F8343B
+#URxvt*color2:  #AEF834
+#URxvt*color3:  #EBF834
+#URxvt*color4:  #34C7F8
+#URxvt*color5:  #B734F8
+#URxvt*color6:  #34F8C4
+#URxvt*color7:  #EEEEEE
+#URxvt*color8:  #0C0C0C
+#URxvt*color9:  #F9343B
+#URxvt*color10: #AFF833
+#URxvt*color11: #EAF834
+#URxvt*color12: #35C7F8
+#URxvt*color13: #B834F8
+#URxvt*color14: #35F8C4
+#URxvt*color15: #EEEEEE
+
+#URxvt*color8:  #181818
+#URxvt*color9:  #F8F8F8
+#URxvt*color10: #AADB0F
+#URxvt*color11: #F7F7F7
+#URxvt*color12: #404040
+#URxvt*color13: #91BA0D
+#URxvt*color14: #E2E2E2
+#URxvt*color15: #FFFFFF
 
 # SETTINGS
 URxvt*scrollBar: False
 URxvt*secondaryScroll: True
 URxvt*saveLines: 1000
-URxvt*geometry: 82x22
+URxvt*geometry: 78x20
 URxvt.cursorUnderline: False
 URxvt*cursorColor: #dddddd
 URxvt.cursorBlink: True
-URxvt*underlineColor: #202020
-URxvt*allow_bold: False
-URxvt.internalBorder: 3
-# URxvt.borderColor:   #181818
+URxvt*underlineColor: #303030
+URxvt*allow_bold: True
+#URxvt.internalBorder: 3
+#URxvt.borderColor:   #181818
 URxvt*perl-lib: /usr/lib/urxvt/perl/ 
 
 # CLICKABLE LINKS
 URxvt.perl-ext-common : default,matcher
-URxvt.url-launcher: firefox
+URxvt.url-launcher: inox
 URxvt.matcher.button: 1

@@ -1,12 +1,11 @@
-!  /$$   /$$                                                                                          
-! | $$  / $$                                                                                          
-! |  $$/ $$/  /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$$
-!  \  $$$$/  /$$__  $$ /$$__  $$ /$$_____/ /$$__  $$| $$  | $$ /$$__  $$ /$$_____/ /$$__  $$ /$$_____/
-!   >$$  $$ | $$  \__/| $$$$$$$$|  $$$$$$ | $$  \ $$| $$  | $$| $$  \__/| $$      | $$$$$$$$|  $$$$$$ 
-!  /$$/\  $$| $$      | $$_____/ \____  $$| $$  | $$| $$  | $$| $$      | $$      | $$_____/ \____  $$
-! | $$  \ $$| $$      |  $$$$$$$ /$$$$$$$/|  $$$$$$/|  $$$$$$/| $$      |  $$$$$$$|  $$$$$$$ /$$$$$$$/
-! |__/  |__/|__/       \_______/|_______/  \______/  \______/ |__/       \_______/ \_______/|_______/ 
-!
+!  ██     ██                                                                        
+! ░░██   ██                                                                         
+!  ░░██ ██   ██████  █████   ██████  ██████  ██   ██ ██████  █████   █████   ██████ 
+!   ░░███   ░░██░░█ ██░░░██ ██░░░░  ██░░░░██░██  ░██░░██░░█ ██░░░██ ██░░░██ ██░░░░  
+!    ██░██   ░██ ░ ░███████░░█████ ░██   ░██░██  ░██ ░██ ░ ░██  ░░ ░███████░░█████  
+!   ██ ░░██  ░██   ░██░░░░  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░░░░░██ 
+!  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
+! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
 !SETTINGS
 Xcursor*theme: 		pixelfun
 Xcursor*size:  		16
@@ -29,74 +28,18 @@ Xclock*background: 	#080808
 !*boldFont:   -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1 
 !*italicFont: -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1 
 
-*foreground: #FFFFFF
-*background: #080808
-
-*color0:  #0C0C0C
-*color1:  #F8F8F8
-*color2:  #AADB0F
-*color3:  #F7F7F7
-*color4:  #D2D2D2
-*color5:  #91BA0D
-*color6:  #E2E2E2
-*color7:  #FFFFFF
-*color8:  #0C0C0C
-*color9:  #F0F0F0
-*color10: #B2E610
-*color11: #E8E8E8
-*color12: #D0D0D0
-*color13: #91BF0D
-*color14: #D9D9D9
-*color15: #FFFFFF
-
-!*color0:  #0C0C0C
-!*color1:  #F8C6C8
-!*color2:  #E5F8C6
-!*color3:  #F5F8C6
-!*color4:  #C6ECF8
-!*color5:  #E8C6F8
-!*color6:  #C6F8EB
-!*color7:  #EEEEEE
-!*color8:  #0C0C0C
-!*color9:  #F8BABD
-!*color10: #E0F8BA
-!*color11: #F4F8BA
-!*color12: #BAE9F8
-!*color13: #E4BAF8
-!*color14: #BAF8E8
-!*color15: #EEEEEE
-
-!*color0:  #0C0C0C
-!*color1:  #F8343B
-!*color2:  #AEF834
-!*color3:  #EBF834
-!*color4:  #34C7F8
-!*color5:  #B734F8
-!*color6:  #34F8C4
-!*color7:  #EEEEEE
-!*color8:  #0C0C0C
-!*color9:  #F9343B
-!*color10: #AFF833
-!*color11: #EAF834
-!*color12: #35C7F8
-!*color13: #B834F8
-!*color14: #35F8C4
-!*color15: #EEEEEE
-
-!*color8:  #181818
-!*color9:  #F8F8F8
-!*color10: #AADB0F
-!*color11: #F7F7F7
-!*color12: #404040
-!*color13: #91BA0D
-!*color14: #E2E2E2
-!*color15: #FFFFFF
+#include  "/home/nxll/.colors/fray"
+!#include "/home/nxll/.colors/gummy"
+!#include "/home/nxll/.colors/gummyfade"
+!#include  "/home/nxll/.colors/muted"
 
 !URXVT SETTINGS
+URxvt.internalBorder: 2
+urxvt*lineSpace: -1
 URxvt*scrollBar: False
 URxvt*secondaryScroll: True
+URxvt.geometry: 82x22
 URxvt*saveLines: 1000
-!URxvt*geometry: 78x20
 URxvt*cursorUnderline: False
 URxvt*cursorColor: #dddddd
 URxvt*cursorBlink: True

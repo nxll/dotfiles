@@ -1,14 +1,12 @@
 #!/bin/bash
-#
-#    /$$                                              /$$            /$$$$$$          
-#   | $$                                             |__/           /$$__  $$         
-#  /$$$$$$   /$$$$$$/$$$$  /$$   /$$ /$$   /$$        /$$ /$$$$$$$ | $$  \__//$$$$$$  
-# |_  $$_/  | $$_  $$_  $$| $$  | $$|  $$ /$$/       | $$| $$__  $$| $$$$   /$$__  $$ 
-#   | $$    | $$ \ $$ \ $$| $$  | $$ \  $$$$/        | $$| $$  \ $$| $$_/  | $$  \ $$ 
-#   | $$ /$$| $$ | $$ | $$| $$  | $$  >$$  $$        | $$| $$  | $$| $$    | $$  | $$ 
-#   |  $$$$/| $$ | $$ | $$|  $$$$$$/ /$$/\  $$       | $$| $$  | $$| $$    |  $$$$$$/ 
-#    \___/  |__/ |__/ |__/ \______/ |__/  \__//$$$$$$|__/|__/  |__/|__/     \______/  
-#                                            |______/                                 
+#    ██                                     ██            ████         
+#   ░██                                    ░░            ░██░          
+#  ██████ ██████████  ██   ██ ██   ██       ██ ███████  ██████  ██████ 
+# ░░░██░ ░░██░░██░░██░██  ░██░░██ ██       ░██░░██░░░██░░░██░  ██░░░░██
+#   ░██   ░██ ░██ ░██░██  ░██ ░░███        ░██ ░██  ░██  ░██  ░██   ░██
+#   ░██   ░██ ░██ ░██░██  ░██  ██░██       ░██ ░██  ░██  ░██  ░██   ░██
+#   ░░██  ███ ░██ ░██░░██████ ██ ░░██ █████░██ ███  ░██  ░██  ░░██████ 
+#    ░░  ░░░  ░░  ░░  ░░░░░░ ░░   ░░ ░░░░░ ░░ ░░░   ░░   ░░    ░░░░░░  
 # SHOW SYSTEM INFO IN TMUX
 # AUTHOR: nxll <nxll@teknik.io>
 
@@ -18,9 +16,9 @@ EMPTY=${EMPTY-┄}
 SIZE=${SIZE-8}
 
 #COLORS
-STATUS="#[fg=colour255,bg=colour234]"
-ICON="#[fg=colour255,bg=colour235]"
-MBCOL="#[fg=colour255,bg=colour236]"
+STATUS="#[fg=colour255,bg=colour0]"
+ICON="#[fg=colour255,bg=colour233]"
+MBCOL="#[fg=colour255,bg=colour234]"
 CCOL="#[fg=colour0,bg=colour2]"
 SEP="#[fg=default,bg=default]"
 
@@ -68,12 +66,12 @@ VOLBAR()
 
 MUSIC()
 {
-	SONG="$(mpc current -f "%artist% ≠ %title%")"
+	SONG="$(mpc current -f "%artist% ≠ %title%" | cut -c1-60)"
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
 		if [ "$PLAYING" = "[playing]" ] ; then
-			SYMBOL="$ICON » $STATUS"
+			SYMBOL="$ICON ♫ $STATUS"
 		elif [ $PLAYING = "[paused]" ] ; then
-			SYMBOL="$ICON ✖ $STATUS"
+			SYMBOL="$ICON x $STATUS"
 		fi
 															
 	echo -n "$SYMBOL $SONG"
@@ -98,4 +96,5 @@ CLOCK()
 	echo -n "$(date "+%H:%M")"
 }
 
-echo -n "$(MUSIC) $SEP $(MUSBAR) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "
+echo -n "$(MUSIC) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "
+#echo -n "$(MUSIC) $SEP $(MUSBAR) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "

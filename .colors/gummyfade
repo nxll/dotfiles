@@ -1,9 +1,9 @@
-*background: #121314
+*background: #273941
 *foreground: #FFFFFF
 
 !BLACK
-*color0:  #151617
-*color8:  #17181A
+*color0:  #202F36
+*color8:  #1A262B
 !RED
 *color1:  #F8C6C8
 *color9:  #F8BABD

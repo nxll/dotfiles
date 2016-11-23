@@ -7,20 +7,13 @@
 !  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
 ! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
 !SETTINGS
-Xcursor*theme: 		pixelfun
-Xcursor*size:  		16
-XTerm*scrollBar: 	false
-XTerm*rightScrollBar: 	false
-XLogo*geometry: 	150x150
-Xclock*geometry: 	150x150-0-0
-Xclock*background: 	#080808
-
-*font:       -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
-*boldFont:   -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
-*italicFont: -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
-!*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+!*font:       -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
+!*boldFont:   -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
+!*italicFont: -benis-lemon-medium-r-normal--*-*-75-75-m-*-iso10646-1
+*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*boldFont:   -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 !*boldFont:   -kakwa-kakwafont-medium-r-bold--12-120-72-72-c-60-iso8859-1
-!*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 !*font:       -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 !*boldFont:   -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
 !*italicFont: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
@@ -28,25 +21,36 @@ Xclock*background: 	#080808
 !*boldFont:   -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1 
 !*italicFont: -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1 
 
-#include  "/home/nxll/.colors/fray"
+!#include "/home/nxll/.colors/fray"
+#include "/home/nxll/.colors/grayfray"
 !#include "/home/nxll/.colors/gummy"
 !#include "/home/nxll/.colors/gummyfade"
-!#include  "/home/nxll/.colors/muted"
+!#include "/home/nxll/.colors/muted"
+!#include  "/home/nxll/.colors/h4x"
 
 !URXVT SETTINGS
-URxvt.internalBorder: 2
-urxvt*lineSpace: -1
-URxvt*scrollBar: False
-URxvt*secondaryScroll: True
-URxvt.geometry: 82x22
+URxvt.internalBorder: 15
+URxvt*lineSpace: 2
+URxvt*scrollBar: false
+URxvt*scrollColor: #131415
+URxvt.geometry: 80x18
 URxvt*saveLines: 1000
-URxvt*cursorUnderline: False
-URxvt*cursorColor: #dddddd
-URxvt*cursorBlink: True
+URxvt*cursorUnderline: false
+URxvt*cursorColor: #A1A2A3
+URxvt*cursorBlink: true
 URxvt*underlineColor: #303030
-URxvt*allow_bold: True
+URxvt*allow_bold: true
 URxvt*perl-lib: /usr/lib/urxvt/perl/ 
 !CLICKABLE LINKS
 URxvt*perl-ext-common : default,matcher
 URxvt*url-launcher: inox
 URxvt*matcher.button: 1
+
+!MISC
+Xcursor*theme: 		pixelfun
+Xcursor*size:  		16
+XTerm*scrollBar: 	false
+XTerm*rightScrollBar: 	false
+XLogo*geometry: 	150x150
+Xclock*geometry: 	150x150-0-0
+Xclock*background: 	#121314

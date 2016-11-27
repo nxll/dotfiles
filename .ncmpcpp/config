@@ -1,37 +1,37 @@
-#  /$$$$$$$   /$$$$$$$ /$$$$$$/$$$$   /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$ 
-# | $$__  $$ /$$_____/| $$_  $$_  $$ /$$__  $$ /$$_____/ /$$__  $$ /$$__  $$
-# | $$  \ $$| $$      | $$ \ $$ \ $$| $$  \ $$| $$      | $$  \ $$| $$  \ $$
-# | $$  | $$| $$      | $$ | $$ | $$| $$  | $$| $$      | $$  | $$| $$  | $$
-# | $$  | $$|  $$$$$$$| $$ | $$ | $$| $$$$$$$/|  $$$$$$$| $$$$$$$/| $$$$$$$/
-# |__/  |__/ \_______/|__/ |__/ |__/| $$____/  \_______/| $$____/ | $$____/ 
-#                                  | $$                | $$      | $$       
-#                                  | $$                | $$      | $$       
-#                                  |__/                |__/      |__/       
-#
+#                               ██████          ██████  ██████ 
+#  ███████   █████  ██████████ ░██░░░██  █████ ░██░░░██░██░░░██
+# ░░██░░░██ ██░░░██░░██░░██░░██░██  ░██ ██░░░██░██  ░██░██  ░██
+#  ░██  ░██░██  ░░  ░██ ░██ ░██░██████ ░██  ░░ ░██████ ░██████ 
+#  ░██  ░██░██   ██ ░██ ░██ ░██░██░░░  ░██   ██░██░░░  ░██░░░  
+#  ███  ░██░░█████  ███ ░██ ░██░██     ░░█████ ░██     ░██     
+# ░░░   ░░  ░░░░░  ░░░  ░░  ░░ ░░       ░░░░░  ░░      ░░      
 # PLAYLIST
-song_list_format               = "$0%n $1▒ $4%a $3≠ $0%t $R%b $1▒ $4%l$9"
+#song_list_format              = "$2%n $1▒ $0%a $3≠ $0%t $R$4%l $1▒ $0%b$9"
+song_list_format               = "$2%n $1▒ $0%a $3≠ $0%t $R$1▒ $0%b$9"
 now_playing_prefix             = "$b$1"
-now_playing_suffix             = "$/b"
+now_playing_suffix             = "$b$1"
 playlist_display_mode          = "classic" (classic/columns)
 playlist_separate_albums       = "no"
 
 # BARS
 song_status_format             = "$8%a $2%t $5%b {(Disc %d) } $1"
-progressbar_look               = "░█ "
+#progressbar_look              = "━■━"
+#progressbar_look              = "▒█┅"
+progressbar_look               = "██▒"
 titles_visibility              = "no"
 statusbar_visibility           = "no"
 header_visibility              = "no"
 display_bitrate                = "no"
 
 # BROWSER
-browser_playlist_prefix        = "$2plist >$9 "
+browser_playlist_prefix        = "$2playlist$9 "
 browser_display_mode           = "classic" (classic/columns)
 
 # VISUALIZER
 visualizer_fifo_path           = "/tmp/mpd.fifo"
 visualizer_output_name         = "fifo"
 visualizer_type                = "spectrum" (spectrum/wave)
-visualizer_look                = "✖✖"
+visualizer_look                = "┃┃"
 
 # COLORS
 header_window_color            = black
@@ -44,9 +44,9 @@ main_window_color      	       = white
 main_window_highlight_color    = white
 alternative_ui_separator_color = black
 active_window_border           = black
-progressbar_color   	       = default
-progressbar_elapsed_color      = 236
-statusbar_color   	       = red
+progressbar_color   	       = black
+progressbar_elapsed_color      = black
+statusbar_color   	           = red
 active_column_color            = green
 visualizer_color               = white
 

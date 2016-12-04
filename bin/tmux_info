@@ -1,24 +1,24 @@
 #!/bin/bash
-#    ██                                     ██            ████         
-#   ░██                                    ░░            ░██░          
-#  ██████ ██████████  ██   ██ ██   ██       ██ ███████  ██████  ██████ 
-# ░░░██░ ░░██░░██░░██░██  ░██░░██ ██       ░██░░██░░░██░░░██░  ██░░░░██
-#   ░██   ░██ ░██ ░██░██  ░██ ░░███        ░██ ░██  ░██  ░██  ░██   ░██
-#   ░██   ░██ ░██ ░██░██  ░██  ██░██       ░██ ░██  ░██  ░██  ░██   ░██
-#   ░░██  ███ ░██ ░██░░██████ ██ ░░██ █████░██ ███  ░██  ░██  ░░██████ 
-#    ░░  ░░░  ░░  ░░  ░░░░░░ ░░   ░░ ░░░░░ ░░ ░░░   ░░   ░░    ░░░░░░  
+#    ██                                     ██            ████          
+#   ░██                                    ░░            ░██░           
+#  ██████ ██████████  ██   ██ ██   ██       ██ ███████  ██████  ██████  
+# ░░░██░ ░░██░░██░░██░██  ░██░░██ ██       ░██░░██░░░██░░░██░  ██░░░░██ 
+#   ░██   ░██ ░██ ░██░██  ░██ ░░███        ░██ ░██  ░██  ░██  ░██   ░██ 
+#   ░██   ░██ ░██ ░██░██  ░██  ██░██       ░██ ░██  ░██  ░██  ░██   ░██ 
+#   ░░██  ███ ░██ ░██░░██████ ██ ░░██ █████░██ ███  ░██  ░██  ░░██████  
+#    ░░  ░░░  ░░  ░░  ░░░░░░ ░░   ░░ ░░░░░ ░░ ░░░   ░░   ░░    ░░░░░░   
 # SHOW SYSTEM INFO IN TMUX
 # AUTHOR: nxll <nxll@teknik.io>
 
 #DRAW BAR
 FULL=${FULL-━}
-EMPTY=${EMPTY-┄}
+EMPTY=${EMPTY-━}
 SIZE=${SIZE-8}
 
 #COLORS
-STATUS="#[fg=colour255,bg=colour0]"
-ICON="#[fg=colour255,bg=colour233]"
-MBCOL="#[fg=colour255,bg=colour234]"
+STATUS="#[fg=colour7,bg=colour0]"
+ICON="#[fg=colour7,bg=colour8]"
+PBCOL="#[fg=colour3]"
 CCOL="#[fg=colour0,bg=colour2]"
 SEP="#[fg=default,bg=default]"
 
@@ -26,6 +26,7 @@ SEP="#[fg=default,bg=default]"
 BAT=/sys/class/power_supply/BAT0
 VOLPERC=$(pamixer --get-vol)
 BATPERC=$(cat $BAT/capacity)
+MUSLENGTH=50
 
 DRAW()
 {
@@ -38,7 +39,7 @@ DRAW()
 	do
 		[ "$v" -le "$inc" ] \
 			&& out="${out}${FULL}" \
-			|| out="${out}${EMPTY}"
+			|| out="${out}$PBCOL${EMPTY}"
 	done
 
 	echo -n "$out"
@@ -66,7 +67,7 @@ VOLBAR()
 
 MUSIC()
 {
-	SONG="$(mpc current -f "%artist% ≠ %title%" | cut -c1-60)"
+	SONG="$(mpc current -f "%artist% ≠ %title%" | cut -c1-$MUSLENGTH)"
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
 		if [ "$PLAYING" = "[playing]" ] ; then
 			SYMBOL="$ICON ♫ $STATUS"
@@ -82,12 +83,11 @@ MUSBAR()
 	MUSPERC=$(mpc status | sed -n 2p | grep -o '[0-9]*' | tail -1)
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
 		if [ "$PLAYING" = "[playing]" ] ; then
-			MBC="$MBCOL"
+			MBC="$ICON"
 		elif [ $PLAYING = "[paused]" ] ; then
-			MBC="$MBCOL"
+			MBC="$ICON"
 		fi
 		
-
 	echo -n "$MBC $(DRAW $MUSPERC $SIZE)"
 }
 
@@ -96,5 +96,10 @@ CLOCK()
 	echo -n "$(date "+%H:%M")"
 }
 
-echo -n "$(MUSIC) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "
+DATE()
+{
+	echo -n "$(date "+%d/%m")"
+}
+
+echo -n "$(MUSIC) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $ICON $(DATE) $SEP $CCOL $(CLOCK) "
 #echo -n "$(MUSIC) $SEP $(MUSBAR) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "

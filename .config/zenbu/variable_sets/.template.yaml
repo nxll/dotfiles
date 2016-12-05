@@ -1,0 +1,40 @@
+# TEMPLATE
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: ""
+
+#COLORS
+colors:
+    tbwmf:      ""
+    tbwmu:      ""
+
+    primary:    ""
+    secondary:  ""
+    background: ""
+    foreground: ""
+
+    black:
+        normal: ""
+        bold:   ""
+    red:
+        normal: ""
+        bold:   ""
+    green:
+        normal: ""
+        bold:   ""
+    yellow:
+        normal: ""
+        bold:   ""
+    blue:
+        normal: ""
+        bold:   ""
+    magenta:
+        normal: ""
+        bold:   ""
+    cyan:
+        normal: ""
+        bold:   ""
+    white:
+        normal: ""
+        bold:   ""

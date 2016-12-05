@@ -1,0 +1,44 @@
+## ~/.config/zathura/zathurarc
+#set uri-command "jumanji %s"
+
+#map normal J scroll full_down
+#map normal K scroll full_up
+#map normal <PageUp> navigate previous
+#map normal <PageDown> navigate next
+#map normal <PageDown> scroll full_down
+#map normal <PageUp> scroll full_up
+map <C-+> zoom in
+map <C--> zoom out
+
+set show-scrollbars false
+set n-completion-items 10
+set zoom-step 5
+set page-padding 0
+set pages-per-row 1
+set recolor true
+set adjust-open width
+
+#set font "lemon 8"
+set font "kakwafont 8"
+set default-bg "{{ bgc }}"
+set default-fg "{{ fgc }}"
+set inputbar-bg "{{ n_black }}"
+set inputbar-fg "{{ fgc }}"
+set statusbar-bg "{{ n_black }}"
+set statusbar-fg "{{ fgc }}"
+set tabbar-bg "{{ n_black }}"
+set tabbar-fg "{{ fgc }}"
+set tabbar-focus-bg "{{ b_black }}"
+set tabbar-focus-fg "{{ n_green }}"
+set completion-bg "{{ n_black }}"
+set completion-fg "{{ fgc }}"
+set completion-group-bg "{{ n_black }}"
+set completion-group-fg "{{ fgc }}"
+set completion-highlight-bg "{{ b_black }}"
+set completion-highlight-fg "{{ n_green }}"
+set notification-error-bg "{{ n_black }}"
+set notification-error-fg "{{ n_red }}"
+set notification-warning-bg "{{ n_black }}"
+set notification-warning-fg "{{ fgc }}"
+set recolor-darkcolor "{{ fgc }}"
+set recolor-lightcolor "{{ bgc }}"

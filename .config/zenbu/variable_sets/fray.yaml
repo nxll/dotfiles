@@ -1,0 +1,40 @@
+# FRAY
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "fray"
+
+#COLORS
+colors:
+    wmbf:       "#252629"
+    wmbu:       "#1C1D1F"
+    
+    primary:    "white"
+    secondary:  "green"
+    background: "#121314"
+    foreground: "#F5F5F5"
+
+    black:
+        normal: "#151617" 
+        bold:   "#191A1C"
+    red:
+        normal: "#F8F8F8"
+        bold:   "#F0F0F0"
+    green:
+        normal: "#AADB0F"
+        bold:   "#B2E610"
+    yellow:
+        normal: "#313233"
+        bold:   "#414243"
+    blue:
+        normal: "#E2E2E2"
+        bold:   "#CECECE"
+    magenta:
+        normal: "#91BA0D"
+        bold:   "#9DCF0E"
+    cyan:
+        normal: "#B2B2B2"
+        bold:   "#C9C9C9"
+    white:
+        normal: "#F2F2F2" 
+        bold:   "#FAFAFA"

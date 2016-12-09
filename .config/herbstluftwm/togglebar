@@ -1,0 +1,9 @@
+#!/bin/sh
+# Toggle lemonbar
+
+if pgrep "panel" > /dev/null
+then
+    pkill -x panel && herbstclient pad 0 0   
+else
+    ~/.config/herbstluftwm/panel &
+fi

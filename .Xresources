@@ -1,0 +1,68 @@
+!  ██     ██                                                                        
+! ░░██   ██                                                                         
+!  ░░██ ██   ██████  █████   ██████  ██████  ██   ██ ██████  █████   █████   ██████ 
+!   ░░███   ░░██░░█ ██░░░██ ██░░░░  ██░░░░██░██  ░██░░██░░█ ██░░░██ ██░░░██ ██░░░░  
+!    ██░██   ░██ ░ ░███████░░█████ ░██   ░██░██  ░██ ░██ ░ ░██  ░░ ░███████░░█████  
+!   ██ ░░██  ░██   ░██░░░░  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░░░░░██ 
+!  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
+! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
+!SETTINGS
+*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*boldFont:   -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
+
+!COLORS
+*highlightColor:     #272A2B
+*borderColor:        #1D2021
+*cursorColor:        #DBDBDB
+
+*background:  #1D2021
+*foreground:  #F2ECEC
+
+!BLACK
+*color0:      #222526
+*color8:      #272A2B
+!RED
+*color1:      #E8E2E2
+*color9:      #FCFCFC
+!GREEN
+*color2:      #AADB0F
+*color10:     #BAF010
+!YELLOW
+*color3:      #2E3233
+*color11:     #404647
+!BLUE
+*color4:      #E2E2E2
+*color12:     #F7F7F7
+!MAGENTA
+*color5:      #91BA0D
+*color13:     #A1CF0E
+!CYAN
+*color6:      #B2B2B2
+*color14:     #C7C7C7
+!WHITE
+*color7:      #D6D0D0
+*color15:     #DBDBDB
+
+!URXVT SETTINGS
+URxvt*dynamicColors:      on
+URxvt.internalBorder:     15
+URxvt*lineSpace:          2
+URxvt*scrollBar:          false
+URxvt.geometry:           74x16
+URxvt*saveLines:          1000
+URxvt*cursorUnderline:    false
+URxvt*cursorBlink:        true
+URxvt*allow_bold:         true
+
+!PERL
+URxvt*perl-lib:        /usr/lib/urxvt/perl/
+URxvt*perl-ext-common: default,matcher
+
+!CLICKABLE LINKS
+URxvt*url-launcher:   inox
+URxvt*matcher.button: 1
+
+!MISC
+Xcursor*theme: 		  pixelfun
+Xcursor*size:  		  16

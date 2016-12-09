@@ -1,0 +1,199 @@
+#!/bin/sh
+#  ██                       
+# ░██                       
+# ░██       ██████   ██████ 
+# ░██████  ░░░░░░██ ░░██░░█ 
+# ░██░░░██  ███████  ░██ ░  
+# ░██  ░██ ██░░░░██  ░██    
+# ░██████ ░░████████░███    
+# ░░░░░    ░░░░░░░░ ░░░     
+# BARSCRIPT
+# nxll <nxll@taknik.io>
+
+#RESTART
+pkill lemonbar
+
+#COLORS
+FG1="{{ fgc }}"
+FG2="{{ n_white }}"
+BG1="{{ bgc }}"
+BG2="{{ n_black }}"
+COL1="{{ b_black }}"
+COL2="{{ n_green }}"
+
+#VARS
+FONT="{{ font1 }}"
+GLYPH="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+HEIGHT=16
+BORDER=3
+MUSLENGTH=50
+WRKCHAR=+
+#WRKCHAR=""
+
+#DRAW BAR
+FULL=${FULL-━}
+EMPTY=${EMPTY-┄}
+SIZE=${SIZE-8}
+
+DRAW()
+{
+	perc=$1
+	size=$2
+
+	inc=$(( perc * size / 100 ))
+
+	for v in $(seq 0 $(( size - 1 )))
+	do
+		[ "$v" -le "$inc" ] \
+			&& out="${out}${FULL}" \
+			|| out="${out}${EMPTY}"
+	done
+
+	echo -n "$out"
+}
+
+WRK()
+{
+
+	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
+	
+	if [ ${OGWKSPACE} = "0" ] ;
+	then 
+		echo "%{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "1" ] ;
+	then
+		echo "%{B$BG2}%{F$FG1} $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "2" ] ;
+	then 
+		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "3" ] ;
+	then 
+		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "4" ] ;
+	then 
+		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B-}%{F-}"
+    	else
+		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
+	fi
+}
+
+WRKS()
+{
+
+	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
+	
+	if [ ${OGWKSPACE} = "0" ] ;
+	then 
+		echo "%{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}     %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "1" ] ;
+	then
+		echo "%{B$BG2}%{F$FG1}  %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}    %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "2" ] ;
+	then 
+		echo "%{B$BG2}%{F$FG1}   %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}   %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "3" ] ;
+	then 
+		echo "%{B$BG2}%{F$FG1}    %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}  %{B-}%{F-}"
+	elif [ ${OGWKSPACE} = "4" ] ;
+	then 
+		echo "%{B$BG2}%{F$FG1}     %{B$COL2}%{F$BG1}  %{B-}%{F-}"
+    	else
+		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
+	fi
+}
+
+WIN()
+{
+    #echo -n "%{B$COL2}%{F$BG1}  %{F-}%{B-}"
+    echo -n "%{B$COL1}%{F$FG1} $(xtitle) %{F-}%{B-}"
+}
+
+MUSIC()
+{
+	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
+		if [ "$PLAYING" = "[playing]" ] ; then
+        	SYMBOL="%{B$COL2}%{F$BG1}  %{F-}%{B-}"
+	        SONG="%{B$BG2} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+		elif [ $PLAYING = "[paused]" ] ; then
+			SYMBOL="%{B$COL2}%{F$BG1}  %{F-}%{B-}"
+	     	SONG="%{B$BG2} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+		fi
+
+    echo -n "${SYMBOL}${SONG}"
+}
+
+VOL()
+{
+    percent=$(pamixer --get-volume)
+
+    echo -n "%{B$BG2}  %{B-} ${percent}%"
+}
+
+BAT()
+{
+    percent=$(cat /sys/class/power_supply/BAT0/capacity)
+    status=$(cat /sys/class/power_supply/BAT0/status)
+
+    fullthing="${symbol} ${percent}"
+
+    if test $status = "Charging"; then
+        symbol=""
+        echo -n "%{B$BG2} ${symbol} %{B-} ${percent}%"
+    elif test $status = "Full"; then
+        symbol=""
+        echo -n "%{B$BG2} ${symbol} %{B-} ${percent}%"
+    else
+        if test $percent -gt 66; then
+            symbol=""
+            echo -n "%{B$BG2} ${symbol} %{B-} ${percent}%"
+        elif test $percent -gt 34; then
+            symbol=""
+            echo -n "%{B$BG2} ${symbol} %{B-} ${percent}%"
+        else
+		symbol=""
+            echo -n "%{B$BG2} ${symbol} %{B-} ${percent}%"
+        fi
+    fi
+}
+
+NET()
+{
+   symbol="%{B$BG2}  %{B-}"
+   wifi_ssid=$(
+   if [ grep -q "Not connected."] ; then
+      echo "No AP"
+   else
+      iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
+   fi)
+
+   echo -n "${symbol} ${wifi_ssid}"
+}
+
+DATE()
+{
+    echo -n "%{B$BG2} $(date "+%d/%m " | tr [A-Z] [a-z])%{B-}"
+}
+
+CLOCK()
+{
+    echo -n "%{B$COL2}%{F$BG1} $(date "+%H:%M ")%{F-}%{B-}"
+}
+
+BAR()
+{ 
+    #ADD ALL THE THINGS
+    while true; do
+		BUF="$(MUSIC)%{c}$(WRK)%{r}$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
+		echo $BUF	
+        sleep 0.1
+    done | lemonbar -f $GLYPH \
+        -f $FONT \
+        -F $FG1 \
+        -B $BG1 \
+        -u $BORDER \
+		-r $BORDER \
+		-R "{{ wmu }}" \
+        -g 1274x$HEIGHT+0+0 | sh &
+}
+
+BAR > /dev/null

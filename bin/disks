@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo
+echo "$(tput setab 0)$(tput setaf 238) #DISKS $(tput sgr0)";
+echo
+lsblk -a; echo;
+echo "$(tput setab 0)$(tput setaf 238) #DISK USAGE $(tput sgr0)";
+echo
+df -h;
+echo

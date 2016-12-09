@@ -1,0 +1,105 @@
+#!/bin/bash
+#    ██                                     ██            ████          
+#   ░██                                    ░░            ░██░           
+#  ██████ ██████████  ██   ██ ██   ██       ██ ███████  ██████  ██████  
+# ░░░██░ ░░██░░██░░██░██  ░██░░██ ██       ░██░░██░░░██░░░██░  ██░░░░██ 
+#   ░██   ░██ ░██ ░██░██  ░██ ░░███        ░██ ░██  ░██  ░██  ░██   ░██ 
+#   ░██   ░██ ░██ ░██░██  ░██  ██░██       ░██ ░██  ░██  ░██  ░██   ░██ 
+#   ░░██  ███ ░██ ░██░░██████ ██ ░░██ █████░██ ███  ░██  ░██  ░░██████  
+#    ░░  ░░░  ░░  ░░  ░░░░░░ ░░   ░░ ░░░░░ ░░ ░░░   ░░   ░░    ░░░░░░   
+# SHOW SYSTEM INFO IN TMUX
+# AUTHOR: nxll <nxll@teknik.io>
+
+#DRAW BAR
+FULL=${FULL-━}
+EMPTY=${EMPTY-━}
+SIZE=${SIZE-8}
+
+#COLORS
+STATUS="#[fg=colour7,bg=colour0]"
+ICON="#[fg=colour7,bg=colour8]"
+PBCOL="#[fg=colour3]"
+CCOL="#[fg=colour0,bg=colour2]"
+SEP="#[fg=default,bg=default]"
+
+#VARS
+BAT=/sys/class/power_supply/BAT0
+VOLPERC=$(pamixer --get-vol)
+BATPERC=$(cat $BAT/capacity)
+MUSLENGTH=50
+
+DRAW()
+{
+	perc=$1
+	size=$2
+
+	inc=$(( perc * size / 100 ))
+
+	for v in $(seq 0 $(( size - 1 )))
+	do
+		[ "$v" -le "$inc" ] \
+			&& out="${out}${FULL}" \
+			|| out="${out}$PBCOL${EMPTY}"
+	done
+
+	echo -n "$out"
+}
+
+BATTERY()
+{
+	echo -n "$BATPERC%"
+}
+
+BATBAR()
+{	
+	echo -n "$(DRAW $BATPERC $SIZE)"
+}
+
+VOLUME()
+{
+	echo -n "$VOLPERC%"
+}
+
+VOLBAR()
+{
+	echo -n "$(DRAW $VOLPERC $SIZE)"
+}
+
+MUSIC()
+{
+	SONG="$(mpc current -f "%artist% ≠ %title%" | cut -c1-$MUSLENGTH)"
+	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
+		if [ "$PLAYING" = "[playing]" ] ; then
+			SYMBOL="$ICON ♫ $STATUS"
+		elif [ $PLAYING = "[paused]" ] ; then
+			SYMBOL="$ICON x $STATUS"
+		fi
+															
+	echo -n "$SYMBOL $SONG"
+}
+
+MUSBAR()
+{	
+	MUSPERC=$(mpc status | sed -n 2p | grep -o '[0-9]*' | tail -1)
+	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
+		if [ "$PLAYING" = "[playing]" ] ; then
+			MBC="$ICON"
+		elif [ $PLAYING = "[paused]" ] ; then
+			MBC="$ICON"
+		fi
+		
+	echo -n "$MBC $(DRAW $MUSPERC $SIZE)"
+}
+
+CLOCK()
+{
+	echo -n "$(date "+%H:%M")"
+}
+
+DATE()
+{
+	echo -n "$(date "+%d/%m")"
+}
+
+echo -n "$(MUSIC) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $ICON $(DATE) $SEP $CCOL $(CLOCK) "
+#echo -n "$(MUSIC) $SEP $(MUSBAR) $SEP $ICON VOL $STATUS $(VOLUME) $SEP $ICON BAT $STATUS $(BATTERY) $SEP $CCOL $(CLOCK) "

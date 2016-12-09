@@ -1,0 +1,40 @@
+# MONO
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "mono"
+
+#COLORS
+colors:
+    wmbf:       "#FFFFFF"
+    wmbu:       "#EEEEEE"
+
+    primary:    "white"
+    secondary:  "white"
+    background: "#000000"
+    foreground: "#FFFFFF"
+
+    black:
+        normal: "#050505"
+        bold:   "#0A0A0A"
+    red:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"
+    green:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"
+    yellow:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"
+    blue:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"
+    magenta:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"
+    cyan:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"
+    white:
+        normal: "#FFFFFF"
+        bold:   "#FFFFFF"

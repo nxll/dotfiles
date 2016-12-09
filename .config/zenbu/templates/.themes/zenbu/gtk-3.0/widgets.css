@@ -1,0 +1,637 @@
+/**********************************************/
+*
+{
+    /*-GtkWidget-focus-line-pattern: "\0"; use CSS outline-style*/
+
+    /* START: Deprecated in GTK 3.20 */
+    -GtkCheckButton-indicator-size: 10;
+    -GtkCheckMenuItem-indicator-size: 10;
+    -GtkCellRendererToggle-indicator-size: 10;
+
+    -GtkToolItemGroup-expander-size: 8;
+    -GtkExpander-expander-size: 8;
+    -GtkTreeView-expander-size: 8;
+
+    -GtkMenuItem-arrow-scaling: 0.7;
+
+    /*-GtkButton-child-displacement-x: 0; default*/
+    /*-GtkButton-child-displacement-y: 0; default*/
+    /*-GtkButton-default-border: 0; use CSS margins and padding*/
+
+    /*-GtkScrolledWindow-scrollbar-spacing: 3; default*/
+
+    -GtkRange-trough-border: 0;
+    /*-GtkRange-stepper-spacing: -1; should be >=0*/
+
+    /*-GtkNotebook-initial-gap: 0; default*/
+    -GtkNotebook-tab-curvature: 0;
+    /*-GtkNotebook-tab-overlap: 2; default*/
+
+    /*-GtkPaned-handle-size: 5; default*/
+    /* END: Deprecated in GTK 3.20 */
+
+    padding: 0;
+    color: @fg_color;
+    border-color: @border_color;
+    border-style: solid;
+}
+
+*:selected,
+.view:selected,
+.entry:selected
+{
+    background-color: @selected_bg_color1;
+    color: @fg_color;
+}
+
+*:selected:focused,
+.view:selected:focused,
+.entry:selected:focused
+{
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+*:focused
+{
+    color: @border_color;
+}
+
+.view:focused,
+.entry:focused,
+label:focused
+{
+    color: @fg_color;
+}
+
+treeview.view:focused
+{
+    color: @border_color;
+}
+
+treeview.view:focused *
+{
+    color: @fg_color;
+}
+
+*:insensitive
+{
+    background-color: shade(@bg_color, 0.95);
+    border-color: @insensitive_border_color;
+    color: mix(@fg_color, @base_color, 0.5);
+}
+
+.background
+{
+    background-color: @bg_color;
+    border: none;
+}
+/**********************************************/
+
+
+/**********************************************/
+label,
+label:active,
+label:insensitive,
+image,
+image:active,
+image:insensitive
+{
+    background-color: transparent;
+    border-width: 0;
+}
+/**********************************************/
+
+
+/**********************************************/
+statusbar *
+{
+    border-width: 1px 0 0 0;
+}
+
+statusbar label
+{
+    border-width: 0;
+}
+/**********************************************/
+
+
+/**********************************************/
+tooltip
+{
+    border: 1px solid @fg_color;
+    background-color: @bg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+.view
+{
+    background-color: @base_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+row
+{
+    border-width: 0;
+}
+
+row:hover
+{
+    background-color: shade(@base_color, 0.95);
+}
+
+row:nth-child(odd)
+{
+    background-color: shade(@base_color, 0.97);
+}
+/**********************************************/
+
+
+/**********************************************/
+trough,
+trough > row,
+trough > row:hover,
+trough > row:selected,
+trough > row:selected:focused
+{
+    background-color: mix(@fg_color, @bg_color, 0.9);
+    border-width: 0px;
+}
+
+trough > row:selected
+{
+    border-color: @fg_color;
+}
+
+trough > row:selected:focused
+{
+    border-color: @selected_fg_color;
+}
+
+scrollbar > button,
+scrollbar > button:hover,
+scrollbar > button:active,
+scrollbar > button:hover:active
+{
+    border-color: @border_color;
+}
+
+scrollbar slider
+{
+    background-color: @bg_color;
+    border-left-color: @base_color;
+    border-top-color: @base_color;
+    border-width: 1px;
+    padding: 1px;
+    min-height: 10px;
+    min-width: 10px;
+}
+
+progressbar > trough
+{
+    background-color: @bg_color;
+}
+
+scale > contents > trough
+{
+    border-width: 1px;
+    border-color: @border_color1;
+    border-right-color: @base_color;
+    border-bottom-color: @base_color;
+}
+
+scale > contents > trough > slider
+{
+    background-color: @bg_color;
+    border-left-color: @base_color;
+    border-top-color: @base_color;
+    border-width: 1px;
+    padding: 1px;
+    min-height: 10px;
+    min-width: 10px;
+}
+
+scrolledwindow
+{
+    border: none;
+}
+/**********************************************/
+
+
+/**********************************************/
+switch {
+    border-width: 1px;
+}
+
+switch trough
+{
+    background-color: transparent;
+}
+
+switch trough:active
+{
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+switch trough:insensitive
+{
+    background-color: shade(@bg_color, 0.95);
+}
+/**********************************************/
+
+
+/**********************************************/
+slider
+{
+    border-width: 1px;
+    background-color: @bg_color;
+}
+
+slider:insensitive
+{
+}
+/**********************************************/
+
+
+/**********************************************/
+separator
+{
+    background-color: @border_color;
+    min-height: 1px;
+    min-width: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+/**********************************************/
+
+
+/**********************************************/
+pane-separator
+{
+    border-width: 2;
+    background-color: @bg_color;
+}
+
+pane-separator:hover
+{
+    background-color: shade(@base_color, 0.95);
+}
+/**********************************************/
+
+
+/**********************************************/
+button
+{
+    background-color: @bg_color;
+    border-left-color: @base_color;
+    border-top-color: @base_color;
+    border-width: 1px;
+    padding: 1px;
+}
+
+text-button
+{
+    border-width: 1px;
+    padding: 4px;
+}
+
+button:hover
+{
+    background-color: shade(@bg_color, 1.03);
+}
+
+button:active
+{
+    background-color: shade(@bg_color, 0.9);
+    border-right-color: {{ n_black }};
+    border-bottom-color: {{ n_black }};
+    border-left-color: {{ n_black }};
+    border-top-color: {{ n_black }};
+}
+
+button:active:hover
+{
+    background-color: shade(@bg_color, 1.03);
+}
+
+button:insensitive
+{
+    background-color: shade(@bg_color, 0.95);
+    border-color: @insensitive_border_color;
+    color: mix(@fg_color, @base_color, 0.5);
+}
+
+spinbutton button
+{
+    border: none;
+}
+
+spinbutton button:focused
+{
+    color: @fg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+entry
+{
+    background-color: @base_color;
+    padding: 2px 2px 3px 2px;
+    border-width: 1px;
+}
+
+entry:insensitive
+{
+    background-color: shade(@base_color, 0.95);
+}
+/**********************************************/
+
+
+/**********************************************/
+checkbutton,
+checkbutton:selected,
+checkbutton:selected:focused,
+checkbutton:insensitive
+{
+    background-color: transparent;
+}
+
+radio,
+radio:selected,
+radio:selected:focused
+{
+    background-color: @base_color;
+    color: @selected_bg_color;
+}
+
+check,
+check:selected,
+check:selected:focused
+{
+    background-color: @base_color;
+    color: shade(@selected_bg_color, 0.9);
+}
+
+radio:hover,
+check:hover,
+radio:hover:focused,
+.check:hover:focused
+{
+    background-color: shade(@base_color, 1.03);
+    border-color: @selected_bg_color;
+}
+
+radio:insensitive,
+radio:insensitive:selected,
+check:insensitive,
+check:insensitive:selected
+{
+    background-color: shade(@base_color, 0.95);
+    color: mix(@fg_color, @base_color, 0.5);
+}
+
+check row,
+radio row
+{
+    background-color: @base_color;
+    border-width: 1px;
+}
+/**********************************************/
+
+
+/**********************************************/
+combobox
+{
+    background-color: @base_color;
+    border-width: 0;
+}
+
+combobox:insensitive
+{
+    background-color: shade(@bg_color, 0.95);
+}
+
+combobox button
+{
+    padding: 0;
+}
+/**********************************************/
+
+
+/**********************************************/
+toolbar
+{
+    padding: 2px 0;
+    border-width: 0 0 1px 0;
+}
+/**********************************************/
+
+
+/**********************************************/
+progressbar progress,
+progressbar progress .row,
+progressbar progress .row:hover
+{
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    border-width: 1px;
+}
+
+progressbar progress .row:selected
+{
+    border-color: @fg_color;
+}
+
+progressbar progress .row:selected:focused
+{
+    border-color: @selected_fg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+menubar
+{
+    border-width: 0 0 1px 0;
+}
+
+menu
+{
+    border-width: 1px;
+}
+
+menuitem
+{
+    border-width: 0;
+    background-color: transparent;
+    padding: 3px 7px 2px 7px;
+}
+
+menuitem label
+{
+    color: inherit;
+}
+
+menuitem:hover,
+menuitem *:hover
+{
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+menuitem.check,
+menuitem.radio
+{
+    background-color: @base_color;
+    color: @selected_bg_color;
+    border-color: @border_color;
+    border-width: 1px;
+}
+
+menuitem.check
+{
+    color: shade(@selected_bg_color, 0.9);
+}
+
+menuitem.check:insensitive,
+menuitem.radio:insensitive
+{
+    background-color: shade(@base_color, 0.95);
+    color: mix(@fg_color, @base_color, 0.5);
+}
+/**********************************************/
+
+
+/** configure tabs */
+notebook > stack
+{
+    padding: 4px;
+    background-color: @bg_color;
+
+    border-color: @base_color;
+    border-right-color: @border_color;
+    border-bottom-color: @border_color;
+    border-width: 1px;
+}
+
+notebook > header > tabs > tab
+{
+    padding: 4px;
+    border-width: 1px;
+    border-right-color: @border_color1;
+    border-left-color: @base_color;
+    border-top-color: @base_color;
+    background-color: mix(@fg_color, @bg_color, 0.9);
+}
+
+notebook > header > tabs > tab:checked
+{
+    background-color: @bg_color;
+}
+
+notebook > header.top > tabs > tab
+{
+    margin-bottom: -1px;
+    border-bottom-width: 0px;
+}
+
+notebook > header.bottom > tabs > tab
+{
+    margin-top: -1px;
+    border-top-width: 0px;
+}
+
+notebook > header.left > tabs > tab
+{
+    margin-right: -1px;
+    border-right-width: 0px;
+}
+
+notebook > header.right > tabs > tab
+{
+    margin-left: -1px;
+    border-left-width: 0px;
+}
+
+/**********************************************/
+sidebar,
+sidebar.view
+{
+    background-color: shade(@bg_color, 1.05);
+}
+
+sidebar row:hover,
+sidebar.view row:hover
+{
+    background-color: @bg_color;
+}
+
+sidebar row:selected,
+sidebar row:selected:hover
+{
+    background-color: @selected_bg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+textview {
+    border-width: 1px;
+}
+
+colorswatch
+{
+    border-width: 1px;
+    background-color: @bg_color;
+}
+
+statusbar *
+{
+    border: none;
+}
+
+popover
+{
+    border-width: 1px;
+}
+/**********************************************/
+
+
+/**********************************************/
+expander
+{
+    border-color: @fg_color;
+}
+
+info
+{
+    background-color: @info_bg_color;
+    color: @info_fg_color;
+}
+
+warning
+{
+    background-color: @warning_bg_color;
+    color: @warning_fg_color;
+}
+
+question
+{
+    background-color: @question_bg_color;
+    color: @question_fg_color;
+}
+
+error
+{
+    background-color: @error_bg_color;
+    color: @error_fg_color;
+}
+/**********************************************/

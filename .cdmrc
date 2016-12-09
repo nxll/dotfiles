@@ -1,0 +1,29 @@
+#!/bin/bash
+#               ██                           
+#              ░██                           
+#   █████      ░██ ██████████  ██████  █████ 
+#  ██░░░██  ██████░░██░░██░░██░░██░░█ ██░░░██
+# ░██  ░░  ██░░░██ ░██ ░██ ░██ ░██ ░ ░██  ░░ 
+# ░██   ██░██  ░██ ░██ ░██ ░██ ░██   ░██   ██
+# ░░█████ ░░██████ ███ ░██ ░██░███   ░░█████ 
+#  ░░░░░   ░░░░░░ ░░░  ░░  ░░ ░░░     ░░░░░  
+binlist=(
+   "startx"             # Launch X session
+   "/bin/zsh"           # Launch ZSH
+   "systemctl reboot"   # Reboot
+   "systemctl poweroff" # Shutdown
+)
+
+namelist=("x" "zsh" "reboot" "shutdown")
+
+flaglist=(C C C C)
+
+dialogrc=/usr/share/cdm/themes/miromiro_green
+countfrom=0
+display=0
+xtty=keep
+locktty=no
+consolekit=yes
+cktimeout=10
+altstartx=no
+startxlog=/dev/null

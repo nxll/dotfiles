@@ -1,0 +1,40 @@
+# MONOGREEN
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "monogreen"
+
+#COLORS
+colors:
+    wmbf:       "#00FF00"
+    wmbu:       "#00CC00"
+
+    primary:    "white"
+    secondary:  "white"
+    background: "#000000"
+    foreground: "#00FF00"
+
+    black:
+        normal: "#000D00"
+        bold:   "#001A00"
+    red:
+        normal: "#00FF00"
+        bold:   "#00FF00"
+    green:
+        normal: "#00FF00"
+        bold:   "#00FF00"
+    yellow:
+        normal: "#00FF00"
+        bold:   "#00FF00"
+    blue:
+        normal: "#00FF00"
+        bold:   "#00FF00"
+    magenta:
+        normal: "#00FF00"
+        bold:   "#00FF00"
+    cyan:
+        normal: "#00FF00"
+        bold:   "#00FF00"
+    white:
+        normal: "#00FF00"
+        bold:   "#00FF00"

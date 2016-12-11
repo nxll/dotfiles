@@ -1,0 +1,4 @@
+#!/bin/bash
+#SWITCH WALL WITH ZENBU
+
+hsetroot -fill /home/nxll/images/wallpapers/{{ wallpaper }}

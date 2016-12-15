@@ -12,37 +12,37 @@
 *italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*highlightColor:     #191A1C
-*borderColor:        #121314
-*cursorColor:        #DBDBDB
+*highlightColor:     #57607A
+*borderColor:        #3C4254
+*cursorColor:        #FDCBAC
 
-*background:  #121314
-*foreground:  #F2ECEC
+*background:  #3C4254
+*foreground:  #FEDDD0
 
 !BLACK
-*color0:      #151617
-*color8:      #191A1C
+*color0:      #4B5269
+*color8:      #57607A
 !RED
-*color1:      #E8E2E2
-*color9:      #FCFCFC
+*color1:      #D8686D
+*color9:      #ED7278
 !GREEN
-*color2:      #AADB0F
-*color10:     #BAF010
+*color2:      #918EB3
+*color10:     #A19EC7
 !YELLOW
-*color3:      #2E3233
-*color11:     #404647
+*color3:      #EBC6A1
+*color11:     #FFD7AF
 !BLUE
-*color4:      #E2E2E2
-*color12:     #F7F7F7
+*color4:      #B84E46
+*color12:     #CC564E
 !MAGENTA
-*color5:      #91BA0D
-*color13:     #A1CF0E
+*color5:      #875F87
+*color13:     #9C6D9C
 !CYAN
-*color6:      #B2B2B2
-*color14:     #C7C7C7
+*color6:      #F77C6C
+*color14:     #FF806F
 !WHITE
-*color7:      #D6D0D0
-*color15:     #DBDBDB
+*color7:      #FDCBAC
+*color15:     #FDCBAC
 
 !URXVT SETTINGS
 URxvt*dynamicColors:      on
@@ -62,6 +62,16 @@ URxvt*perl-ext-common: default,matcher
 !CLICKABLE LINKS
 URxvt*url-launcher:   inox
 URxvt*matcher.button: 1
+
+!2BWM COLORS
+twobwm.border_width: 	   6
+twobwm.outer_border: 	   3
+twobwm.focus_color: 	   #D8686D
+twobwm.unfocus_color: 	   #4B5269
+twobwm.fixed_color: 	   #4B5269
+twobwm.unkill_color: 	   #4B5269
+twobwm.outer_border_color: #3C4254
+twobwm.fixed_unkill_color: #4B5269
 
 !MISC
 Xcursor*theme: 		  pixelfun

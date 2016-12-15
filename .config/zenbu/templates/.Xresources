@@ -63,6 +63,16 @@ URxvt*perl-ext-common: default,matcher
 URxvt*url-launcher:   inox
 URxvt*matcher.button: 1
 
+!2BWM COLORS
+twobwm.border_width: 	   6
+twobwm.outer_border: 	   3
+twobwm.focus_color: 	   {{ wmf }}
+twobwm.unfocus_color: 	   {{ wmu }}
+twobwm.fixed_color: 	   {{ wmu }}
+twobwm.unkill_color: 	   {{ wmu }}
+twobwm.outer_border_color: {{ bgc }}
+twobwm.fixed_unkill_color: {{ wmu }}
+
 !MISC
 Xcursor*theme: 		  pixelfun
 Xcursor*size:  		  16

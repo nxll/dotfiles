@@ -15,8 +15,8 @@ colors:
     foreground: "#EEEEEE"
 
     black:
-        normal: "#11171C" 
-        bold:   "#0F151A"
+        normal: "#181F26" 
+        bold:   "#1B232B"
     red:
         normal: "#AC504F"
         bold:   "#CC504F"

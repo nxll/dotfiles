@@ -5,7 +5,8 @@
 name: "hotline"
 
 #WALLPAPER
-wallpaper:  "hotline_miami_chicken.png"
+wallpaper:  "minimal_sunset.jpg"
+wtype:      "center"
 
 #COLORS
 colors:

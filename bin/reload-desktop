@@ -89,6 +89,9 @@ main ()
 		fi
 	fi
 
+	# Reload Wallpaper
+	$HOME/bin/ws
+
 	# Window Manager {{{
 	# Reload window manager
 	getwm
@@ -100,10 +103,10 @@ main ()
 			herbstclient reload &>/dev/null &
 			;;
 		2bwm)
-			cd $HOME/src/2bwm/
-			make clean &>/dev/null
-			make &>/dev/null
-			make install &>/dev/null
+			#cd $HOME/src/2bwm/
+			#make clean &>/dev/null
+			#make &>/dev/null
+			#make install &>/dev/null
 			xdotool key Super+q &>/dev/null
 			;;
 	esac
@@ -114,7 +117,7 @@ main ()
 		tmux source-file "$tmux_conf" &>/dev/null &
 	fi
 
-	#sxiv
+	# sxiv
 	sxivconf="$HOME/src/sxiv/"
 	if [[ -f "$sxivconf/config.h" ]]; then
 		cd $sxivconf 
@@ -122,6 +125,7 @@ main ()
 		make &>/dev/null
 		make install &>/dev/null
 	fi
+
 }
 
 main

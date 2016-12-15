@@ -28,13 +28,13 @@ static const uint8_t offsets[] = {0,22,0,22};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"{{ wmf }}","{{ wmu }}","{{ n_black }}","{{ n_black }}","{{ n_black }}","{{ bgc }}","{{ bgc }}"};
+static const char *colors[] = {"#D8686D","#4B5269","#4B5269","#4B5269","#4B5269","#3C4254","#3C4254"};
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  * (By changing -DNCOMPTON to -DCOMPTON)
  */
 /* if this is set to true the inner border and outer borders colors will be swapped */
-static const bool inverted_colors = true;
+static const bool inverted_colors = false;
 ///---Cursor---///
 /* default position of the cursor:
  * correct values are:
@@ -62,7 +62,7 @@ static const char *next[]      = { "mpc", "next", NULL };
 static const char *prev[]      = { "mpc", "prev", NULL };
 static const char *volup[]     = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *voldown[]   = { "pulsemixer", "--change-volume", "-5", NULL };
-static const char *mute[]      = { "pulsemixer", "--id", "0", "--toggle-mute", NULL };
+static const char *mute[]      = { "pulsemixer", "--toggle-mute", NULL };
 
 static const char *click1[]    = { "xdotool","click", "1", NULL };
 static const char *click2[]    = { "xdotool","click", "2", NULL };

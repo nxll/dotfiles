@@ -12,16 +12,16 @@
 *italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*highlightColor:     #272A2B
-*borderColor:        #1D2021
+*highlightColor:     #191A1C
+*borderColor:        #121314
 *cursorColor:        #DBDBDB
 
-*background:  #1D2021
+*background:  #121314
 *foreground:  #F2ECEC
 
 !BLACK
-*color0:      #222526
-*color8:      #272A2B
+*color0:      #151617
+*color8:      #191A1C
 !RED
 *color1:      #E8E2E2
 *color9:      #FCFCFC

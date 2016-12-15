@@ -4,6 +4,9 @@
 
 name: "hotline"
 
+#WALLPAPER
+wallpaper:  "hotline_miami_chicken.png"
+
 #COLORS
 colors:
     wmbf:       "#F2014C"

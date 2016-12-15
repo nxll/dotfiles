@@ -1,0 +1,4 @@
+#!/bin/bash
+#SWITCH WALL WITH ZENBU
+
+hsetroot -fill $HOME/images/wallpapers/pexels-photo-70305-bw.jpeg

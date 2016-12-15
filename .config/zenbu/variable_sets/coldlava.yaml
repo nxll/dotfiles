@@ -4,6 +4,10 @@
 
 name: "coldlava"
 
+#WALLPAPER
+wallpaper:  "_DSF6699b_3000px_1500.jpg"
+wtype:      "fill"
+
 #COLORS
 colors:
     wmbf:       "#D8686D"

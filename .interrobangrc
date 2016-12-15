@@ -10,8 +10,8 @@
 set font      = fixed
 set font      = -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
 set geometry  = 1274x16+0+0
-set colors    = #F2ECEC #1D2021 #F2ECEC #1D2021 #AADB0F #1D2021
-set border    = 3px #262A2B
+set colors    = #F2ECEC #121314 #F2ECEC #121314 #AADB0F #121314
+set border    = 3px #F2ECEC
 set bangchar  = !
 set autocomp  = 1
 set list      = true

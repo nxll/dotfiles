@@ -4,37 +4,41 @@
 
 name: "fray"
 
+#WALLPAPER
+wallpaper:  "pexels-photo-70305-bw.jpeg"
+wtype:      "fill"
+
 #COLORS
 colors:
-    wmbf:       "#252629"
-    wmbu:       "#1C1D1F"
+    wmbf:       "#F2ECEC"
+    wmbu:       "#252629"
     
     primary:    "white"
     secondary:  "green"
     background: "#121314"
-    foreground: "#F5F5F5"
+    foreground: "#F2ECEC"
 
     black:
         normal: "#151617" 
         bold:   "#191A1C"
     red:
-        normal: "#F8F8F8"
-        bold:   "#F0F0F0"
+        normal: "#E8E2E2"
+        bold:   "#FCFCFC"
     green:
         normal: "#AADB0F"
-        bold:   "#B2E610"
+        bold:   "#BAF010"
     yellow:
-        normal: "#313233"
-        bold:   "#414243"
+        normal: "#2E3233"
+        bold:   "#404647"
     blue:
         normal: "#E2E2E2"
-        bold:   "#CECECE"
+        bold:   "#F7F7F7"
     magenta:
         normal: "#91BA0D"
-        bold:   "#9DCF0E"
+        bold:   "#A1CF0E"
     cyan:
         normal: "#B2B2B2"
-        bold:   "#C9C9C9"
+        bold:   "#C7C7C7"
     white:
-        normal: "#F2F2F2" 
-        bold:   "#FAFAFA"
+        normal: "#D6D0D0" 
+        bold:   "#DBDBDB"

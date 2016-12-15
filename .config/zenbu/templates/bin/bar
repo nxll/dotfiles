@@ -27,8 +27,8 @@ GLYPH="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 HEIGHT=16
 BORDER=3
 MUSLENGTH=50
-WRKCHAR=+
-#WRKCHAR=""
+WRKCHAR="+"
+#WRKCHAR=""
 
 #DRAW BAR
 FULL=${FULL-━}
@@ -59,45 +59,20 @@ WRK()
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo "%{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B-}%{F-}"
+		echo "%{B$BG2} %{F$COL2}$WRKCHAR%{F-} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR %{B-}%{F-}"
+		echo "%{B$BG2} $WRKCHAR %{F$COL2}$WRKCHAR%{F-} $WRKCHAR $WRKCHAR $WRKCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR %{B-}%{F-}"
+		echo "%{B$BG2} $WRKCHAR $WRKCHAR %{F$COL2}$WRKCHAR%{F-} $WRKCHAR $WRKCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR %{B-}%{F-}"
+		echo "%{B$BG2} $WRKCHAR $WRKCHAR $WRKCHAR %{F$COL2}$WRKCHAR%{F-} $WRKCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B-}%{F-}"
-    	else
-		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
-	fi
-}
-
-WRKS()
-{
-
-	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
-	
-	if [ ${OGWKSPACE} = "0" ] ;
-	then 
-		echo "%{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}     %{B-}%{F-}"
-	elif [ ${OGWKSPACE} = "1" ] ;
-	then
-		echo "%{B$BG2}%{F$FG1}  %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}    %{B-}%{F-}"
-	elif [ ${OGWKSPACE} = "2" ] ;
-	then 
-		echo "%{B$BG2}%{F$FG1}   %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}   %{B-}%{F-}"
-	elif [ ${OGWKSPACE} = "3" ] ;
-	then 
-		echo "%{B$BG2}%{F$FG1}    %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}  %{B-}%{F-}"
-	elif [ ${OGWKSPACE} = "4" ] ;
-	then 
-		echo "%{B$BG2}%{F$FG1}     %{B$COL2}%{F$BG1}  %{B-}%{F-}"
-    	else
+		echo "%{B$BG2} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{F$COL2}$WRKCHAR%{F-} %{B-}"
+    else
 		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
 	fi
 }
@@ -176,7 +151,7 @@ DATE()
 
 CLOCK()
 {
-    echo -n "%{B$COL2}%{F$BG1} $(date "+%H:%M ")%{F-}%{B-}"
+    echo -n "%{B$COL2}%{F$BG1} $(date "+%H:%M") %{F-}%{B-}"
 }
 
 BAR()

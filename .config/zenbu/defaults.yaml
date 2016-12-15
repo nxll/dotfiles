@@ -2,6 +2,10 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
+#WALLPAPER
+wallpaper:  "greybark.png"
+wtype:      "fill"
+
 #FONTS
 fonts:
     #kakwafont
@@ -18,6 +22,11 @@ fonts:
     #font1: "-lucy-tewii-medium-r-normal-*-11-90-100-100-c-60-iso10646-1"
     #font2: "tewii:size=8"
     #font3: "tewii 8"
+
+    #nixedsys
+    #font1:  "-misc-nixedsys-medium-r-normal--15-140-75-75-c-80-iso10646-1"
+    #font2:  "nixedsys:size=15"
+    #font3:  "nixedsys 15"
 
     #drift
     #font1: "-artwiz-drift-medium-r-normal--10-100-75-75-n-60-iso10646-1"

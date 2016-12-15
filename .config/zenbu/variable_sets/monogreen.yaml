@@ -4,6 +4,10 @@
 
 name: "monogreen"
 
+#WALLPAPER
+wallpaper:  "000tile.png"
+wtype:      "tile"
+
 #COLORS
 colors:
     wmbf:       "#00FF00"

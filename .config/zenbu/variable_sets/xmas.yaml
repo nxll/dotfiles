@@ -1,0 +1,43 @@
+# XMAS
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "xmas"
+
+#WALLPAPER
+wallpaper:  "167H.jpg"
+
+#COLORS
+colors:
+    wmbf:       "#E0E0E0"
+    wmbu:       "#E5E5E5"
+
+    primary:    "white"
+    secondary:  "red"
+    background: "#ECECEC"
+    foreground: "#CD0505"
+
+    black:
+        normal: "#E3E3E3"
+        bold:   "#D9D9D9"
+    red:
+        normal: "#CB2828"
+        bold:   "#BF2626"
+    green:
+        normal: "#007424"
+        bold:   "#006620"
+    yellow:
+        normal: "#BFB02C"
+        bold:   "#B3A429"
+    blue:
+        normal: "#8BA8CC"
+        bold:   "#829EBF"
+    magenta:
+        normal: "#B70F00"
+        bold:   "#C41000"
+    cyan:
+        normal: "#6DE6CE"
+        bold:   "#73F2D9"
+    white:
+        normal: "#BF0505"
+        bold:   "#B30505"

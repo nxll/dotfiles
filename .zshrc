@@ -26,7 +26,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # PROMPT
-PROMPT="%F{2}≠ %F{7}%n%F{1}╾╼%F{6}[%F{7}%1~%F{6}]%F{2};%f"
+PROMPT="%K{8}%F{11} » %K{0}%F{6} [%F{7}%1~%F{6}]%F{2};%f%k "
+#PROMPT="%F{2}≠ %F{7}%n%F{1}╾╼%F{6}[%F{7}%1~%F{6}]%F{2};%f"
 #PROMPT="%F{2}≠%f "
 
 # NO DUPES
@@ -54,6 +55,7 @@ alias remove='sudo pacman -Rs'
 alias update='sudo pacman -Syu'
 alias search='sudo pacman -Ss'
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias pkgcnt='pacman -Q | wc -l'
 
 # OTHER
 alias todo='separator;echo;echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 2)TODO$(tput sgr0)";cat $HOME/.todo;echo;separator'

@@ -12,37 +12,37 @@
 *italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*highlightColor:     #57607A
-*borderColor:        #3C4254
-*cursorColor:        #FDCBAC
-
-*background:  #3C4254
-*foreground:  #FEDDD0
+*background:  #21211F
+*foreground:  #B8B9B4
 
 !BLACK
-*color0:      #4B5269
-*color8:      #57607A
+*color0:      #262624
+*color8:      #2B2B29
 !RED
-*color1:      #D8686D
-*color9:      #ED7278
+*color1:      #939490
+*color9:      #989995
 !GREEN
-*color2:      #918EB3
-*color10:     #A19EC7
+*color2:      #5E5E5C
+*color10:     #636361
 !YELLOW
-*color3:      #EBC6A1
-*color11:     #FFD7AF
+*color3:      #B6B8B3
+*color11:     #BBBDB8
 !BLUE
-*color4:      #B84E46
-*color12:     #CC564E
+*color4:      #727370
+*color12:     #777875
 !MAGENTA
-*color5:      #875F87
-*color13:     #9C6D9C
+*color5:      #D1D1CB
+*color13:     #D6D6D0
 !CYAN
-*color6:      #F77C6C
-*color14:     #FF806F
+*color6:      #636361
+*color14:     #696966
 !WHITE
-*color7:      #FDCBAC
-*color15:     #FDCBAC
+*color7:      #AAABA6
+*color15:     #AFB0AB
+
+*highlightColor:     #2B2B29
+*borderColor:        #21211F
+*cursorColor:        #AFB0AB
 
 !URXVT SETTINGS
 URxvt*dynamicColors:      on
@@ -64,14 +64,14 @@ URxvt*url-launcher:   inox
 URxvt*matcher.button: 1
 
 !2BWM COLORS
-twobwm.border_width: 	   6
-twobwm.outer_border: 	   3
-twobwm.focus_color: 	   #D8686D
-twobwm.unfocus_color: 	   #4B5269
-twobwm.fixed_color: 	   #4B5269
-twobwm.unkill_color: 	   #4B5269
-twobwm.outer_border_color: #3C4254
-twobwm.fixed_unkill_color: #4B5269
+twobwm.border_width: 	   5
+twobwm.outer_border: 	   2
+twobwm.focus_color: 	   #A8A8A6
+twobwm.unfocus_color: 	   #353533
+twobwm.fixed_color: 	   #353533
+twobwm.unkill_color: 	   #353533
+twobwm.outer_border_color: #21211F
+twobwm.fixed_unkill_color: #353533
 
 !MISC
 Xcursor*theme: 		  pixelfun

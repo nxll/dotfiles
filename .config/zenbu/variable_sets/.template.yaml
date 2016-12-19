@@ -4,6 +4,10 @@
 
 name: ""
 
+#WALLPAPER
+wallpaper:  ""
+wtype:      ""
+
 #COLORS
 colors:
     wmbf:       ""

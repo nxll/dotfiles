@@ -12,10 +12,6 @@
 *italicFont: {{ font1 }} 
 
 !COLORS
-*highlightColor:     {{ b_black }}
-*borderColor:        {{ bgc }}
-*cursorColor:        {{ b_white  }}
-
 *background:  {{ bgc  }}
 *foreground:  {{ fgc  }}
 
@@ -44,6 +40,10 @@
 *color7:      {{ n_white  }}
 *color15:     {{ b_white  }}
 
+*highlightColor:     {{ b_black }}
+*borderColor:        {{ bgc }}
+*cursorColor:        {{ b_white  }}
+
 !URXVT SETTINGS
 URxvt*dynamicColors:      on
 URxvt.internalBorder:     15
@@ -64,8 +64,8 @@ URxvt*url-launcher:   inox
 URxvt*matcher.button: 1
 
 !2BWM COLORS
-twobwm.border_width: 	   6
-twobwm.outer_border: 	   3
+twobwm.border_width: 	   5
+twobwm.outer_border: 	   2
 twobwm.focus_color: 	   {{ wmf }}
 twobwm.unfocus_color: 	   {{ wmu }}
 twobwm.fixed_color: 	   {{ wmu }}
@@ -73,6 +73,15 @@ twobwm.unkill_color: 	   {{ wmu }}
 twobwm.outer_border_color: {{ bgc }}
 twobwm.fixed_unkill_color: {{ wmu }}
 
+!SXIV COLORS
+sxiv.font: 			{{ font2 }}
+sxiv.win_bg_color: 	{{ bgc }}
+sxiv.win_fs_color: 	{{ b_black }}
+sxiv.sel_color: 	{{ b_black }}
+sxiv.bar_bg_color: 	{{ n_black }}
+sxiv.bar_fg_color: 	{{ fgc }}
+sxiv.win_width: 	460
+sxiv.win_height: 	350
+
 !MISC
-Xcursor*theme: 		  pixelfun
 Xcursor*size:  		  16

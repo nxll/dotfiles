@@ -73,6 +73,15 @@ twobwm.unkill_color: 	   #353533
 twobwm.outer_border_color: #21211F
 twobwm.fixed_unkill_color: #353533
 
+!SXIV COLORS
+sxiv.font: 			kakwafont:size=8
+sxiv.win_bg_color: 	#21211F
+sxiv.win_fs_color: 	#2B2B29
+sxiv.sel_color: 	#2B2B29
+sxiv.bar_bg_color: 	#262624
+sxiv.bar_fg_color: 	#B8B9B4
+sxiv.win_width: 	460
+sxiv.win_height: 	350
+
 !MISC
-Xcursor*theme: 		  pixelfun
 Xcursor*size:  		  16

@@ -45,7 +45,7 @@
 *cursorColor:        {{ b_white  }}
 
 !URXVT SETTINGS
-URxvt*dynamicColors:      on
+URxvt*dynamicColors:      off
 URxvt.internalBorder:     15
 URxvt*lineSpace:          2
 URxvt*scrollBar:          false

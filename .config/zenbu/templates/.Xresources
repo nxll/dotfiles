@@ -12,48 +12,47 @@
 *italicFont: {{ font1 }} 
 
 !COLORS
-*background:  {{ bgc  }}
-*foreground:  {{ fgc  }}
+*highlightColor: {{ b_black }}
+*cursorColor: 	 {{ b_white  }}
+*borderColor: 	 {{ bgc }}
+*background:  	 {{ bgc  }}
+*foreground:  	 {{ fgc  }}
 
 !BLACK
-*color0:      {{ n_black  }}
-*color8:      {{ b_black  }}
+*color0:  {{ n_black  }}
+*color8:  {{ b_black  }}
 !RED
-*color1:      {{ n_red  }}
-*color9:      {{ b_red  }}
+*color1:  {{ n_red  }}
+*color9:  {{ b_red  }}
 !GREEN
-*color2:      {{ n_green  }}
-*color10:     {{ b_green  }}
+*color2:  {{ n_green  }}
+*color10: {{ b_green  }}
 !YELLOW
-*color3:      {{ n_yellow  }}
-*color11:     {{ b_yellow  }}
+*color3:  {{ n_yellow  }}
+*color11: {{ b_yellow  }}
 !BLUE
-*color4:      {{ n_blue  }}
-*color12:     {{ b_blue  }}
+*color4:  {{ n_blue  }}
+*color12: {{ b_blue  }}
 !MAGENTA
-*color5:      {{ n_magenta  }}
-*color13:     {{ b_magenta  }}
+*color5:  {{ n_magenta  }}
+*color13: {{ b_magenta  }}
 !CYAN
-*color6:      {{ n_cyan  }}
-*color14:     {{ b_cyan  }}
+*color6:  {{ n_cyan  }}
+*color14: {{ b_cyan  }}
 !WHITE
-*color7:      {{ n_white  }}
-*color15:     {{ b_white  }}
-
-*highlightColor: 	{{ b_black }}
-*cursorColor: 		{{ b_white  }}
-*borderColor: 		{{ bgc }}
+*color7:  {{ n_white  }}
+*color15: {{ b_white  }}
 
 !URXVT SETTINGS
-URxvt*dynamicColors:      on
-URxvt.internalBorder:     15
-URxvt*lineSpace:          2
-URxvt*scrollBar:          false
-URxvt.geometry:           74x16
-URxvt*saveLines:          1000
-URxvt*cursorUnderline:    false
-URxvt*cursorBlink:        true
-URxvt*allow_bold:         true
+URxvt*dynamicColors:   on
+URxvt.internalBorder:  15
+URxvt*lineSpace:       2
+URxvt*scrollBar:       false
+URxvt.geometry:        74x16
+URxvt*saveLines:       1000
+URxvt*cursorUnderline: false
+URxvt*cursorBlink:     true
+URxvt*allow_bold:      true
 
 !PERL
 URxvt*perl-lib:        /usr/lib/urxvt/perl/
@@ -74,14 +73,14 @@ twobwm.outer_border_color: {{ bgc }}
 twobwm.fixed_unkill_color: {{ wmu }}
 
 !SXIV COLORS
-sxiv.font: 			{{ font2 }}
-sxiv.win_bg_color: 	{{ bgc }}
-sxiv.win_fs_color: 	{{ b_black }}
-sxiv.sel_color: 	{{ b_black }}
-sxiv.bar_bg_color: 	{{ n_black }}
-sxiv.bar_fg_color: 	{{ fgc }}
-sxiv.win_width: 	460
-sxiv.win_height: 	350
+sxiv.font: 		   {{ font2 }}
+sxiv.win_bg_color: {{ bgc }}
+sxiv.win_fs_color: {{ b_black }}
+sxiv.sel_color:    {{ b_black }}
+sxiv.bar_bg_color: {{ n_black }}
+sxiv.bar_fg_color: {{ fgc }}
+sxiv.win_width:    460
+sxiv.win_height:   350
 
 !MISC
-Xcursor*size:  		  16
+Xcursor*size: 16

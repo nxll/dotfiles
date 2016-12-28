@@ -1,0 +1,9 @@
+#!/bin/sh
+# Toggle lemonbar
+
+if pgrep "lemonbar" > /dev/null
+then
+    pkill -x lemonbar && herbstclient pad 0 0   
+else
+    $HOME/bin/bar &
+fi

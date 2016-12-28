@@ -7,24 +7,24 @@ style "default"
         fg[ACTIVE]              = "{{ fgc }}"
         fg[INSENSITIVE]         = "{{ fgc }}"
         fg[PRELIGHT]            = "{{ b_white }}"
-        fg[SELECTED]            = "{{ b_white }}"
+        fg[SELECTED]            = "{{ n_green }}"
         
         bg[ACTIVE]              = "{{ bgc }}"
 		bg[NORMAL]              = "{{ bgc }}"
         bg[INSENSITIVE]         = "{{ bgc }}"
         bg[PRELIGHT]            = "{{ b_black }}"
-        bg[SELECTED]            = "{{ n_black }}"
+        bg[SELECTED]            = "{{ b_black }}"
 
         base[NORMAL]            = "{{ n_black }}"
         base[ACTIVE]            = "{{ n_black }}"
         base[INSENSITIVE]       = "{{ n_black }}"
         base[PRELIGHT]          = "{{ b_black }}"
-		base[SELECTED]          = "{{ n_black }}"
+		base[SELECTED]          = "{{ b_black }}"
         
         text[NORMAL]            = "{{ fgc }}"
         text[ACTIVE]            = "{{ fgc }}"
         text[PRELIGHT]          = "{{ b_white }}"
-        text[SELECTED]          = "{{ b_white }}"
+        text[SELECTED]          = "{{ n_green }}"
         text[INSENSITIVE]       = mix (0.5, @text_color, @base_color)
 	
 
@@ -73,7 +73,7 @@ style "menu"
 style "entry"
 {
 	bg[SELECTED] = "{{ n_black }}"
-	fg[SELECTED] = "{{ fgc }}"
+	fg[SELECTED] = "{{ n_green }}"
 }
 
 class "GtkWidget" style "default"
@@ -95,7 +95,7 @@ style "mist-text-is-fg-color-workaround"
         text[ACTIVE]              = "{{ fgc }}"
         text[INSENSITIVE]         = "{{ fgc }}"
         text[PRELIGHT]            = "{{ b_white }}"
-        text[SELECTED]            = "{{ b_white }}"
+        text[SELECTED]            = "{{ n_green }}"
 }
 widget_class "*.<GtkComboBox>.<GtkCellView>"   style "mist-text-is-fg-color-workaround"
 
@@ -105,7 +105,7 @@ style "mist-menuitem-text-is-fg-color-workaround"
         text[ACTIVE]              = "{{ fgc }}"
         text[INSENSITIVE]         = "{{ fgc }}"
         text[PRELIGHT]            = "{{ b_white }}"
-        text[SELECTED]            = "{{ b_white }}"
+        text[SELECTED]            = "{{ n_green }}"
 }
 widget "*.gtk-combobox-popup-menu.*"   style "mist-menuitem-text-is-fg-color-workaround"
 
@@ -118,7 +118,7 @@ style "mist-fg-is-text-color-workaround"
         fg[ACTIVE]            = "{{ fgc }}"
         fg[INSENSITIVE]       = "{{ fgc }}"
         fg[PRELIGHT]          = "{{ b_white }}"
-        fg[SELECTED]          = "{{ b_white }}"
+        fg[SELECTED]          = "{{ n_green }}"
 }
 widget_class "*<GtkListItem>*" style "mist-fg-is-text-color-workaround"
 # The same problem also exists for GtkCList and GtkCTree

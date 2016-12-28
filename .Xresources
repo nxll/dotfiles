@@ -12,48 +12,47 @@
 *italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*background:  #21211F
-*foreground:  #B8B9B4
+*highlightColor: #57607A
+*cursorColor: 	 #FDCBAC
+*borderColor: 	 #3C4254
+*background:  	 #3C4254
+*foreground:  	 #FEDDD0
 
 !BLACK
-*color0:      #262624
-*color8:      #2B2B29
+*color0:  #4B5269
+*color8:  #57607A
 !RED
-*color1:      #939490
-*color9:      #989995
+*color1:  #D8686D
+*color9:  #ED7278
 !GREEN
-*color2:      #5E5E5C
-*color10:     #636361
+*color2:  #918EB3
+*color10: #A19EC7
 !YELLOW
-*color3:      #B6B8B3
-*color11:     #BBBDB8
+*color3:  #EBC6A1
+*color11: #FFD7AF
 !BLUE
-*color4:      #727370
-*color12:     #777875
+*color4:  #D95258
+*color12: #F75D64
 !MAGENTA
-*color5:      #D1D1CB
-*color13:     #D6D6D0
+*color5:  #875F87
+*color13: #9C6D9C
 !CYAN
-*color6:      #636361
-*color14:     #696966
+*color6:  #F77C6C
+*color14: #FF806F
 !WHITE
-*color7:      #AAABA6
-*color15:     #AFB0AB
-
-*highlightColor: 	#2B2B29
-*cursorColor: 		#AFB0AB
-*borderColor: 		#21211F
+*color7:  #F2C2A5
+*color15: #FDCBAC
 
 !URXVT SETTINGS
-URxvt*dynamicColors:      on
-URxvt.internalBorder:     15
-URxvt*lineSpace:          2
-URxvt*scrollBar:          false
-URxvt.geometry:           74x16
-URxvt*saveLines:          1000
-URxvt*cursorUnderline:    false
-URxvt*cursorBlink:        true
-URxvt*allow_bold:         true
+URxvt*dynamicColors:   on
+URxvt.internalBorder:  15
+URxvt*lineSpace:       2
+URxvt*scrollBar:       false
+URxvt.geometry:        74x16
+URxvt*saveLines:       1000
+URxvt*cursorUnderline: false
+URxvt*cursorBlink:     true
+URxvt*allow_bold:      true
 
 !PERL
 URxvt*perl-lib:        /usr/lib/urxvt/perl/
@@ -66,22 +65,22 @@ URxvt*matcher.button: 1
 !2BWM COLORS
 twobwm.border_width: 	   5
 twobwm.outer_border: 	   2
-twobwm.focus_color: 	   #A8A8A6
-twobwm.unfocus_color: 	   #353533
-twobwm.fixed_color: 	   #353533
-twobwm.unkill_color: 	   #353533
-twobwm.outer_border_color: #21211F
-twobwm.fixed_unkill_color: #353533
+twobwm.focus_color: 	   #D8686D
+twobwm.unfocus_color: 	   #4B5269
+twobwm.fixed_color: 	   #4B5269
+twobwm.unkill_color: 	   #4B5269
+twobwm.outer_border_color: #3C4254
+twobwm.fixed_unkill_color: #4B5269
 
 !SXIV COLORS
-sxiv.font: 			kakwafont:size=8
-sxiv.win_bg_color: 	#21211F
-sxiv.win_fs_color: 	#2B2B29
-sxiv.sel_color: 	#2B2B29
-sxiv.bar_bg_color: 	#262624
-sxiv.bar_fg_color: 	#B8B9B4
-sxiv.win_width: 	460
-sxiv.win_height: 	350
+sxiv.font: 		   kakwafont:size=8
+sxiv.win_bg_color: #3C4254
+sxiv.win_fs_color: #57607A
+sxiv.sel_color:    #57607A
+sxiv.bar_bg_color: #4B5269
+sxiv.bar_fg_color: #FEDDD0
+sxiv.win_width:    460
+sxiv.win_height:   350
 
 !MISC
-Xcursor*size:  		  16
+Xcursor*size: 16

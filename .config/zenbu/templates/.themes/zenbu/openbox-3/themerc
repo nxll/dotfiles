@@ -1,0 +1,44 @@
+# MENU 
+menu.items.active.bg: flat solid
+menu.items.active.bg.color: {{ b_black }}
+menu.items.active.text.color: {{ fgc }}
+menu.items.bg: flat solid
+menu.items.bg.color: {{ bgc }}
+menu.items.disabled.text.color: {{ n_black }}
+menu.items.text.color: {{ fgc }}
+menu.overlap.x: -4
+menu.separator.color: {{ bgc }}
+menu.title.bg: flat solid
+menu.title.*.color: {{ bgc }}
+*.border.color: {{ n_black }}
+*.justify: left
+
+# OSD
+osd.bg: flat solid
+osd.bg.color: {{ bgc }}
+osd.hilight.bg: flat solid
+osd.hilight.bg.color: {{ b_black }}
+osd.label.bg: parentrelative
+osd.label.text.color: {{ fgc }}
+osd.unhilight.bg: flat solid
+osd.unhilight.bg.color: {{ n_black }}
+
+# PADDING
+padding.height: 1
+padding.width: 0
+window.client.padding.width: 0
+
+# WINDOW
+border.width: 1
+window.handle.width: 0
+window.active.title.bg: flat
+window.*.title.bg: flat
+window.active.title.bg.color: {{ wmf }}
+window.inactive.title.bg.color: {{ wmu }}
+window.*.title.separator.color: {{ n_black }}
+
+# TWEAKS
+*.*.label.bg: parentrelative
+*.*.button.*.bg: parentrelative
+window.*.label.text.color: {{ n_black }}
+*.*.button.*.image.color: {{ n_black }}

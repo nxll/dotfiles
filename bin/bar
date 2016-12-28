@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #  ██                       
 # ░██                       
 # ░██       ██████   ██████ 
@@ -14,91 +14,73 @@
 pkill lemonbar
 
 #COLORS
-FG1="#F2ECEC"
-FG2="#D6D0D0"
-BG1="#1D2021"
-BG2="#222526"
-COL1="#272A2B"
-COL2="#AADB0F"
+FG1="#FEDDD0"
+FG2="#F2C2A5"
+BG1="#3C4254"
+BG2="#4B5269"
+COL1="#57607A"
+COL2="#918EB3"
 
 #VARS
 FONT="-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
 GLYPH="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-HEIGHT=16
+HEIGHT=18
 BORDER=3
 MUSLENGTH=50
-WRKCHAR=+
-#WRKCHAR=""
+ACTCHAR="+"
+SELCHAR="+"
+#SELCHAR=""
 
-#DRAW BAR
-FULL=${FULL-━}
-EMPTY=${EMPTY-┄}
-SIZE=${SIZE-8}
-
-DRAW()
-{
-	perc=$1
-	size=$2
-
-	inc=$(( perc * size / 100 ))
-
-	for v in $(seq 0 $(( size - 1 )))
-	do
-		[ "$v" -le "$inc" ] \
-			&& out="${out}${FULL}" \
-			|| out="${out}${EMPTY}"
-	done
-
-	echo -n "$out"
-}
+if pgrep herbstluftwm; then
+monitor=${1:-0}
+herbstclient pad $monitor 24
+fi
 
 WRK()
 {
-
 	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo "%{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B-}%{F-}"
+		echo -e "%{B$BG2} %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B$BG2}%{F$FG1} $WRKCHAR %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B$COL2}%{F$BG1} $WRKCHAR %{B-}%{F-}"
-    	else
-		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} %{B-}"
+    else
+		echo -e "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
 	fi
 }
 
-WRKS()
+WRKBG()
 {
-
 	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo "%{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}     %{B-}%{F-}"
+		echo -e "%{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo "%{B$BG2}%{F$FG1}  %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}    %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1}   %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}   %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1}    %{B$COL2}%{F$BG1}  %{B$BG2}%{F$FG1}  %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo "%{B$BG2}%{F$FG1}     %{B$COL2}%{F$BG1}  %{B-}%{F-}"
-    	else
-		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B$COL2}%{F$BG1} $ACTCHAR %{F-}%{B-}"
+    else
+		echo -e "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
 	fi
 }
 
@@ -124,9 +106,7 @@ MUSIC()
 
 VOL()
 {
-    percent=$(pamixer --get-volume)
-
-    echo -n "%{B$BG2}  %{B-} ${percent}%"
+	echo -n "%{B$BG2}  %{B-} $(pamixer --get-volume)%"
 }
 
 BAT()
@@ -158,15 +138,15 @@ BAT()
 
 NET()
 {
-   symbol="%{B$BG2}  %{B-}"
-   wifi_ssid=$(
-   if [ grep -q "Not connected."] ; then
-      echo "No AP"
-   else
-      iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
-   fi)
+	SYMBOL="%{B$BG2}  %{B-}"
+	WIFI_SSID=$(
+	if [ grep -q "Not connected."] ; then
+		echo "No AP"
+	else
+		iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
+	fi)
 
-   echo -n "${symbol} ${wifi_ssid}"
+	echo -n "${SYMBOL} ${WIFI_SSID}"
 }
 
 DATE()
@@ -176,14 +156,14 @@ DATE()
 
 CLOCK()
 {
-    echo -n "%{B$COL2}%{F$BG1} $(date "+%H:%M ")%{F-}%{B-}"
+    echo -n "%{B$COL2}%{F$BG1} $(date "+%H:%M") %{F-}%{B-}"
 }
 
 BAR()
 { 
     #ADD ALL THE THINGS
     while true; do
-		BUF="$(MUSIC)%{c}$(WRK)%{r}$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
+		BUF="$(MUSIC)%{c}$(WRKBG)%{r}$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
 		echo $BUF	
         sleep 0.1
     done | lemonbar -f $GLYPH \
@@ -192,7 +172,7 @@ BAR()
         -B $BG1 \
         -u $BORDER \
 		-r $BORDER \
-		-R "#262A2B" \
+		-R "#4B5269" \
         -g 1274x$HEIGHT+0+0 | sh &
 }
 

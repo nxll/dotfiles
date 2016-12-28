@@ -1,0 +1,40 @@
+# BARRAGE
+# for zenbu
+# original by Shinryuu <https://github.com/Shinryuu>
+
+name: "barrage"
+
+#COLORS
+colors:
+    wmbf:       "#5E3838"
+    wmbu:       "#282828"
+
+    primary:    "white"
+    secondary:  "red"
+    background: "#1D1F21"
+    foreground: "#7B8695"
+
+    black:
+        normal: "#26292B"
+        bold:   "#2F3336"
+    red:
+        normal: "#785561"
+        bold:   "#8A6270"
+    green:
+        normal: "#58614F"
+        bold:   "#6D7762"
+    yellow:
+        normal: "#7E735A"
+        bold:   "#8D8063"
+    blue:
+        normal: "#424A64"
+        bold:   "#626C94"
+    magenta:
+        normal: "#4D3E4C"
+        bold:   "#665064"
+    cyan:
+        normal: "#3C5A5D"
+        bold:   "#548084"
+    white:
+        normal: "#7B8695"
+        bold:   "#94A1B3"

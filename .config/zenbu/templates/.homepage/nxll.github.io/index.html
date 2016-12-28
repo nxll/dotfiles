@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<title>NXLL</title>
+		<link href="favicon.ico" rel="icon" type="image/ico" />
+
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">		
+
+		<style type="text/css">
+
+			body {
+				background:{{ n_black }};
+				color:{{ fgc }}; 
+				font-family:'Share Tech Mono', monospace;
+				font-size:11px;
+			}
+
+			a {
+				color:{{ fgc }};
+				background:{{ n_black }};
+				text-decoration:none;
+			}
+
+			a:hover {
+				color:{{ b_black }};
+			}
+
+			#content {
+				background:{{ bgc }};
+				position:absolute;
+				border:3px {{ wmu }} solid;
+				top:35%;
+				left:50%;
+				margin:-100 0 0 -175;
+				padding:20px;
+				-moz-box-shadow: 2px 2px 1px {{ b_black }};
+				-webkit-box-shadow: 2px 2px 1px {{ b_black }};
+				box-shadow: 2px 2px 1px {{ b_black }};
+			}
+
+			#content:hover {
+				border:3px {{ wmf }} solid;
+			}
+
+			#content a {
+				color:{{ fgc }};
+				background:{{ n_black }};
+				border:1px {{ b_black }} solid;
+				line-height:18px;
+				padding:1px;
+				text-decoration:none;
+			}
+
+			#content a:hover {
+				color:{{ bgc }};
+				background:{{ fgc }};
+			}
+			
+			#content img {
+				width:200px;
+				height:180px;
+				margin-left:20%;	
+			}
+
+			#content table {
+				font-family:'Share Tech Mono', monospace;
+				font-size:11px;
+				background:{{ bgc }};
+				border:0px {{ n_black }} solid;	
+			}
+
+			#content ctitle {
+				color:{{ fgc }};
+				background:{{ n_black }};
+				border:1px {{ b_black }} solid;
+				padding:1px;
+			}
+
+			#content sep {
+				color:{{ n_green }};
+				font-family:'Share Tech Mono', monospace;
+				font-size:16px;
+			}
+
+			#search_box {
+				background:{{ n_black }};
+				color:{{ fgc }}; 
+				font-family:'Share Tech Mono', monospace;
+				font-size:11px;
+				border:1px {{ b_black }} solid;
+				margin-left:18%;
+				text-transform:uppercase;
+				width:100px;
+				text-align:center;
+			}
+
+			#search_box:focus {
+				outline : none;	    
+			}
+			    
+			#search input {
+				color:{{ fgc }};
+				border: 0px solid;						    
+			}
+
+			#search input.typing {
+				color:{{ fgc }};	    
+			}
+
+			#footer {
+			}
+
+		</style>
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+        $( function() {
+		$( "#content"  ).draggable();     
+        }  );
+        </script>
+	</head>
+
+	<body>
+		<div id="content" draggable="true">
+			<img src=goathead.png>
+			<table class="links">
+				<tr>
+					<td></td>
+					<td></td>
+					<td><form action='https://duckduckgo.com/?q=' id='search_form' method='get' target="_blank">
+						<input id="search_box" name='q' type='text' placeholder='WOT?' autocomplete='off' value=""/>
+					</form></td>
+				</tr>
+				<tr>
+					<td align='right'><ctitle>GENERAL</ctitle></td>
+					<td align='center'><sep>&#x2260;</sep></td>
+					<td>
+					<a href="https://www.nixers.net/" target="_blank">nixers</a>
+					<a href="https://github.com/" target="_blank">github</a>
+					<a href="https://github.com/nxll/dotfiles" target="_blank">[1]</a>
+					<a href="https://git.teknik.io/nxll/dotfiles" target="_blank">[2]</a>
+					<a href="https://tpb.run/" target="_blank">TPB</a>
+					<a href="https://teknik.io/" target="_blank">teknik</a>
+					<a href="http://danielfgray.gitlab.io/dtoplist/#/?_k=aspfyp" target="_blank">dtops</a>
+					<td>
+				</tr>
+				<tr>
+					<td align='right'><ctitle>REDDIT</ctitle></td>	
+					<td align='center'><sep>&#x2260;</sep></td>
+					<td>
+					<a href="https://www.reddit.com/r/unixart" target="_blank">unixart</a>
+					<a href="https://www.reddit.com/r/unixporn" target="_blank">unixpr0n</a>
+					<a href="https://www.reddit.com/r/Horrorsynth" target="_blank">horrorsynth</a>
+					<a href="https://www.reddit.com/r/Defcon" target="_blank">defcon</a>
+					<a href="https://www.reddit.com/r/FUI" target="_blank">FUI</a>
+					</td>
+				</tr>
+				<tr>
+					<td align='right'><ctitle>YOUTUBE</ctitle></td>
+					<td align='center'><sep>&#x2260;</sep></td>
+					<td>
+					<a href="https://www.youtube.com/channel/UCvrLvII5oxSWEMEkszrxXEA/videos" target="_blank">N O D E</a>
+					<a href="https://www.youtube.com/user/teksyndicate/videos" target="_blank">L1Tech</a>
+					<a href="https://www.youtube.com/user/CGPGrey/videos" target="_blank">CGPGrey</a>
+					<a href="https://www.youtube.com/user/Robbaz/videos" target="_blank">Robbaz</a>
+					<a href="https://www.youtube.com/channel/UCwW_vaMPlq8J4weKDsfeJzw/videos" target="_blank">Bearing</a>
+					</td>
+				</tr>
+				<tr>
+					<td align='right'><ctitle>4CHAN</ctitle></td>
+					<td align='center'><sep>&#x2260;</sep></td>
+					<td>
+					<a href="https://boards.4chan.org/g/" target="_blank">/g/</a>
+					<a href="http://boards.4chan.org/t/" target="_blank">/t/</a>
+					<a href="https://boards.4chan.org/wg/" target="_blank">/wg/</a>
+					<a href="https://boards.4chan.org/b/" target="_blank">/b/</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="footer">
+		</div>
+	</body>
+
+</html>

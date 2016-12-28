@@ -11,14 +11,14 @@
 #sxhkd &
 setxkbmap -layout gb &
 xrdb -load ~/.Xresources &
-hsetroot -fill $HOME/images/wallpapers/greybark.png
+$HOME/bin/ws &
+mpd &
 compton --config ~/.compton.conf &
 xsetroot -cursor_name left_ptr &
 urxvtd -q -o -f &
 pulseaudio --start &
 dunst &
 udiskie -2 &
-xfce4-power-manager &
 $HOME/bin/bar &
 
 # WM

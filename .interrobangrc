@@ -7,18 +7,17 @@
 # ░██ ███  ░██  ░░██ ░░██████░███   ░███   ░░██████ ░██████ ░░████████ ███  ░██  █████  
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
-set font      = fixed
 set font      = -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
-set geometry  = 1274x16+0+0
-set colors    = #B8B9B4 #21211F #B8B9B4 #21211F #5E5E5C #21211F
-set border    = 3px #353533
+set geometry  = 1278x18+0+0
+set colors    = #FEDDD0 #3C4254 #FEDDD0 #3C4254 #918EB3 #3C4254
+set border    = 3px #4B5269
 set bangchar  = !
 set autocomp  = 1
 set list      = true
 set last      = true
 set margin    = -80
 set shell     = /usr/bin/zsh
-set run_hook  = %s || notify-send "error: command not found"
+set run_hook  = %s || notify-send "ERROR"
 
 #BANGS
 bang !        = urxvtc -e %s

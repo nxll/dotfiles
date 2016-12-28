@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #  ██                       
 # ░██                       
 # ░██       ██████   ██████ 
@@ -24,56 +24,63 @@ COL2="{{ n_green }}"
 #VARS
 FONT="{{ font1 }}"
 GLYPH="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-HEIGHT=16
+HEIGHT=18
 BORDER=3
 MUSLENGTH=50
-WRKCHAR="+"
-#WRKCHAR=""
+ACTCHAR="+"
+SELCHAR="+"
+#SELCHAR=""
 
-#DRAW BAR
-FULL=${FULL-━}
-EMPTY=${EMPTY-┄}
-SIZE=${SIZE-8}
-
-DRAW()
-{
-	perc=$1
-	size=$2
-
-	inc=$(( perc * size / 100 ))
-
-	for v in $(seq 0 $(( size - 1 )))
-	do
-		[ "$v" -le "$inc" ] \
-			&& out="${out}${FULL}" \
-			|| out="${out}${EMPTY}"
-	done
-
-	echo -n "$out"
-}
+if pgrep herbstluftwm; then
+monitor=${1:-0}
+herbstclient pad $monitor 24
+fi
 
 WRK()
 {
-
 	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo "%{B$BG2} %{F$COL2}$WRKCHAR%{F-} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{B-}"
+		echo -e "%{B$BG2} %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo "%{B$BG2} $WRKCHAR %{F$COL2}$WRKCHAR%{F-} $WRKCHAR $WRKCHAR $WRKCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo "%{B$BG2} $WRKCHAR $WRKCHAR %{F$COL2}$WRKCHAR%{F-} $WRKCHAR $WRKCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo "%{B$BG2} $WRKCHAR $WRKCHAR $WRKCHAR %{F$COL2}$WRKCHAR%{F-} $WRKCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo "%{B$BG2} $WRKCHAR $WRKCHAR $WRKCHAR $WRKCHAR %{F$COL2}$WRKCHAR%{F-} %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} %{B-}"
     else
-		echo "%{B$COL2}%{F$BG1} ERROR %{B-}%{F-}"
+		echo -e "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
+	fi
+}
+
+WRKBG()
+{
+	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
+	
+	if [ ${OGWKSPACE} = "0" ] ;
+	then 
+		echo -e "%{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
+	elif [ ${OGWKSPACE} = "1" ] ;
+	then
+		echo -e "%{B$BG2} $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{B-}"
+	elif [ ${OGWKSPACE} = "2" ] ;
+	then 
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR %{B-}"
+	elif [ ${OGWKSPACE} = "3" ] ;
+	then 
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR %{B-}"
+	elif [ ${OGWKSPACE} = "4" ] ;
+	then 
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B$COL2}%{F$BG1} $ACTCHAR %{F-}%{B-}"
+    else
+		echo -e "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
 	fi
 }
 
@@ -99,9 +106,7 @@ MUSIC()
 
 VOL()
 {
-    percent=$(pamixer --get-volume)
-
-    echo -n "%{B$BG2}  %{B-} ${percent}%"
+	echo -n "%{B$BG2}  %{B-} $(pamixer --get-volume)%"
 }
 
 BAT()
@@ -133,15 +138,15 @@ BAT()
 
 NET()
 {
-   symbol="%{B$BG2}  %{B-}"
-   wifi_ssid=$(
-   if [ grep -q "Not connected."] ; then
-      echo "No AP"
-   else
-      iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
-   fi)
+	SYMBOL="%{B$BG2}  %{B-}"
+	WIFI_SSID=$(
+	if [ grep -q "Not connected."] ; then
+		echo "No AP"
+	else
+		iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
+	fi)
 
-   echo -n "${symbol} ${wifi_ssid}"
+	echo -n "${SYMBOL} ${WIFI_SSID}"
 }
 
 DATE()
@@ -158,7 +163,7 @@ BAR()
 { 
     #ADD ALL THE THINGS
     while true; do
-		BUF="$(MUSIC)%{c}$(WRK)%{r}$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
+		BUF="$(MUSIC)%{c}$(WRKBG)%{r}$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
 		echo $BUF	
         sleep 0.1
     done | lemonbar -f $GLYPH \

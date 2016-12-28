@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -e "
+ \e[0;30mBLACK \e[0;31mRED \e[0;32mGREEN \e[0;33mYELLOW \e[0;34mBLUE \e[0;35mPURPLE \e[0;36mCYAN \e[0;37mWHITE
+ \e[1;30mBLACK \e[1;31mRED \e[1;32mGREEN \e[1;33mYELLOW \e[1;34mBLUE \e[1;35mPURPLE \e[1;36mCYAN \e[1;37mWHITE
+ "

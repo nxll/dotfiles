@@ -1,4 +1,30 @@
 #!/bin/bash
 #SWITCH WALL WITH ZENBU
 
-hsetroot -{{ wtype }} $HOME/images/wallpapers/{{ wallpaper }} -blur {{ wblur }}
+#BASE ON IMAGE
+imws()
+{
+	hsetroot -{{ wtype }} $HOME/images/wallpapers/{{ wallpaper }} -blur {{ wblur }}
+}
+
+#BASE ON COLORSCHEME
+csws()
+{
+	convert -size 100x100 \
+	xc:"{{ n_black }}" \
+   	xc:"{{ n_red }}" \
+	xc:"{{ n_green }}" \
+	xc:"{{ n_yellow }}" \
+	xc:"{{ n_blue }}" \
+	xc:"{{ n_magenta }}" \
+	xc:"{{ n_cyan }}" \
+	xc:"{{ n_white }}" \
+	+append -filter Cubic \
+	-distort SRT 60 \
+	/tmp/csws.png
+	
+	hsetroot -fill /tmp/csws.png -brightness 0.2 -blur 100
+}
+
+csws
+#imws

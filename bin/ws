@@ -1,4 +1,30 @@
 #!/bin/bash
 #SWITCH WALL WITH ZENBU
 
-hsetroot -fill $HOME/images/wallpapers/pexels-photo-70305-bw.jpeg
+#BASE ON IMAGE
+imws()
+{
+	hsetroot -fill $HOME/images/wallpapers/greybark.png -blur 0
+}
+
+#BASE ON COLORSCHEME
+csws()
+{
+	convert -size 100x100 \
+	xc:"#202124" \
+   	xc:"#E8E2E2" \
+	xc:"#AADB0F" \
+	xc:"#2E3233" \
+	xc:"#E2E2E2" \
+	xc:"#91BA0D" \
+	xc:"#B2B2B2" \
+	xc:"#D6D0D0" \
+	+append -filter Cubic \
+	-distort SRT 60 \
+	/tmp/csws.png
+	
+	hsetroot -fill /tmp/csws.png -brightness 0.2 -blur 100
+}
+
+csws
+#imws

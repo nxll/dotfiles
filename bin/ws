@@ -4,26 +4,26 @@
 #BASE ON IMAGE
 imws()
 {
-	hsetroot -fill $HOME/images/wallpapers/greybark.png -blur 0
+	hsetroot -fill $HOME/images/wallpapers/_DSF6699b_3000px_1500.jpg -blur 0
 }
 
 #BASE ON COLORSCHEME
 csws()
 {
 	convert -size 100x100 \
-	xc:"#202124" \
-   	xc:"#E8E2E2" \
-	xc:"#AADB0F" \
-	xc:"#2E3233" \
-	xc:"#E2E2E2" \
-	xc:"#91BA0D" \
-	xc:"#B2B2B2" \
-	xc:"#D6D0D0" \
+	xc:"#57607A" \
+   	xc:"#ED7278" \
+	xc:"#A19EC7" \
+	xc:"#FFD7AF" \
+	xc:"#F75D64" \
+	xc:"#9C6D9C" \
+	xc:"#FF806F" \
+	xc:"#FDCBAC" \
 	+append -filter Cubic \
 	-distort SRT 60 \
 	/tmp/csws.png
 	
-	hsetroot -fill /tmp/csws.png -brightness 0.2 -blur 100
+	hsetroot -fill /tmp/csws.png -brightness 0.1 -blur 100
 }
 
 csws

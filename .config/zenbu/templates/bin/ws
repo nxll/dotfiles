@@ -20,10 +20,11 @@ csws()
 	xc:"{{ b_cyan }}" \
 	xc:"{{ b_white }}" \
 	+append -filter Cubic \
+	-spread 80 \
 	-distort SRT 60 \
 	/tmp/csws.png
-	
-	hsetroot -fill /tmp/csws.png -brightness 0.1 -blur 100
+
+	hsetroot -fill /tmp/csws.png -blur 100
 }
 
 csws

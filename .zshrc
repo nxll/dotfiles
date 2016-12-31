@@ -21,7 +21,7 @@ source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 export PATH=$HOME/bin:$PATH
 
 # HISTORY
-HISTFILE=~/.zhist
+HISTFILE=$HOME/.zhist
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -42,12 +42,12 @@ alias mv='mv -v'
 alias cp='cp -v'
 alias df='df -h'
 alias ps='ps -ef'
-alias bin='cd ~/bin'
-alias documents='cd ~/documents'
-alias downloads='cd ~/downloads'
-alias images='cd ~/images'
-alias music='cd ~/music'
-alias videos='cd ~/videos'
+alias bin='cd $HOME/bin'
+alias documents='cd $HOME/documents'
+alias downloads='cd $HOME/downloads'
+alias images='cd $HOME/images'
+alias music='cd $HOME/music'
+alias videos='cd $HOME/videos'
 
 # PACMAN
 alias install='sudo pacman -S'
@@ -58,6 +58,7 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 alias pkgcnt='pacman -Q | wc -l'
 
 # OTHER
+alias v='vim'
 alias todo='separator;echo;echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 2)TODO$(tput sgr0)";cat $HOME/.todo;echo;separator'
 alias atodo='echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 4)$(date "+%d/%m")$(tput sgr0)$1" >> $HOME/.todo'
 alias rtodo='sed -i '$d' $HOME/.todo'

@@ -74,7 +74,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "1280x14-0+24"
+    geometry = "1280x18-22+60"
     
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -111,7 +111,7 @@
     sticky_history = yes
     
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 100
     
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -119,7 +119,7 @@
     # The height of a single line.  If the height is smaller than the
     # font height, it will get raised to the font height.
     # This adds empty space above and under the text.
-    line_height = 16
+    line_height = 20
     
     # Draw a line of "separatpr_height" pixel height between two
     # notifications.
@@ -127,7 +127,7 @@
     separator_height = 0
     
     # Padding between text and separator.
-    padding = 4
+    padding = 6
     
     # Horizontal padding.
     horizontal_padding = 6
@@ -149,7 +149,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = firefox
+    browser = inox
 
     # Align icons left/right/off
     icon_position = off

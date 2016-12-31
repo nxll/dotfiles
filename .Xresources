@@ -12,40 +12,40 @@
 *italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*highlightColor: #57607A
-*cursorColor: 	 #FDCBAC
-*borderColor: 	 #3C4254
-*background:  	 #3C4254
-*foreground:  	 #FEDDD0
+*highlightColor: #242529
+*cursorColor: 	 #DBDBDB
+*borderColor: 	 #1C1D1F
+*background:  	 #1C1D1F
+*foreground:  	 #F2ECEC
 
 !BLACK
-*color0:  #4B5269
-*color8:  #57607A
+*color0:  #202124
+*color8:  #242529
 !RED
-*color1:  #D8686D
-*color9:  #ED7278
+*color1:  #E8E2E2
+*color9:  #FCFCFC
 !GREEN
-*color2:  #918EB3
-*color10: #A19EC7
+*color2:  #AADB0F
+*color10: #BAF010
 !YELLOW
-*color3:  #EBC6A1
-*color11: #FFD7AF
+*color3:  #2E3233
+*color11: #404647
 !BLUE
-*color4:  #D95258
-*color12: #F75D64
+*color4:  #E2E2E2
+*color12: #F7F7F7
 !MAGENTA
-*color5:  #875F87
-*color13: #9C6D9C
+*color5:  #91BA0D
+*color13: #A1CF0E
 !CYAN
-*color6:  #F77C6C
-*color14: #FF806F
+*color6:  #B2B2B2
+*color14: #C7C7C7
 !WHITE
-*color7:  #F2C2A5
-*color15: #FDCBAC
+*color7:  #D6D0D0
+*color15: #DBDBDB
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
-URxvt.internalBorder:  15
+URxvt.internalBorder:  20
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
 URxvt.geometry:        74x16
@@ -63,22 +63,22 @@ URxvt*url-launcher:   inox
 URxvt*matcher.button: 1
 
 !2BWM COLORS
-twobwm.border_width: 	   5
-twobwm.outer_border: 	   2
-twobwm.focus_color: 	   #D8686D
-twobwm.unfocus_color: 	   #4B5269
-twobwm.fixed_color: 	   #4B5269
-twobwm.unkill_color: 	   #4B5269
-twobwm.outer_border_color: #3C4254
-twobwm.fixed_unkill_color: #4B5269
+twobwm.border_width: 	   6
+twobwm.outer_border: 	   0
+twobwm.focus_color: 	   #F2ECEC
+twobwm.unfocus_color: 	   #292A2E
+twobwm.fixed_color: 	   #292A2E
+twobwm.unkill_color: 	   #292A2E
+twobwm.outer_border_color: #1C1D1F
+twobwm.fixed_unkill_color: #292A2E
 
 !SXIV COLORS
 sxiv.font: 		   kakwafont:size=8
-sxiv.win_bg_color: #3C4254
-sxiv.win_fs_color: #57607A
-sxiv.sel_color:    #57607A
-sxiv.bar_bg_color: #4B5269
-sxiv.bar_fg_color: #FEDDD0
+sxiv.win_bg_color: #1C1D1F
+sxiv.win_fs_color: #242529
+sxiv.sel_color:    #242529
+sxiv.bar_bg_color: #202124
+sxiv.bar_fg_color: #F2ECEC
 sxiv.win_width:    460
 sxiv.win_height:   350
 

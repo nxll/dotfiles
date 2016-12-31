@@ -24,8 +24,8 @@ COL2="{{ n_green }}"
 #VARS
 FONT="{{ font1 }}"
 GLYPH="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-HEIGHT=18
-BORDER=3
+HEIGHT=20
+BORDER=6
 MUSLENGTH=50
 ACTCHAR="+"
 SELCHAR="+"
@@ -60,6 +60,30 @@ WRK()
 	fi
 }
 
+WRKN()
+{
+	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
+	
+	if [ ${OGWKSPACE} = "0" ] ;
+	then 
+		echo "%{B$COL2} %{F$BG1}0%{F-} %{B$BG2} 1 2 3 4 %{B-}"
+	elif [ ${OGWKSPACE} = "1" ] ;
+	then
+		echo "%{B$BG2} 0 %{B$COL2} %{F$BG1}1%{F-} %{B$BG2} 2 3 4 %{B-}"
+	elif [ ${OGWKSPACE} = "2" ] ;
+	then 
+		echo "%{B$BG2} 0 1 %{B$COL2} %{F$BG1}2%{F-} %{B$BG2} 3 4 %{B-}"
+	elif [ ${OGWKSPACE} = "3" ] ;
+	then 
+		echo "%{B$BG2} 0 1 2 %{B$COL2} %{F$BG1}3%{F-} %{B$BG2} 4 %{B-}"
+	elif [ ${OGWKSPACE} = "4" ] ;
+	then 
+		echo "%{B$BG2} 0 1 2 3 %{B$COL2} %{F$BG1}4%{F-} %{B-}"
+    else
+		echo "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
+	fi
+}
+
 WRKBG()
 {
 	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
@@ -87,18 +111,18 @@ WRKBG()
 WIN()
 {
     #echo -n "%{B$COL2}%{F$BG1}  %{F-}%{B-}"
-    echo -n "%{B$COL1}%{F$FG1} $(xtitle) %{F-}%{B-}"
+	echo -n "%{B$COL1}%{F$FG1} $(wname $(pfw)) %{F-}%{B-}"
 }
 
 MUSIC()
 {
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
 		if [ "$PLAYING" = "[playing]" ] ; then
-        	SYMBOL="%{B$COL2}%{F$BG1}  %{F-}%{B-}"
-	        SONG="%{B$BG2} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+        	SYMBOL="%{B$BG2}  %{B-}"
+	        SONG=" $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) "
 		elif [ $PLAYING = "[paused]" ] ; then
-			SYMBOL="%{B$COL2}%{F$BG1}  %{F-}%{B-}"
-	     	SONG="%{B$BG2} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+			SYMBOL="%{B$BG2}  %{B-}"
+	     	SONG=" $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) "
 		fi
 
     echo -n "${SYMBOL}${SONG}"
@@ -163,7 +187,7 @@ BAR()
 { 
     #ADD ALL THE THINGS
     while true; do
-		BUF="$(MUSIC)%{c}$(WRKBG)%{r}$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
+		BUF="$(WRKN)%{c}%{r}$(MUSIC)$(BAT) $(VOL) $(NET) $(DATE)$(CLOCK)" 
 		echo $BUF	
         sleep 0.1
     done | lemonbar -f $GLYPH \
@@ -173,7 +197,7 @@ BAR()
         -u $BORDER \
 		-r $BORDER \
 		-R "{{ wmu }}" \
-        -g 1274x$HEIGHT+0+0 | sh &
+        -g 696x$HEIGHT+549+20 | sh &
 }
 
 BAR > /dev/null

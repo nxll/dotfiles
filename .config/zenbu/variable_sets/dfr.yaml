@@ -1,8 +1,8 @@
-# LTFR
+# DFR
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "ltfr"
+name: "dfr"
 
 #WALLPAPER
 wallpaper:  "mountains_bw.png"
@@ -10,7 +10,7 @@ wtype:      "fill"
 
 #COLORS
 colors:
-    wmbf:       "#F2ECEC"
+    wmbf:       "#37383D"
     wmbu:       "#292A2E"
     
     primary:    "white"

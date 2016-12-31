@@ -6,18 +6,20 @@
 #  ███  ░██░░█████  ███ ░██ ░██░██     ░░█████ ░██     ░██     
 # ░░░   ░░  ░░░░░  ░░░  ░░  ░░ ░░       ░░░░░  ░░      ░░      
 # PLAYLIST
-#song_list_format              = "$2%n $1▒ $0%a $3≠ $0%t $R$4%l $1▒ $0%b$9"
-song_list_format               = "$2%n $1▒ $0%a $3≠ $0%t $R$1▒ $0%b$9"
-now_playing_prefix             = "$b$1"
-now_playing_suffix             = "$b$1"
+#song_list_format 			   = "$3{%a} $1│ $0{%t}"
+#song_list_format 			   = "$2%n  $0%a $b$1≠ $/b$0%t $R%b$9  %l"
+song_list_format 			   = "$2%n  $b$0%a $1≠ $/b$0%t $R$2%l"
+now_playing_prefix             = "$b"
+now_playing_suffix             = "$/b"
 playlist_display_mode          = "classic" (classic/columns)
 playlist_separate_albums       = "no"
 
 # BARS
-song_status_format             = "$8%a $2%t $5%b {(Disc %d) } $1"
+song_status_format             = "$1%a » %t $1"
 #progressbar_look              = "━■━"
-#progressbar_look              = "▒█┅"
-progressbar_look               = "██▒"
+progressbar_look 			   = "▉▉▉"
+#progressbar_look 			   = "██▒"
+#progressbar_look 			   = "━━━"
 titles_visibility              = "no"
 statusbar_visibility           = "no"
 header_visibility              = "no"
@@ -45,7 +47,7 @@ main_window_highlight_color    = white
 alternative_ui_separator_color = black
 active_window_border           = black
 progressbar_color   	       = black
-progressbar_elapsed_color      = black
+progressbar_elapsed_color      = green
 statusbar_color   	           = red
 active_column_color            = green
 visualizer_color               = white

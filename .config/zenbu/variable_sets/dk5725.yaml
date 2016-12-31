@@ -1,0 +1,40 @@
+# DK5725
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "dk5725"
+
+#COLORS
+colors:
+    wmbf:       "#434144"
+    wmbu:       "#393638"
+
+    primary:    "white"
+    secondary:  "red"
+    background: "#363334"
+    foreground: "#C3C1B8"
+
+    black:
+        normal: "#393638"
+        bold:   "#403D3F"
+    red:
+        normal: "#97544D"
+        bold:   "#97463E"
+    green:
+        normal: "#97A293"
+        bold:   "#8BA283"
+    yellow:
+        normal: "#C29F6F"
+        bold:   "#C2975B"
+    blue:
+        normal: "#5E606C"
+        bold:   "#53576C"
+    magenta:
+        normal: "#78746C"
+        bold:   "#787060"
+    cyan:
+        normal: "#7A6054"
+        bold:   "#7A5848"
+    white:
+        normal: "#C3C1B8"
+        bold:   "#D1CFC5"

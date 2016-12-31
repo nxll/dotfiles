@@ -4,7 +4,7 @@ let g:colors_name = "fray"
 if &background == "light"
     hi Boolean 	    gui=NONE ctermfg=2    ctermbg=NONE
     hi ColorColumn  gui=NONE ctermfg=7    ctermbg=NONE
-    hi Comment 	    gui=NONE ctermfg=253  ctermbg=0
+    hi Comment 	    gui=NONE ctermfg=11   ctermbg=0
     hi Conceal 	    gui=NONE ctermfg=7    ctermbg=NONE
     hi Conditional  gui=NONE ctermfg=5    ctermbg=NONE
     hi Constant     gui=NONE ctermfg=7    ctermbg=NONE

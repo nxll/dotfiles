@@ -133,7 +133,7 @@ feedback() {
 
 	# Open url in browser
 	if [[ "$browser" == true  ]]; then
-		inox "$url"
+		inox "$url" &
 	fi
 
 	# Send notification

@@ -89,9 +89,6 @@ main ()
 		fi
 	fi
 
-	# Reload Wallpaper
-	$HOME/bin/ws
-
 	# Window Manager {{{
 	# Reload window manager
 	getwm
@@ -111,6 +108,9 @@ main ()
 			;;
 	esac
 
+	# Reload Wallpaper
+	$HOME/bin/ws
+
 	# tmux
 	# Reload tmux colors
 	if [[ -n "$tmux_conf" ]]; then
@@ -118,13 +118,13 @@ main ()
 	fi
 
 	# sxiv
-	sxivconf="$HOME/src/sxiv/"
-	if [[ -f "$sxivconf/config.h" ]]; then
-		cd $sxivconf 
-		make clean &>/dev/null
-		make &>/dev/null
-		make install &>/dev/null
-	fi
+	#sxivconf="$HOME/src/sxiv/"
+	#if [[ -f "$sxivconf/config.h" ]]; then
+	#	cd $sxivconf 
+	#	make clean &>/dev/null
+	#	make &>/dev/null
+	#	make install &>/dev/null
+	#fi
 
 }
 

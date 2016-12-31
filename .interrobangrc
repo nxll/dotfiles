@@ -8,9 +8,9 @@
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
 set font      = -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
-set geometry  = 1278x18+0+0
-set colors    = #FEDDD0 #3C4254 #FEDDD0 #3C4254 #918EB3 #3C4254
-set border    = 3px #4B5269
+set geometry  = 486x20+25+20
+set colors    = #F2ECEC #1C1D1F #F2ECEC #1C1D1F #AADB0F #1C1D1F
+set border    = 6px #292A2E
 set bangchar  = !
 set autocomp  = 1
 set list      = true

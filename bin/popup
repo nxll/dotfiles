@@ -1,0 +1,15 @@
+#!/bin/bash
+
+X=0
+Y=22
+W=120
+H=20
+
+BG="#1D2021"
+FG="#F2ECEC"
+FONT="-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
+
+#ADD ALL THE THINGS
+OPT="-g ${W}x${H}+${X}+${Y} -B ${BG} -F ${FG} -f ${FONT}"
+
+echo "$1" | skroll -rn 20 | lemonbar $OPT

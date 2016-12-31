@@ -1,0 +1,136 @@
+#!/usr/bin/env bash
+# Script Name: rhisk
+# Written by fullsalvo
+# Combined with scripts written by Ethan Chan - https://github.com/metakirby5
+# Loads zenbu templates including those from subfolders
+# Lists usable options based on category type
+# Currently used specifically for i3, bspwm, Openbox
+# Additional Dependencies: compton, dunst, tmux
+
+# Declarations
+
+declare INDENT_STEP="   "
+declare choices=""
+
+# Functions
+
+err() {
+	printf "\e[31m$1\e[0m" >&2
+}
+
+hl () {
+	printf "\e[32m$1\e[0m" >&2
+}
+
+wzk ()
+{
+	if (( $# == 0 )); then
+		$RHISK_COMM -e >/dev/null
+	else
+		$RHISK_COMM -e "$@" >/dev/null
+	fi
+
+	[[ "$?" != 0 ]] && exit 1
+
+	[[ "$#" != 0 ]] && sleep 1
+
+	reload-desktop
+	exit 0
+}
+
+theme ()
+{
+	local out=()
+	local tem=$($RHISK_COMM -l)
+	for i in "$@"; do
+		opt=$(printf "${tem}" | grep "${i}$")
+		if [[ -n $opt ]]; then
+			out+=("$opt")
+		else
+			err "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
+			exit 1
+		fi
+	done
+	wzk "${out[@]}"
+	exit 0
+}
+
+display() {
+	local theme="$1"
+	local indent="$2"
+	if [[ "$theme" == */* ]]; then
+		# recursive case
+		printf "\e[34m$indent${theme%%/*}:\e[0m\n"
+		display "${theme#*/}" "$indent$INDENT_STEP"
+	else
+		printf "$indent$theme"
+	fi
+}
+
+options ()
+{
+	clear
+	local result=""
+	if [[  -z $($RHISK_COMM -l) ]]; then
+		err "You have no themes to display."
+	fi
+	for t in $($RHISK_COMM -l); do
+		result="$result
+$(display "$t" "")"
+	done
+	hl "Template Options:"
+	printf "$result" | awk '!a[$0]++'
+}
+
+usage ()
+{
+	clear
+	more <<-'HELP'
+	rhisk - sanpai theme switch script
+	Usage:
+	rhisk [ optional args... ] - Rhisk
+
+	Help Options:
+	-h                      Show help options
+	Theme Options:
+	-o                      Show theme options
+	-c                      Show all options uncategorized
+	HELP
+}
+
+compl_opts ()
+{
+	for t in $($RHISK_COMM -l); do
+		choices+="${t##*/}\n"
+	done
+	printf "$choices"
+}
+
+
+# Options
+
+while getopts ':ohc' option; do
+	case $option in
+		o)
+			options
+			exit
+			;;
+		h)
+			usage
+			exit
+			;;
+		c)
+			compl_opts
+			exit
+			;;
+		\?)
+			err "-$OPTARG is not a valid option\n"
+			exit
+			;;
+	esac
+done
+shift $((OPTIND-1))
+
+# Main
+
+theme "$@"

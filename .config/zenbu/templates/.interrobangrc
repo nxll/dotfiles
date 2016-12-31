@@ -8,9 +8,9 @@
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
 set font      = {{ font1 }}
-set geometry  = 1278x18+0+0
+set geometry  = 486x20+25+20
 set colors    = {{ fgc }} {{ bgc }} {{ fgc }} {{ bgc }} {{ n_green }} {{ bgc }}
-set border    = 3px {{ wmu }}
+set border    = 6px {{ wmu }}
 set bangchar  = !
 set autocomp  = 1
 set list      = true

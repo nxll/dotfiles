@@ -1,0 +1,40 @@
+# GUMMYFADE
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "gummyfade"
+
+#COLORS
+colors:
+    wmbf:       "#3D2F3C"
+    wmbu:       "#332732"
+
+    primary:    "white"
+    secondary:  "blue"
+    background: "#291F28"
+    foreground: "#E0CEDF"
+
+    black:
+        normal: "#332732"
+        bold:   "#3D2F3C"
+    red:
+        normal: "#F8C6C8"
+        bold:   "#F8BABD"
+    green:
+        normal: "#E5F8C6"
+        bold:   "#E0F8BA"
+    yellow:
+        normal: "#F5F8C6"
+        bold:   "#F4F8BA"
+    blue:
+        normal: "#CAE9F8"
+        bold:   "#BAE9F8"
+    magenta:
+        normal: "#E8C6F8"
+        bold:   "#E4BAF8"
+    cyan:
+        normal: "#C6F8EB"
+        bold:   "#BAF8E8"
+    white:
+        normal: "#EBD3E9"
+        bold:   "#FFE5FD"

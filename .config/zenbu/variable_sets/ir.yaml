@@ -1,0 +1,40 @@
+# IR
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "ir"
+
+#COLORS
+colors:
+    wmbf:       "#F6887A"
+    wmbu:       "#444D59"
+
+    primary:    "white"
+    secondary:  "blue"
+    background: "#2A2F36"
+    foreground: "#DCDCDC"
+
+    black:
+        normal: "#323740"
+        bold:   "#3A404A"
+    red:
+        normal: "#F6887A"
+        bold:   "#FF8D7E"
+    green:
+        normal: "#84CDC9"
+        bold:   "#8AD6D2"
+    yellow:
+        normal: "#B0ACA9"
+        bold:   "#BAB6B3"
+    blue:
+        normal: "#729597"
+        bold:   "#799FA1"
+    magenta:
+        normal: "#908A8A"
+        bold:   "#999393"
+    cyan:
+        normal: "#AAC3C8"
+        bold:   "#B2CCD1"
+    white:
+        normal: "#F5F5F5"
+        bold:   "#FFFFFF"

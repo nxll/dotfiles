@@ -1,0 +1,45 @@
+# RG982
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "rg982"
+
+#WALLPAPER
+wallpaper:  "mountains_bw.png"
+wtype:      "fill"
+wblur:      "0"
+
+#COLORS
+colors:
+    wmbf:       "#454545"
+    wmbu:       "#3B3B3B"
+
+    primary:    "white"
+    secondary:  "blue"
+    background: "#303030"
+    foreground: "#CACCC6"
+
+    black:
+        normal: "#3B3B3B"
+        bold:   "#454545"
+    red:
+        normal: "#939490"
+        bold:   "#C6C7C2"
+    green:
+        normal: "#9AC70E"
+        bold:   "#C2FA11"
+    yellow:
+        normal: "#727370"
+        bold:   "#90918E"
+    blue:
+        normal: "#B6B8B3"
+        bold:   "#D4D6D0"
+    magenta:
+        normal: "#D1D1CB"
+        bold:   "#F0F0E9"
+    cyan:
+        normal: "#636361"
+        bold:   "#82827F"
+    white:
+        normal: "#AAABA6"
+        bold:   "#C8C9C4"

@@ -1,0 +1,44 @@
+# FADED
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "faded"
+
+#WALLPAPER
+wallpaper:  "000tile.png"
+wtype:      "tile"
+
+#COLORS
+colors:
+    wmbf:       "#AAAAAA"
+    wmbu:       "#BBBBBB"
+
+    primary:    "white"
+    secondary:  "white"
+    background: "#000000"
+    foreground: "#888888"
+
+    black:
+        normal: "#050505"
+        bold:   "#0A0A0A"
+    red:
+        normal: "#888888"
+        bold:   "#888888"
+    green:
+        normal: "#888888"
+        bold:   "#888888"
+    yellow:
+        normal: "#888888"
+        bold:   "#888888"
+    blue:
+        normal: "#888888"
+        bold:   "#888888"
+    magenta:
+        normal: "#888888"
+        bold:   "#888888"
+    cyan:
+        normal: "#888888"
+        bold:   "#888888"
+    white:
+        normal: "#888888"
+        bold:   "#888888"

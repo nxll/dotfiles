@@ -1,0 +1,40 @@
+# SHARP
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "sharp"
+
+#COLORS
+colors:
+    wmbf:       "#627B85"
+    wmbu:       "#2B343D"
+
+    primary:    "white"
+    secondary:  "red"
+    background: "#282F38"
+    foreground: "#B8C2CC"
+
+    black:
+        normal: "#2F3842"
+        bold:   "#36414D"
+    red:
+        normal: "#8D4A4A"
+        bold:   "#A15454"
+    green:
+        normal: "#83B370"
+        bold:   "#92C77C"
+    yellow:
+        normal: "#D4D46A"
+        bold:   "#E8E874"
+    blue:
+        normal: "#4E6169"
+        bold:   "#5C737C"
+    magenta:
+        normal: "#804A79"
+        bold:   "#94568C"
+    cyan:
+        normal: "#34676F"
+        bold:   "#3E7B85"
+    white:
+        normal: "#C1CCD6"
+        bold:   "#CAD6E0"

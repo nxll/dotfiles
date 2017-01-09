@@ -1,0 +1,40 @@
+# NXMUNK
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "nxmunk"
+
+#COLORS
+colors:
+    wmbf:       "#689ED9"
+    wmbu:       "#222222"
+
+    primary:    "white"
+    secondary:  "blue"
+    background: "#181818"
+    foreground: "#AFAFAF"
+
+    black:
+        normal: "#222222"
+        bold:   "#303030"
+    red:
+        normal: "#5E8FC4"
+        bold:   "#689ED9"
+    green:
+        normal: "#7A7EC4"
+        bold:   "#878BD9"
+    yellow:
+        normal: "#888888"
+        bold:   "#A6A6A6"
+    blue:
+        normal: "#B0B0B0"
+        bold:   "#BFBFBF"
+    magenta:
+        normal: "#9084B7"
+        bold:   "#A193CC"
+    cyan:
+        normal: "#9F9EA5"
+        bold:   "#B1B0B8"
+    white:
+        normal: "#7C7C7C"
+        bold:   "#919191"

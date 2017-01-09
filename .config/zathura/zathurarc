@@ -1,0 +1,44 @@
+## ~/.config/zathura/zathurarc
+#set uri-command "jumanji %s"
+
+#map normal J scroll full_down
+#map normal K scroll full_up
+#map normal <PageUp> navigate previous
+#map normal <PageDown> navigate next
+#map normal <PageDown> scroll full_down
+#map normal <PageUp> scroll full_up
+map <C-+> zoom in
+map <C--> zoom out
+
+set show-scrollbars false
+set n-completion-items 10
+set zoom-step 5
+set page-padding 0
+set pages-per-row 1
+set recolor true
+set adjust-open width
+
+#set font "lemon 8"
+set font "kakwa kakwafont 8"
+set default-bg "#21211F"
+set default-fg "#D4D4D4"
+set inputbar-bg "#292927"
+set inputbar-fg "#D4D4D4"
+set statusbar-bg "#292927"
+set statusbar-fg "#D4D4D4"
+set tabbar-bg "#292927"
+set tabbar-fg "#D4D4D4"
+set tabbar-focus-bg "#2E2E2C"
+set tabbar-focus-fg "#9AC70E"
+set completion-bg "#292927"
+set completion-fg "#D4D4D4"
+set completion-group-bg "#292927"
+set completion-group-fg "#D4D4D4"
+set completion-highlight-bg "#2E2E2C"
+set completion-highlight-fg "#9AC70E"
+set notification-error-bg "#292927"
+set notification-error-fg "#939490"
+set notification-warning-bg "#292927"
+set notification-warning-fg "#D4D4D4"
+set recolor-darkcolor "#D4D4D4"
+set recolor-lightcolor "#21211F"

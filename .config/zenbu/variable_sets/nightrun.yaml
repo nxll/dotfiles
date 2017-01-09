@@ -1,0 +1,45 @@
+# NIGHTRUN
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "nightrun"
+
+#WALLPAPER
+wallpaper:  "mountains_bw.png"
+wtype:      "fill"
+wblur:      "0"
+
+#COLORS
+colors:
+    wmbf:       "#D6D6D6"
+    wmbu:       "#262624"
+
+    primary:    "white"
+    secondary:  "blue"
+    background: "#21211F"
+    foreground: "#D4D4D4"
+
+    black:
+        normal: "#292927"
+        bold:   "#2E2E2C"
+    red:
+        normal: "#939490"
+        bold:   "#C6C7C2"
+    green:
+        normal: "#9AC70E"
+        bold:   "#C2FA11"
+    yellow:
+        normal: "#727370"
+        bold:   "#90918E"
+    blue:
+        normal: "#B6B8B3"
+        bold:   "#D4D6D0"
+    magenta:
+        normal: "#D1D1CB"
+        bold:   "#F0F0E9"
+    cyan:
+        normal: "#636361"
+        bold:   "#82827F"
+    white:
+        normal: "#B8B8B8"
+        bold:   "#C2C2C2"

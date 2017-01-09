@@ -1,0 +1,40 @@
+# GUMMY
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "gummy"
+
+#COLORS
+colors:
+    wmbf:       "#996F99"
+    wmbu:       "#4D384D"
+
+    primary:    "white"
+    secondary:  "blue"
+    background: "#2A1F2A"
+    foreground: "#F2D5F2"
+
+    black:
+        normal: "#332633" 
+        bold:   "#3D2E3D"
+    red:
+        normal: "#F8343B"
+        bold:   "#F9343B"
+    green:
+        normal: "#AEF834"
+        bold:   "#AFF833"
+    yellow:
+        normal: "#EBF834"
+        bold:   "#EAF834"
+    blue:
+        normal: "#34C7F8"
+        bold:   "#35C7F8"
+    magenta:
+        normal: "#B734F8"
+        bold:   "#B834F8"
+    cyan:
+        normal: "#34F8C4"
+        bold:   "#35F8C4"
+    white:
+        normal: "#FADCFA"
+        bold:   "#FFE0FF"

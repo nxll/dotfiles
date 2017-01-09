@@ -14,25 +14,13 @@
 pkill lemonbar
 
 #COLORS
-FG="{{ fgc }}"
-BG="{{ bgc }}"
-
-NBLACK="{{ n_black }}"
-BBLACK="{{ b_black }}"
-NRED="{{ n_red }}"
-BRED="{{ b_red }}"
-NGREEN="{{ n_green }}"
-BGREEN="{{ b_green }}"
-NYELLOW="{{ n_yellow }}"
-BYELLOW="{{ b_yellow }}"
-NBLUE="{{ n_blue }}"
-BBLUE="{{ b_blue }}"
-NPURPLE="{{ n_magenta }}"
-BPURPLE="{{ b_magenta }}"
-NCYAN="{{ n_cyan }}"
-BCYAN="{{ b_cyan }}"
-NWHITE="{{ n_white }}"
-BWHITE="{{ b_white }}"
+FG1="{{ fgc }}"
+FG2="{{ n_white }}"
+BG1="{{ bgc }}"
+BG2="{{ n_black }}"
+COL1="{{ b_black }}"
+COL2="{{ n_green }}"
+COL3="{{ wmf }}"
 
 #VARS
 FONT="{{ font1 }}"
@@ -52,7 +40,7 @@ fi
 
 SEP()
 {
-	echo -e "%{B$BG} %{B-}"
+	echo -e "%{B$BG1} %{B-}"
 }
 
 WRK()
@@ -61,21 +49,21 @@ WRK()
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo -e "%{B$NBLACK} %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
+		echo -e "%{B$BG2} %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo -e "%{B$NBLACK} $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR $SELCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{F$COL2}$ACTCHAR%{F-} %{B-}"
     else
-		echo -e "%{B$NGREEN} %{F$BG}ERROR%{F-} %{B-}"
+		echo -e "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
 	fi
 }
 
@@ -85,21 +73,21 @@ WRKN()
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo "%{B$NGREEN} %{F$BG}0%{F-} %{B$NBLACK} 1 2 3 4 %{B-}"
+		echo "%{B$COL2} %{F$BG1}0%{F-} %{B$BG2} 1 2 3 4 %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo "%{B$NBLACK} 0 %{B$NGREEN} %{F$BG}1%{F-} %{B$NBLACK} 2 3 4 %{B-}"
+		echo "%{B$BG2} 0 %{B$COL2} %{F$BG1}1%{F-} %{B$BG2} 2 3 4 %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo "%{B$NBLACK} 0 1 %{B$NGREEN} %{F$BG}2%{F-} %{B$NBLACK} 3 4 %{B-}"
+		echo "%{B$BG2} 0 1 %{B$COL2} %{F$BG1}2%{F-} %{B$BG2} 3 4 %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo "%{B$NBLACK} 0 1 2 %{B$NGREEN} %{F$BG}3%{F-} %{B$NBLACK} 4 %{B-}"
+		echo "%{B$BG2} 0 1 2 %{B$COL2} %{F$BG1}3%{F-} %{B$BG2} 4 %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo "%{B$NBLACK} 0 1 2 3 %{B$NGREEN} %{F$BG}4%{F-} %{B-}"
+		echo "%{B$BG2} 0 1 2 3 %{B$COL2} %{F$BG1}4%{F-} %{B-}"
     else
-		echo "%{B$NGREEN} %{F$BG}ERROR%{F-} %{B-}"
+		echo "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
 	fi
 }
 
@@ -109,39 +97,39 @@ WRKBG()
 	
 	if [ ${OGWKSPACE} = "0" ] ;
 	then 
-		echo -e "%{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
+		echo -e "%{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "1" ] ;
 	then
-		echo -e "%{B$NBLACK} $SELCHAR %{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "2" ] ;
 	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR %{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR $SELCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "3" ] ;
 	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR %{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR %{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR %{B$COL2} %{F$BG1}$ACTCHAR%{F-} %{B$BG2} $SELCHAR %{B-}"
 	elif [ ${OGWKSPACE} = "4" ] ;
 	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B$NGREEN}%{F$BG} $ACTCHAR %{F-}%{B-}"
+		echo -e "%{B$BG2} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B$COL2}%{F$BG1} $ACTCHAR %{F-}%{B-}"
     else
-		echo -e "%{B$NGREEN} %{F$BG}ERROR%{F-} %{B-}"
+		echo -e "%{B$COL2} %{F$BG1}ERROR%{F-} %{B-}"
 	fi
 }
 
 WIN()
 {
-    #echo -n "%{B$NGREEN}%{F$BG}  %{F-}%{B-}"
-	echo -n "%{B$BBLACK}%{F$FG} $(wname $(pfw)) %{F-}%{B-}"
+    #echo -n "%{B$COL2}%{F$BG1}  %{F-}%{B-}"
+	echo -n "%{B$COL1}%{F$FG1} $(wname $(pfw)) %{F-}%{B-}"
 }
 
 MUSIC()
 {
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
 		if [ "$PLAYING" = "[playing]" ] ; then
-        	SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-	        SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+        	SYMBOL="%{B$COL1} %{F$FG1}%{F-} %{B-}"
+	        SONG="%{B$BG2} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
 		elif [ $PLAYING = "[paused]" ] ; then
-			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-	     	SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+			SYMBOL="%{B$COL1} %{F$FG1}%{F-} %{B-}"
+	     	SONG="%{B$BG2} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
 		fi
 
     echo -n "${SYMBOL}${SONG}"
@@ -151,7 +139,7 @@ VOL()
 {
 	GETVOL=$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1  )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
 	
-	echo -n "%{B$BBLACK}  %{B$NBLACK} $GETVOL% %{B-}"
+	echo -n "%{B$COL1}  %{B$BG2} $GETVOL% %{B-}"
 }
 
 BAT()
@@ -161,29 +149,29 @@ BAT()
 
     if test $status = "Charging"; then
         symbol=""
-        echo -n "%{B$BBLACK} ${symbol} %{B-}"
+        echo -n "%{B$COL1} ${symbol} %{B-}"
     elif test $status = "Full"; then
         symbol=""
-        echo -n "%{B$BBLACK} ${symbol} %{B-}"
+        echo -n "%{B$COL1} ${symbol} %{B-}"
     else
         if test $percent -gt 66; then
             symbol=""
-            echo -n "%{B$BBLACK} ${symbol} %{B-}"
+            echo -n "%{B$COL1} ${symbol} %{B-}"
         elif test $percent -gt 34; then
             symbol=""
-            echo -n "%{B$BBLACK} ${symbol} %{B-}"
+            echo -n "%{B$COL1} ${symbol} %{B-}"
         else
 		symbol=""
-            echo -n "%{B$BBLACK} ${symbol} %{B-}"
+            echo -n "%{B$COL1} ${symbol} %{B-}"
         fi
     fi
 
-	echo -e "%{B$NBLACK} $percent% %{B-}"
+	echo -e "%{B$BG2} $percent% %{B-}"
 }
 
 NET()
 {
-	SYMBOL="%{B$BBLACK}  %{B-}"
+	SYMBOL="%{B$COL1}  %{B-}"
 	WIFI_SSID=$(
 	if [ grep -q "Not connected."] ; then
 		echo "No AP"
@@ -191,17 +179,17 @@ NET()
 		iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
 	fi)
 
-	echo -n "${SYMBOL}%{B$NBLACK} ${WIFI_SSID} %{B-}"
+	echo -n "${SYMBOL}%{B$BG2} ${WIFI_SSID} %{B-}"
 }
 
 DATE()
 {
-    echo -n "%{B$BBLACK} %{F$FG}$(date "+%d/%m " | tr [A-Z] [a-z])%{F-}%{B-}"
+    echo -n "%{B$COL1} %{F$FG1}$(date "+%d/%m " | tr [A-Z] [a-z])%{F-}%{B-}"
 }
 
 CLOCK()
 {
-    echo -n "%{B$NGREEN}%{F$BG} $(date "+%H:%M") %{F-}%{B-}"
+    echo -n "%{B$COL2}%{F$BG1} $(date "+%H:%M") %{F-}%{B-}"
 }
 
 BAR()
@@ -213,11 +201,11 @@ BAR()
         sleep 0.1
     done | lemonbar -f $GLYPH \
         -f $FONT \
-        -F $FG \
-        -B $BG \
+        -F $FG1 \
+        -B $BG1 \
         -u $BORDER \
 		-r $BORDER \
-		-R $BG \
+		-R $BG1 \
         -g 1270x$HEIGHT+0+0 | sh &
 }
 

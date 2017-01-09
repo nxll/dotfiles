@@ -31,7 +31,7 @@ case "$1" in
 	;;
 	"-striped")
 		#STRIPES
-		convert -size 100x100 \
+		convert -size 350x350 \
 		xc:"{{ b_black }}" \
 		xc:"{{ b_red }}" \
 		xc:"{{ b_green }}" \

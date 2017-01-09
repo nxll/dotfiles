@@ -50,11 +50,6 @@ monitor=${1:-0}
 herbstclient pad $monitor 24
 fi
 
-SEP()
-{
-	echo -e "%{B$BG} %{B-}"
-}
-
 WRK()
 {
 	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')

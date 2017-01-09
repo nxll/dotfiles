@@ -58,7 +58,7 @@ alias pkgcnt='pacman -Q | wc -l'
 
 # OTHER
 alias v='vim'
-alias todo='separator;echo;echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 2)TODO$(tput sgr0)";cat $HOME/.todo;echo;separator'
+alias todo='echo;echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 2)TODO$(tput sgr0)";cat $HOME/.todo;echo'
 alias atodo='echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 4)$(date "+%d/%m")$(tput sgr0)$1" >> $HOME/.todo'
 alias rtodo='sed -i '$d' $HOME/.todo'
 alias ctodo='rm $HOME/.todo; touch $HOME/.todo'
@@ -71,7 +71,7 @@ alias scr='scrot $HOME/images/screenshots/%d%b2k%y-%H%M%S.png'
 #alias rec='ffmpeg -f x11grab -s 1280x800 -an -loglevel quiet -i $DISPLAY -b:v 5M -y'
 #alias rec='ffmpeg -f x11grab -an -r 16 -video_size 1366x768 -i $DISPLAY -b:V 5M -vcodec huffyuv -y'
 
-# FUNCTION
+# FUNCTIONS
 ix()
 {
 	cat "$1" | curl -F 'f:1=<-' -F 'read:1=2' ix.io 

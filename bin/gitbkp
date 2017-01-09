@@ -1,0 +1,20 @@
+#!/bin/bash
+#BACKUP DOTFILES TO GITHUB
+
+CMD="cp -r"
+GITDIR="$HOME/.git/dotfiles"
+
+#COPY FILES
+$CMD $HOME/.zshrc $GITDIR/
+$CMD $HOME/.vimrc $GITDIR/
+$CMD $HOME/.vim/colors/fray.vim $GITDIR/.vim/colors/
+$CMD $HOME/.interrobangrc $GITDIR/
+$CMD $HOME/
+
+#PUSH
+cd $GITDIR
+git add .
+git commit -m updates
+git push ghdots master
+git push tdots master
+notify-send "GIT UP TO DATE"

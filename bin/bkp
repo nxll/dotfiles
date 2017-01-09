@@ -1,0 +1,19 @@
+#!/bin/bash
+#BACKUP
+
+CMD="rsync -rtv"
+DEST="/run/media/$USER/external"
+
+if [ -d "$DEST"  ]; then
+	#MEDIA
+	$CMD $HOME/documents/ $DEST/documents/
+	$CMD $HOME/downloads/ $DEST/downloads/
+	$CMD $HOME/images/ $DEST/images/
+	$CMD $HOME/music/ $DEST/music/
+	$CMD $HOME/videos/ $DEST/videos/
+	#SCRIPTS
+	$CMD $HOME/bin/ $DEST/bin/
+	notify-send "BACKUP COMPLETE"
+else
+	notify-send "NO BACKUP DIRECTORY"
+fi

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TMPSCRN=/tmp/tmpscrn.png
+
+notify-send -t 1 "TAKING SHOT IN 3.."
+sleep 2s
+notify-send -t 1 "TAKING SHOT IN 3..2.."
+sleep 2s
+notify-send -t 1 "TAKING SHOT IN 3..2..1.."
+sleep 2s
+notify-send -t 1 "TAKING SHOT IN 3..2..1..DONE"
+maim $TMPSCRN
+teknik $TMPSCRN
+rm $TMPSCRN

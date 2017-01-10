@@ -19,6 +19,9 @@ source $HOME/.urxvt/completions/rhisk-comp.zsh
 # SCRIPTS
 export PATH=$HOME/bin:$PATH
 
+#TILER
+export TILER_DIR=$HOME/images/tiles
+
 # HISTORY
 HISTFILE=$HOME/.zhist
 HISTSIZE=1000
@@ -75,6 +78,11 @@ alias scr='scrot $HOME/images/screenshots/%d%b2k%y-%H%M%S.png'
 ix()
 {
 	cat "$1" | curl -F 'f:1=<-' -F 'read:1=2' ix.io 
+}
+
+getcol()
+{
+	echo "$(tput rev)$(tput setaf $1)$(cat $HOME/.Xresources | grep "color$1" | cut -c11-20)$(tput sgr0)"
 }
 
 mtp-mount()

@@ -12,10 +12,10 @@ wblur:      "0"
 #FONTS
 fonts:
     #kakwafont
-    font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
-    font2: "kakwa kakwafont:size=8"
-    font3: "kakwa kakwafont 8"
-    font4: "kakwa kakwafont"
+    #font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
+    #font2: "kakwa kakwafont:size=8"
+    #font3: "kakwa kakwafont 8"
+    #font4: "kakwa kakwafont"
 
     #drift
     #font1: "-artwiz-drift-medium-r-normal--10-100-75-75-n-60-iso10646-1"
@@ -48,10 +48,10 @@ fonts:
     #font4: "lucy tewii"
 
     #gohufont
-    #font1: "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1"
-    #font2: "gohufont:size=10"
-    #font3: "gohufont 10"
-    #font4: "gohufont"
+    font1: "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1"
+    font2: "gohu gohufont:size=8"
+    font3: "gohu gohufont 8"
+    font4: "gohu gohufont"
 
 #COLORS
 colors:

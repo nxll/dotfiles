@@ -5,8 +5,8 @@
 name: "nightrun"
 
 #WALLPAPER
-wallpaper:  "mountains_bw.png"
-wtype:      "fill"
+wallpaper:  "nightrun-green-gobbler-1920x1080.png"
+wtype:      "center"
 wblur:      "0"
 
 #COLORS

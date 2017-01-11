@@ -13,7 +13,7 @@ setxkbmap -layout gb &
 xrdb -load ~/.Xresources &
 udiskie -2 &
 #$HOME/bin/ws -wallpaper &
-$HOME/bin/tt -f $HOME/images/tiles/otis-reading.png &
+$HOME/bin/tt $HOME/images/tiles/gplay.png &
 mpd &
 compton --config ~/.compton.conf &
 xsetroot -cursor_name left_ptr &

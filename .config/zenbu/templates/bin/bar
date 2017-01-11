@@ -132,10 +132,10 @@ MUSIC()
 {
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
 		if [ "$PLAYING" = "[playing]" ] ; then
-        	SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
+        	SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
 	        SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
 		elif [ $PLAYING = "[paused]" ] ; then
-			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
+			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
 	     	SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
 		fi
 

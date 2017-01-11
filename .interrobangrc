@@ -45,6 +45,7 @@ bang us       = firefox "https://unsplash.com/search/%s"
 bang pex      = firefox "https://www.pexels.com/search/%s"
 bang wu       = firefox "http://www.wallpaperup.com/search/results/%s"
 bang flkr 	  = firefox "https://www.flickr.com/search/?text=%s"
+bang da 	  = firefox "http://www.deviantart.com/browse/all/?section=&global=1&q=%s"
 
 #COMPLETIONS
 tab default   = percontation "%s" %s | sort -u

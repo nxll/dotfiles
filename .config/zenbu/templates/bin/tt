@@ -1,0 +1,20 @@
+#!/bin/bash
+#COLORIZE TRANSPARENT IMAGE
+#nxll <nxll@teknik.io>
+
+IMG=$2
+COLOR=$(xrdb -query | grep color8 | cut -c10-20)
+IMGSIZE=$(identify -format '%wx%h' $IMG)
+
+case $1 in
+-f|-file)
+	convert -size $IMGSIZE xc:"{{ b_black }}" /tmp/colortile.png
+	convert /tmp/colortile.png $IMG -gravity center -composite /tmp/wall.png
+
+	hsetroot -tile /tmp/wall.png
+;;
+*)
+	echo "NO IMAGE GIVEN!"
+	echo "Usage: -f,-file $FILE_PATH"
+;;
+esac

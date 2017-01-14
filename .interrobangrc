@@ -8,7 +8,7 @@
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
 set font      = -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
-set geometry  = 1270x16+0+0
+set geometry  = 875x18+82+0
 set colors    = #D4D4D4 #21211F #D4D4D4 #21211F #9AC70E #21211F
 set border    = 5px #21211F
 set bangchar  = !

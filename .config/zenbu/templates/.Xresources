@@ -67,10 +67,12 @@ twobwm.border_width: 	   5
 twobwm.outer_border: 	   0
 twobwm.focus_color: 	   {{ wmf }}
 twobwm.unfocus_color: 	   {{ wmu }}
-twobwm.fixed_color: 	   {{ wmu }}
-twobwm.unkill_color: 	   {{ wmu }}
+twobwm.fixed_color: 	   {{ n_red }}
+twobwm.unkill_color: 	   {{ bgc }}
 twobwm.outer_border_color: {{ bgc }}
-twobwm.fixed_unkill_color: {{ wmu }}
+twobwm.fixed_unkill_color: {{ b_red }}
+twobwm.inverted_colors:    false
+twobwm.enable_compton: 	   true
 
 !SXIV COLORS
 sxiv.font: 		   {{ font2 }}

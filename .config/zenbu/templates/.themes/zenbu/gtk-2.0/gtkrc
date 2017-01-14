@@ -29,7 +29,7 @@ style "default"
 	
 
 	GtkRange::trough_border = 0
-	GtkRange::slider_width = 10
+	GtkRange::slider_width = 5
 	GtkRange::stepper_size = 10
 
 	GtkEntry::progress-border = { 0, 0, 0, 0 }
@@ -39,8 +39,8 @@ style "default"
 	GtkCheckMenuItem::indicator_size=10
 	GtkRadioButton::indicator_size=10
 
-	GtkNotebook::tab_vborder = 1
-	GtkNotebook::tab_hborder = 1
+	GtkNotebook::tab_vborder = 0
+	GtkNotebook::tab_hborder = 0
 	xthickness = 1
 	ythickness = 1
 
@@ -48,8 +48,8 @@ style "default"
 	NautilusIconContainer::light_info_color = "{{ n_white }}"
 	NautilusIconContainer::highlight_alpha=200
 
-	GtkMenu::horizontal_padding=0
-	GtkMenu::vertical_padding=0
+	GtkMenu::horizontal_padding=2
+	GtkMenu::vertical_padding=2
 
 	engine "mist"
  	{

@@ -67,10 +67,12 @@ twobwm.border_width: 	   5
 twobwm.outer_border: 	   0
 twobwm.focus_color: 	   #D6D6D6
 twobwm.unfocus_color: 	   #262624
-twobwm.fixed_color: 	   #262624
-twobwm.unkill_color: 	   #262624
+twobwm.fixed_color: 	   #939490
+twobwm.unkill_color: 	   #21211F
 twobwm.outer_border_color: #21211F
-twobwm.fixed_unkill_color: #262624
+twobwm.fixed_unkill_color: #C6C7C2
+twobwm.inverted_colors:    false
+twobwm.enable_compton: 	   true
 
 !SXIV COLORS
 sxiv.font: 		   kakwa kakwafont:size=8

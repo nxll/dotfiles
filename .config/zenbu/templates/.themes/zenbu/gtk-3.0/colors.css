@@ -1,13 +1,11 @@
 @define-color bg_color {{ bgc }};
 @define-color fg_color {{ fgc }};
 @define-color selected_bg_color {{ n_black }};
-@define-color selected_bg_color1 {{ n_black }};
 @define-color selected_fg_color {{ n_green }};
 @define-color base_color {{ bgc }};
 @define-color text_color {{ fgc }};
 
 @define-color border_color {{ bgc }};
-@define-color border_color1 {{ bgc }};
 @define-color insensitive_border_color {{ bgc }};
 
 @define-color info_fg_color {{ fgc }};

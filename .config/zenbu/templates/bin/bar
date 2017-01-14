@@ -42,8 +42,8 @@ BORDER=5
 MUSLENGTH=45
 #ACTCHAR="+"
 #SELCHAR="+"
-ACTCHAR=""
-SELCHAR=""
+#ACTCHAR=""
+#SELCHAR=""
 
 if pgrep herbstluftwm; then
 monitor=${1:-0}
@@ -51,30 +51,6 @@ herbstclient pad $monitor 24
 fi
 
 WRK()
-{
-	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
-	
-	if [ ${OGWKSPACE} = "0" ] ;
-	then 
-		echo -e "%{B$NBLACK} %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "1" ] ;
-	then
-		echo -e "%{B$NBLACK} $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR $SELCHAR $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "2" ] ;
-	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "3" ] ;
-	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "4" ] ;
-	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{F$NGREEN}$ACTCHAR%{F-} %{B-}"
-    else
-		echo -e "%{B$NGREEN} %{F$BG}ERROR%{F-} %{B-}"
-	fi
-}
-
-WRKN()
 {
 	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
@@ -98,30 +74,6 @@ WRKN()
 	fi
 }
 
-WRKBG()
-{
-	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
-	
-	if [ ${OGWKSPACE} = "0" ] ;
-	then 
-		echo -e "%{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "1" ] ;
-	then
-		echo -e "%{B$NBLACK} $SELCHAR %{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "2" ] ;
-	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR %{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "3" ] ;
-	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR %{B$NGREEN} %{F$BG}$ACTCHAR%{F-} %{B$NBLACK} $SELCHAR %{B-}"
-	elif [ ${OGWKSPACE} = "4" ] ;
-	then 
-		echo -e "%{B$NBLACK} $SELCHAR $SELCHAR $SELCHAR $SELCHAR %{B$NGREEN}%{F$BG} $ACTCHAR %{F-}%{B-}"
-    else
-		echo -e "%{B$NGREEN} %{F$BG}ERROR%{F-} %{B-}"
-	fi
-}
-
 WIN()
 {
     #echo -n "%{B$NGREEN}%{F$BG}  %{F-}%{B-}"
@@ -131,15 +83,29 @@ WIN()
 MUSIC()
 {
 	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
-		if [ "$PLAYING" = "[playing]" ] ; then
+	
+		if [ "$PLAYING" = "[playing]" ]; then
         	SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-	        SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
-		elif [ $PLAYING = "[paused]" ] ; then
+			SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+		elif [ $PLAYING = "[paused]" ]; then
 			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-	     	SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+			SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
+		elif [ ! "$PLAYING" = "[playing]" ]; then
+			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
+			SONG="%{B$NBLACK} ··· %{B-}"
 		fi
 
     echo -n "${SYMBOL}${SONG}"
+}
+
+UPD()
+{
+	COUNT="$(pacman -Qu | wc -l)"
+	if [ ! "$COUNT" = "0" ]; then
+		SYMBOL=""
+
+		echo "%{B$BBLACK} $SYMBOL %{B$NBLACK} $COUNT %{B$BG} ${B-} "
+	fi
 }
 
 VOL()
@@ -179,9 +145,11 @@ BAT()
 NET()
 {
 	SYMBOL="%{B$BBLACK}  %{B-}"
+	DISCONNECTED=$(iw wls1 link | awk '/Not/ {print $1}')
+
 	WIFI_SSID=$(
-	if [ grep -q "Not connected."] ; then
-		echo "No AP"
+	if [ "$DISCONNECTED" = "Not" ]; then
+		echo "NOT CONNECTED"
 	else
 		iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
 	fi)
@@ -203,7 +171,7 @@ BAR()
 { 
     #ADD ALL THE THINGS
     while true; do
-		BUF="$(WRKN) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
+		BUF="$(WRK) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
 		echo $BUF	
         sleep 0.1
     done | lemonbar -f $GLYPH \

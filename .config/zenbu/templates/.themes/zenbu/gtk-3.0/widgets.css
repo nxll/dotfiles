@@ -186,7 +186,7 @@ scrollbar slider
     border-left-color: @base_color;
     border-top-color: @base_color;
     border-width: 0px;
-    padding: 4px;
+    padding: 2px;
     min-height: 10px;
     min-width: 5px;
 }
@@ -210,7 +210,7 @@ scale > contents > trough > slider
     border-left-color: @base_color;
     border-top-color: @base_color;
     border-width: 0px;
-    padding: 4px;
+    padding: 2px;
     min-height: 10px;
     min-width: 5px;
 }
@@ -264,10 +264,10 @@ separator
     background-color: @border_color;
     min-height: 1px;
     min-width: 1px;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 /**********************************************/
 
@@ -293,13 +293,13 @@ button
     border-left-color: @base_color;
     border-top-color: @base_color;
     border-width: 0px;
-    padding: 4px;
+    padding: 2px;
 }
 
 text-button
 {
     border-width: 0px;
-    padding: 4px;
+    padding: 2px;
 }
 
 button:hover
@@ -344,7 +344,7 @@ spinbutton button:focused
 entry
 {
     background-color: @base_color;
-    padding: 4px;
+    padding: 2px;
     border-width: 0px;
 }
 
@@ -361,7 +361,8 @@ checkbutton:selected,
 checkbutton:selected:focused,
 checkbutton:insensitive
 {
-    background-color: transparent;
+    background-color: @base_color;
+	color: @selected-fg-color;
 }
 
 radio,
@@ -369,7 +370,7 @@ radio:selected,
 radio:selected:focused
 {
     background-color: @base_color;
-    color: @selected_bg_color;
+    color: @selected_fg_color;
 }
 
 check,
@@ -377,7 +378,7 @@ check:selected,
 check:selected:focused
 {
     background-color: @base_color;
-    color: shade(@selected_bg_color, 0.9);
+    color: @selected_fg_color;
 }
 
 radio:hover,
@@ -385,8 +386,8 @@ check:hover,
 radio:hover:focused,
 .check:hover:focused
 {
-    background-color: shade(@base_color, 1.03);
-    border-color: @selected_bg_color;
+    background-color: @base_color;
+    border-color: @selected_fg_color;
 }
 
 radio:insensitive,
@@ -421,7 +422,7 @@ combobox:insensitive
 
 combobox button
 {
-    padding: 4px;
+    padding: 2px;
 }
 /**********************************************/
 
@@ -429,7 +430,7 @@ combobox button
 /**********************************************/
 toolbar
 {
-    padding: 4px;
+    padding: 2px;
     border-width: 0 0 0 0;
 }
 /**********************************************/
@@ -472,7 +473,7 @@ menuitem
 {
     border-width: 0;
     background-color: transparent;
-    padding: 4px;
+    padding: 2px;
 }
 
 menuitem label
@@ -513,7 +514,7 @@ menuitem.radio:insensitive
 /** configure tabs */
 notebook > stack
 {
-    padding: 4px;
+    padding: 2px;
     background-color: @bg_color;
 
     border-color: @base_color;
@@ -524,7 +525,7 @@ notebook > stack
 
 notebook > header > tabs > tab
 {
-    padding: 4px;
+    padding: 2px;
     border-width: 0px;
     border-right-color: @border_color;
     border-left-color: @base_color;

@@ -12,10 +12,16 @@ wblur:      "0"
 #FONTS
 fonts:
     #kakwafont
-    font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
-    font2: "kakwa kakwafont:size=8"
-    font3: "kakwa kakwafont 8"
-    font4: "kakwa kakwafont"
+    #font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
+    #font2: "kakwa kakwafont:size=8"
+    #font3: "kakwa kakwafont 8"
+    #font4: "kakwa kakwafont"
+
+    #neep
+    font1: "-jmk-neep-medium-r-semicondensed--11-100-75-75-c-50-iso8859-1"
+    font2: "jmk neep:size=8"
+    font3: "jmk neep 8"
+    font4: "jmk neep"
 
     #drift
     #font1: "-artwiz-drift-medium-r-normal--10-100-75-75-n-60-iso10646-1"

@@ -10,8 +10,8 @@ wtype:      "tile"
 
 #COLORS
 colors:
-    wmbf:       "#A8A8A6"
-    wmbu:       "#353533"
+    wmbf:       "#282826"
+    wmbu:       "#262624"
 
     primary:    "white"
     secondary:  "blue"

@@ -7,9 +7,9 @@
 # ░██ ███  ░██  ░░██ ░░██████░███   ░███   ░░██████ ░██████ ░░████████ ███  ░██  █████  
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
-set font      = -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
-set geometry  = 875x18+82+0
-set colors    = #D4D4D4 #21211F #D4D4D4 #21211F #9AC70E #21211F
+set font      = -jmk-neep-medium-r-semicondensed--11-100-75-75-c-50-iso8859-1
+set geometry  = 935x18+68+0
+set colors    = #B8B9B4 #21211F #B8B9B4 #21211F #9AC70E #21211F
 set border    = 5px #21211F
 set bangchar  = !
 set autocomp  = 1
@@ -50,4 +50,3 @@ bang da 	  = firefix "http://www.deviantart.com/browse/all/?section=&global=1&q=
 #COMPLETIONS
 tab default   = percontation "%s" %s | sort -u
 tab ?         = ignore="%s%s"; awk '/^bang/ {print "!"$2" ";}' ~/.interrobangrc
-tab quit      = echo -e "cancel\nshutdown\nsleep\nreboot\nlogout" | grep "^%s%s"

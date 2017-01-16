@@ -8,7 +8,7 @@
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
 set font      = {{ font1 }}
-set geometry  = 875x18+82+0
+set geometry  = 935x18+68+0
 set colors    = {{ fgc }} {{ bgc }} {{ fgc }} {{ bgc }} {{ n_green }} {{ bgc }}
 set border    = 5px {{ bgc }}
 set bangchar  = !
@@ -50,4 +50,3 @@ bang da 	  = firefix "http://www.deviantart.com/browse/all/?section=&global=1&q=
 #COMPLETIONS
 tab default   = percontation "%s" %s | sort -u
 tab ?         = ignore="%s%s"; awk '/^bang/ {print "!"$2" ";}' ~/.interrobangrc
-tab shutdown  = echo -e "shutdown"

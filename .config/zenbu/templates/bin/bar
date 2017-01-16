@@ -7,112 +7,102 @@
 # ░██  ░██ ██░░░░██  ░██    
 # ░██████ ░░████████░███    
 # ░░░░░    ░░░░░░░░ ░░░     
-# BARSCRIPT
 # nxll <nxll@taknik.io>
 
 #RESTART
 pkill lemonbar
 
 #COLORS
-FG="{{ fgc }}"
-BG="{{ bgc }}"
+fg="{{ fgc }}"
+bg="{{ bgc }}"
 
-NBLACK="{{ n_black }}"
-BBLACK="{{ b_black }}"
-NRED="{{ n_red }}"
-BRED="{{ b_red }}"
-NGREEN="{{ n_green }}"
-BGREEN="{{ b_green }}"
-NYELLOW="{{ n_yellow }}"
-BYELLOW="{{ b_yellow }}"
-NBLUE="{{ n_blue }}"
-BBLUE="{{ b_blue }}"
-NPURPLE="{{ n_magenta }}"
-BPURPLE="{{ b_magenta }}"
-NCYAN="{{ n_cyan }}"
-BCYAN="{{ b_cyan }}"
-NWHITE="{{ n_white }}"
-BWHITE="{{ b_white }}"
+nblk="{{ n_black }}"
+bblk="{{ b_black }}"
+nred="{{ n_red }}"
+bred="{{ b_red }}"
+ngrn="{{ n_green }}"
+bgrn="{{ b_green }}"
+nylw="{{ n_yellow }}"
+bylw="{{ b_yellow }}"
+nblu="{{ n_blue }}"
+bblu="{{ b_blue }}"
+nmag="{{ n_magenta }}"
+bmag="{{ b_magenta }}"
+ncyn="{{ n_cyan }}"
+bcyn="{{ b_cyan }}"
+nwht="{{ n_white }}"
+bwht="{{ b_white }}"
 
 #VARS
-FONT="{{ font1 }}"
-GLYPH="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-HEIGHT=18
-BORDER=5
-MUSLENGTH=45
-#ACTCHAR="+"
-#SELCHAR="+"
-#ACTCHAR=""
-#SELCHAR=""
+font="{{ font1 }}"
+glyph="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+height=18
+border=5
+muslength=45
+#actchar="+"
+#selchar="+"
+#actchar=""
+#selchar=""
 
 if pgrep herbstluftwm; then
 monitor=${1:-0}
-herbstclient pad $monitor 24
+bh=$(( $height + ($border * 2)))
+herbstclient pad $monitor $bh
 fi
 
 WRK()
 {
-	OGWKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
+	wrkspce=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
-	if [ ${OGWKSPACE} = "0" ] ;
+	if [ "${wrkspce}" = "0" ] ;
 	then 
-		echo "%{B$NGREEN} %{F$BG}0%{F-} %{B$NBLACK} 1 2 3 4 %{B-}"
-	elif [ ${OGWKSPACE} = "1" ] ;
+		echo "%{B$ngrn} %{F$bg}0%{F-} %{B$nblk} 1 2 3 4 %{B-}"
+	elif [ "${wrkspce}" = "1" ] ;
 	then
-		echo "%{B$NBLACK} 0 %{B$NGREEN} %{F$BG}1%{F-} %{B$NBLACK} 2 3 4 %{B-}"
-	elif [ ${OGWKSPACE} = "2" ] ;
+		echo "%{B$nblk} 0 %{B$ngrn} %{F$bg}1%{F-} %{B$nblk} 2 3 4 %{B-}"
+	elif [ "${wrkspce}" = "2" ] ;
 	then 
-		echo "%{B$NBLACK} 0 1 %{B$NGREEN} %{F$BG}2%{F-} %{B$NBLACK} 3 4 %{B-}"
-	elif [ ${OGWKSPACE} = "3" ] ;
+		echo "%{B$nblk} 0 1 %{B$ngrn} %{F$bg}2%{F-} %{B$nblk} 3 4 %{B-}"
+	elif [ "${wrkspce}" = "3" ] ;
 	then 
-		echo "%{B$NBLACK} 0 1 2 %{B$NGREEN} %{F$BG}3%{F-} %{B$NBLACK} 4 %{B-}"
-	elif [ ${OGWKSPACE} = "4" ] ;
+		echo "%{B$nblk} 0 1 2 %{B$ngrn} %{F$bg}3%{F-} %{B$nblk} 4 %{B-}"
+	elif [ "${wrkspce}" = "4" ] ;
 	then 
-		echo "%{B$NBLACK} 0 1 2 3 %{B$NGREEN} %{F$BG}4%{F-} %{B-}"
+		echo "%{B$nblk} 0 1 2 3 %{B$ngrn} %{F$bg}4%{F-} %{B-}"
     else
-		echo "%{B$NGREEN} %{F$BG}ERROR%{F-} %{B-}"
+		echo "%{B$ngrn} %{F$bg}NONE%{F-} %{B-}"
 	fi
 }
 
 WIN()
 {
-    #echo -n "%{B$NGREEN}%{F$BG}  %{F-}%{B-}"
-	echo -n "%{B$BBLACK}%{F$FG} $(wname $(pfw)) %{F-}%{B-}"
+    #echo -n "%{B$ngrn}%{F$bg}  %{F-}%{B-}"
+	echo -n "%{B$bblk}%{F$fg} $(wname $(pfw)) %{F-}%{B-}"
 }
 
 MUSIC()
 {
-	PLAYING=$(mpc status | sed -n 2p | cut -c1-9)
+	playing=$(mpc status | sed -n 2p | cut -c1-9)
 	
-		if [ "$PLAYING" = "[playing]" ]; then
-        	SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-			SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
-		elif [ $PLAYING = "[paused]" ]; then
-			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-			SONG="%{B$NBLACK} $(mpc current -f "%artist% - %title%" | cut -c1-$MUSLENGTH) %{B-}"
-		elif [ ! "$PLAYING" = "[playing]" ]; then
-			SYMBOL="%{B$BBLACK} %{F$FG}%{F-} %{B-}"
-			SONG="%{B$NBLACK} ··· %{B-}"
+		if [ "${playing}" = "[playing]" ]; then
+        	symbol="%{B$bblk} %{F$fg}%{F-} %{B-}"
+			song="%{B$nblk} $(mpc current -f "%artist% - %title%" | cut -c1-$muslength) %{B-}"
+		elif [ ${playing} = "[paused]" ]; then
+			symbol="%{B$bblk} %{F$fg}%{F-} %{B-}"
+			song="%{B$nblk} $(mpc current -f "%artist% - %title%" | cut -c1-$muslength) %{B-}"
+		elif [ ! "${playing}" = "[playing]" ]; then
+			symbol="%{B$bblk} %{F$fg}%{F-} %{B-}"
+			song="%{B$nblk} ··· %{B-}"
 		fi
 
-    echo -n "${SYMBOL}${SONG}"
-}
-
-UPD()
-{
-	COUNT="$(pacman -Qu | wc -l)"
-	if [ ! "$COUNT" = "0" ]; then
-		SYMBOL=""
-
-		echo "%{B$BBLACK} $SYMBOL %{B$NBLACK} $COUNT %{B$BG} ${B-} "
-	fi
+    echo -n "${symbol}${song}"
 }
 
 VOL()
 {
-	GETVOL=$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1  )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+	getvol=$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1  )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
 	
-	echo -n "%{B$BBLACK}  %{B$NBLACK} $GETVOL% %{B-}"
+	echo -n "%{B$bblk}  %{B$nblk} $getvol% %{B-}"
 }
 
 BAT()
@@ -122,66 +112,66 @@ BAT()
 
     if test $status = "Charging"; then
         symbol=""
-        echo -n "%{B$BBLACK} ${symbol} %{B-}"
+        echo -n "%{B$bblk} ${symbol} %{B-}"
     elif test $status = "Full"; then
         symbol=""
-        echo -n "%{B$BBLACK} ${symbol} %{B-}"
+        echo -n "%{B$bblk} ${symbol} %{B-}"
     else
         if test $percent -gt 66; then
             symbol=""
-            echo -n "%{B$BBLACK} ${symbol} %{B-}"
+            echo -n "%{B$bblk} ${symbol} %{B-}"
         elif test $percent -gt 34; then
             symbol=""
-            echo -n "%{B$BBLACK} ${symbol} %{B-}"
+            echo -n "%{B$bblk} ${symbol} %{B-}"
         else
 		symbol=""
-            echo -n "%{B$BBLACK} ${symbol} %{B-}"
+            echo -n "%{B$bblk} ${symbol} %{B-}"
         fi
     fi
 
-	echo -e "%{B$NBLACK} $percent% %{B-}"
+	echo -e "%{B$nblk} $percent% %{B-}"
 }
 
 NET()
 {
-	SYMBOL="%{B$BBLACK}  %{B-}"
-	DISCONNECTED=$(iw wls1 link | awk '/Not/ {print $1}')
+	symbol="%{B$bblk}  %{B-}"
+	disconnected=$(iw wls1 link | awk '/Not/ {print $1}')
 
-	WIFI_SSID=$(
-	if [ "$DISCONNECTED" = "Not" ]; then
+	ssid=$(
+	if [ "$disconnected" = "Not" ]; then
 		echo "NOT CONNECTED"
 	else
 		iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
 	fi)
 
-	echo -n "${SYMBOL}%{B$NBLACK} ${WIFI_SSID} %{B-}"
+	echo -n "${symbol}%{B$nblk} ${ssid} %{B-}"
 }
 
 DATE()
 {
-    echo -n "%{B$BBLACK} %{F$FG}$(date "+%d/%m " | tr [A-Z] [a-z])%{F-}%{B-}"
+    echo -n "%{B$bblk} %{F$fg}$(date "+%d/%m " | tr [A-Z] [a-z])%{F-}%{B-}"
 }
 
 CLOCK()
 {
-    echo -n "%{B$NGREEN}%{F$BG} $(date "+%H:%M") %{F-}%{B-}"
+    echo -n "%{B$ngrn}%{F$bg} $(date "+%H:%M") %{F-}%{B-}"
 }
 
 BAR()
 { 
     #ADD ALL THE THINGS
     while true; do
-		BUF="$(WRK) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
-		echo $BUF	
+		buf="$(WRK) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
+		echo "$buf"	
         sleep 0.1
-    done | lemonbar -f $GLYPH \
-        -f $FONT \
-        -F $FG \
-        -B $BG \
-        -u $BORDER \
-		-r $BORDER \
-		-R $BG \
-        -g 1270x$HEIGHT+0+0 | sh &
+    done | lemonbar -f $glyph \
+        -f "$font" \
+        -F "$fg" \
+        -B "$bg" \
+        -u "$border" \
+		-r "$border" \
+		-R "$bg" \
+        -g "1270x$height+0+0" | sh &
 }
 
 BAR > /dev/null

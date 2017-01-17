@@ -1,0 +1,40 @@
+# CRSHD
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "crshd"
+
+#COLORS
+colors:
+    wmbf:       "#EEAE63"
+    wmbu:       "#111111"
+
+    primary:    "white"
+    secondary:  "red"
+    background: "#1F1B18"
+    foreground: "#EBDECE"
+
+    black:
+        normal: "#141210"
+        bold:   "#332D29"
+    red:
+        normal: "#B55A39"
+        bold:   "#C9643F"
+    green:
+        normal: "#748F56"
+        bold:   "#84A362"
+    yellow:
+        normal: "#D79551"
+        bold:   "#EBA358"
+    blue:
+        normal: "#84A362"
+        bold:   "#95B86E"
+    magenta:
+        normal: "#6A5345"
+        bold:   "#576573"
+    cyan:
+        normal: "#334948"
+        bold:   "#425E5D"
+    white:
+        normal: "#77685F"
+        bold:   "#8C7B70"

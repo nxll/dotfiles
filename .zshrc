@@ -28,7 +28,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # PROMPT
-PROMPT="%K{8}%F{11} » %K{0}%F{6} [%F{7}%1~%F{6}]%F{2};%f%k "
+PROMPT="%K{8}%F{11} » %K{0}%F{6} [%F{7}%1~%F{6}]%F{2};;%f%k "
 #PROMPT="%F{2}≠ %F{7}%n%F{1}╾╼%F{6}[%F{7}%1~%F{6}]%F{2};%f"
 #PROMPT="%F{2}≠%f "
 
@@ -61,6 +61,7 @@ alias pkgcnt='pacman -Q | wc -l'
 
 # OTHER
 alias v='vim'
+alias mktar='tar -cvzf'
 alias todo='echo;echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 2)TODO$(tput sgr0)";cat $HOME/.todo;echo'
 alias atodo='echo "$(print " ")$(tput setaf 8)≠ $(tput setaf 4)$(date "+%d/%m")$(tput sgr0)$1" >> $HOME/.todo'
 alias rtodo='sed -i '$d' $HOME/.todo'

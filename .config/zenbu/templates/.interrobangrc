@@ -8,7 +8,7 @@
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
 set font      = {{ font1 }}
-set geometry  = 935x18+68+0
+set geometry  = 880x18+83+0
 set colors    = {{ fgc }} {{ bgc }} {{ fgc }} {{ bgc }} {{ n_green }} {{ bgc }}
 set border    = 5px {{ bgc }}
 set bangchar  = !

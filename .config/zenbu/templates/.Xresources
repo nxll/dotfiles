@@ -68,7 +68,7 @@ twobwm.outer_border: 	   0
 twobwm.focus_color: 	   {{ wmf }}
 twobwm.unfocus_color: 	   {{ wmu }}
 twobwm.fixed_color: 	   {{ n_red }}
-twobwm.unkill_color: 	   {{ bgc }}
+twobwm.unkill_color: 	   {{ n_green }}
 twobwm.outer_border_color: {{ bgc }}
 twobwm.fixed_unkill_color: {{ b_red }}
 twobwm.inverted_colors:    false

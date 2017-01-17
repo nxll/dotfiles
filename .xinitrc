@@ -7,22 +7,20 @@
 #   ██░██ ░██ ░██  ░██░██  ░██   ░██   ░██   ██ 
 #  ██ ░░██░██ ███  ░██░██  ░░██ ░███   ░░█████  
 # ░░   ░░ ░░ ░░░   ░░ ░░    ░░  ░░░     ░░░░░   
-# EXEC
-#sxhkd &
+#EXEC
 setxkbmap -layout gb &
-xrdb -load ~/.Xresources &
+xrdb -load $HOME/.Xresources &
 udiskie -2 &
 mpd &
-compton --config ~/.compton.conf &
-xsetroot -cursor_name left_ptr &
 urxvtd -q -o -f &
 pulseaudio --start &
-#$HOME/bin/ws -wallpaper &
-$HOME/bin/tt -r &
+tt -r &
+xsetroot -cursor_name left_ptr &
+compton --config $HOME/.compton.conf &
 dunst &
-$HOME/bin/bar &
+bar &
 
-# WM
+#EXEC
 #exec herbstluftwm
 #exec openbox
 #exec swm

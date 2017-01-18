@@ -4,19 +4,15 @@
 
 name: "ltfr"
 
-#WALLPAPER
-wallpaper:  "mountains_bw.png"
-wtype:      "fill"
-
 #COLORS
 colors:
     wmbf:       "#F2ECEC"
     wmbu:       "#202124"
     
-    primary:    "white"
-    secondary:  "green"
     background: "#1C1D1F"
     foreground: "#F2ECEC"
+
+    hint: "#AADB0F"
 
     black:
         normal: "#202124" 

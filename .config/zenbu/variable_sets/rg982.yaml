@@ -4,23 +4,19 @@
 
 name: "rg982"
 
-#WALLPAPER
-wallpaper:  "21211Ftile.png"
-wtype:      "tile"
-
 #COLORS
 colors:
-    wmbf:       "#282826"
+    wmbf:       "#999992"
     wmbu:       "#262624"
 
-    primary:    "white"
-    secondary:  "blue"
-    background: "#21211F"
+    background: "#242422"
     foreground: "#B8B9B4"
 
+    hint:       "#9AC70A"
+
     black:
-        normal: "#262624"
-        bold:   "#282826"
+        normal: "#292927"
+        bold:   "#2E2E2C"
     red:
         normal: "#939490"
         bold:   "#989995"

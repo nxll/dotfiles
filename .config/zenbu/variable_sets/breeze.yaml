@@ -9,10 +9,10 @@ colors:
     wmbf:       "#627B85"
     wmbu:       "#2B343D"
 
-    primary:    "white"
-    secondary:  "red"
     background: "#282F38"
     foreground: "#B8C2CC"
+
+    hint: "#8D4A4A"
 
     black:
         normal: "#2F3842"

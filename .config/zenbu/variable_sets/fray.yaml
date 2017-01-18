@@ -4,19 +4,15 @@
 
 name: "fray"
 
-#WALLPAPER
-wallpaper:  "pexels-photo-70305-bw.jpeg"
-wtype:      "fill"
-
 #COLORS
 colors:
     wmbf:       "#F2ECEC"
     wmbu:       "#252629"
-    
-    primary:    "white"
-    secondary:  "green"
+
     background: "#121314"
     foreground: "#F2ECEC"
+
+    hint: "#AADB0F"
 
     black:
         normal: "#161718" 

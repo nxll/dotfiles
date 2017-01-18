@@ -4,20 +4,15 @@
 
 name: "grass"
 
-#WALLPAPER
-wallpaper:  "grass.jpg"
-wtype:      "fill"
-wblur:      "4"
-
 #COLORS
 colors:
     wmbf:       "#4D8F67"
     wmbu:       "#353533"
 
-    primary:    "white"
-    secondary:  "blue"
     background: "#1F2621"
     foreground: "#E2FFE6"
+
+    hint: "#47845F"
 
     black:
         normal: "#242B25"

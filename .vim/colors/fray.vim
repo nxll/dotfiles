@@ -4,7 +4,7 @@ let g:colors_name = "fray"
 if &background == "light"
     hi Boolean 	    gui=NONE ctermfg=2    ctermbg=NONE
     hi ColorColumn  gui=NONE ctermfg=7    ctermbg=NONE
-    hi Comment 	    gui=NONE ctermfg=11   ctermbg=0
+    hi Comment 	    gui=NONE ctermfg=7   ctermbg=0
     hi Conceal 	    gui=NONE ctermfg=7    ctermbg=NONE
     hi Conditional  gui=NONE ctermfg=5    ctermbg=NONE
     hi Constant     gui=NONE ctermfg=7    ctermbg=NONE
@@ -23,7 +23,7 @@ if &background == "light"
     hi Folded 	    gui=NONE ctermfg=4    ctermbg=0
     hi Ignore 	    gui=NONE ctermfg=NONE ctermbg=NONE
     hi IncSearch    gui=NONE ctermfg=NONE ctermbg=NONE
-    hi LineNr 	    gui=NONE ctermfg=8    ctermbg=0
+    hi LineNr 	    gui=NONE ctermfg=7    ctermbg=0
     hi MatchParen   gui=NONE ctermfg=2    ctermbg=NONE
     hi ModeMsg      gui=NONE ctermfg=236  ctermbg=0
     hi MoreMsg 	    gui=NONE ctermfg=NONE ctermbg=NONE
@@ -68,7 +68,7 @@ if &background == "light"
 elseif &background == "dark"
     hi Boolean 	    gui=NONE ctermfg=2    ctermbg=NONE
     hi ColorColumn  gui=NONE ctermfg=7    ctermbg=NONE
-    hi Comment 	    gui=NONE ctermfg=11   ctermbg=0
+    hi Comment 	    gui=NONE ctermfg=7    ctermbg=0
     hi Conceal 	    gui=NONE ctermfg=7    ctermbg=NONE
     hi Conditional  gui=NONE ctermfg=5    ctermbg=NONE
     hi Constant     gui=NONE ctermfg=7    ctermbg=NONE
@@ -87,7 +87,7 @@ elseif &background == "dark"
     hi Folded 	    gui=NONE ctermfg=4    ctermbg=0
     hi Ignore 	    gui=NONE ctermfg=NONE ctermbg=NONE
     hi IncSearch    gui=NONE ctermfg=NONE ctermbg=NONE
-    hi LineNr 	    gui=NONE ctermfg=3    ctermbg=0
+    hi LineNr 	    gui=NONE ctermfg=7    ctermbg=0
     hi MatchParen   gui=NONE ctermfg=0    ctermbg=7 cterm=NONE
     hi ModeMsg      gui=NONE ctermfg=0    ctermbg=2
     hi MoreMsg 	    gui=NONE ctermfg=NONE ctermbg=NONE

@@ -4,20 +4,15 @@
 
 name: "nature"
 
-#WALLPAPER
-wallpaper:  "forest-meadow-leaves-autumn.jpg"
-wtype:      "fill"
-wblur:      "2"
-
 #COLORS
 colors:
     wmbf:       "#CCC5AD"
     wmbu:       "#707746"
 
-    primary:    "white"
-    secondary:  "blue"
     background: "#2D2B26"
     foreground: "#CCC5AD"
+
+    hint: "#A09F73"
 
     black:
         normal: "#33312B"

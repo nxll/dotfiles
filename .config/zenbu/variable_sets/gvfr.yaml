@@ -4,19 +4,15 @@
 
 name: "gvfr"
 
-#WALLPAPER
-wallpaper:  "pexels-photo-70305-bw.jpeg"
-wtype:      "fill"
-
 #COLORS
 colors:
     wmbf:       "#F2ECEC"
     wmbu:       "#2B2F30"
     
-    primary:    "white"
-    secondary:  "green"
     background: "#1D2021"
     foreground: "#F2ECEC"
+
+    hint: "#AADB0F"
 
     black:
         normal: "#222526" 

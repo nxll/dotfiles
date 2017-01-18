@@ -4,19 +4,15 @@
 
 name: ""
 
-#WALLPAPER
-wallpaper:  ""
-wtype:      ""
-
 #COLORS
 colors:
     wmbf:       ""
     wmbu:       ""
 
-    primary:    ""
-    secondary:  ""
     background: ""
     foreground: ""
+
+    hint: ""
 
     black:
         normal: ""

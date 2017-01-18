@@ -1,23 +1,18 @@
-# RG982
+# RLG982
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "rg982"
-
-#WALLPAPER
-wallpaper:  "mountains_bw.png"
-wtype:      "fill"
-wblur:      "0"
+name: "rlg982"
 
 #COLORS
 colors:
     wmbf:       "#454545"
     wmbu:       "#3B3B3B"
 
-    primary:    "white"
-    secondary:  "blue"
     background: "#303030"
     foreground: "#CACCC6"
+
+    hint: "#9AC70E"
 
     black:
         normal: "#3B3B3B"

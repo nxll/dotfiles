@@ -7,7 +7,7 @@ style "default"
         fg[ACTIVE]              = "{{ fgc }}"
         fg[INSENSITIVE]         = "{{ fgc }}"
         fg[PRELIGHT]            = "{{ b_white }}"
-        fg[SELECTED]            = "{{ n_green }}"
+        fg[SELECTED]            = "{{ hint }}"
         
         bg[ACTIVE]              = "{{ bgc }}"
 		bg[NORMAL]              = "{{ bgc }}"
@@ -24,7 +24,7 @@ style "default"
         text[NORMAL]            = "{{ fgc }}"
         text[ACTIVE]            = "{{ fgc }}"
         text[PRELIGHT]          = "{{ b_white }}"
-        text[SELECTED]          = "{{ n_green }}"
+        text[SELECTED]          = "{{ hint }}"
         text[INSENSITIVE]       = mix (0.5, @text_color, @base_color)
 	
 
@@ -73,7 +73,7 @@ style "menu"
 style "entry"
 {
 	bg[SELECTED] = "{{ n_black }}"
-	fg[SELECTED] = "{{ n_green }}"
+	fg[SELECTED] = "{{ hint }}"
 }
 
 class "GtkWidget" style "default"
@@ -95,7 +95,7 @@ style "mist-text-is-fg-color-workaround"
         text[ACTIVE]              = "{{ fgc }}"
         text[INSENSITIVE]         = "{{ fgc }}"
         text[PRELIGHT]            = "{{ b_white }}"
-        text[SELECTED]            = "{{ n_green }}"
+        text[SELECTED]            = "{{ hint }}"
 }
 widget_class "*.<GtkComboBox>.<GtkCellView>"   style "mist-text-is-fg-color-workaround"
 
@@ -105,7 +105,7 @@ style "mist-menuitem-text-is-fg-color-workaround"
         text[ACTIVE]              = "{{ fgc }}"
         text[INSENSITIVE]         = "{{ fgc }}"
         text[PRELIGHT]            = "{{ b_white }}"
-        text[SELECTED]            = "{{ n_green }}"
+        text[SELECTED]            = "{{ hint }}"
 }
 widget "*.gtk-combobox-popup-menu.*"   style "mist-menuitem-text-is-fg-color-workaround"
 
@@ -118,7 +118,7 @@ style "mist-fg-is-text-color-workaround"
         fg[ACTIVE]            = "{{ fgc }}"
         fg[INSENSITIVE]       = "{{ fgc }}"
         fg[PRELIGHT]          = "{{ b_white }}"
-        fg[SELECTED]          = "{{ n_green }}"
+        fg[SELECTED]          = "{{ hint }}"
 }
 widget_class "*<GtkListItem>*" style "mist-fg-is-text-color-workaround"
 # The same problem also exists for GtkCList and GtkCTree

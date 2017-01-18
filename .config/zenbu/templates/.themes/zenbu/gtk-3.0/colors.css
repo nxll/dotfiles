@@ -1,7 +1,7 @@
 @define-color bg_color {{ bgc }};
 @define-color fg_color {{ fgc }};
 @define-color selected_bg_color {{ n_black }};
-@define-color selected_fg_color {{ n_green }};
+@define-color selected_fg_color {{ hint }};
 @define-color base_color {{ bgc }};
 @define-color text_color {{ fgc }};
 

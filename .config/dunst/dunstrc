@@ -8,7 +8,7 @@
 #  ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░     ░░  ░░░     ░░░░░  
 [global]
     #font = Terminus 8 
-    font = kakwa kakwafont 8  
+    font = lucy tewi 8  
     #font = lemon 8
 
     # Allow a small subset of html markup:
@@ -159,7 +159,7 @@
 
 [frame]
     width = 0
-    color = "#3B3B3B"
+    color = "#262624"
 
 [shortcuts]
 
@@ -185,18 +185,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#303030"
-    foreground = "#CACCC6"
+    background = "#242422"
+    foreground = "#B8B9B4"
     timeout = 20
 
 [urgency_normal]
-    background = "#303030"
-    foreground = "#CACCC6"
+    background = "#242422"
+    foreground = "#B8B9B4"
     timeout = 20
 
 [urgency_critical]
     background = "#939490"
-    foreground = "#303030"
+    foreground = "#242422"
     timeout = 30
 
 

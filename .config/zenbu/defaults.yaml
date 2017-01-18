@@ -4,24 +4,25 @@
 
 name: "default"
 
-#WALLPAPER
-wallpaper:  "mountains_bw.png"
-wtype:      "fill"
-wblur:      "0"
-
 #FONTS
 fonts:
     #kakwafont
-    font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
-    font2: "kakwa kakwafont:size=8"
-    font3: "kakwa kakwafont 8"
-    font4: "kakwa kakwafont"
+    #font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
+    #font2: "kakwa kakwafont:size=8"
+    #font3: "kakwa kakwafont 8"
+    #font4: "kakwa kakwafont"
 
     #neep
     #font1: "-jmk-neep-medium-r-semicondensed--11-100-75-75-c-50-iso8859-1"
     #font2: "jmk neep:size=8"
     #font3: "jmk neep 8"
     #font4: "jmk neep"
+
+    #tamzen
+    #font1: "-misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1"
+    #font2: "TamzenForPowerline:size=12"
+    #font3: "TamzenForPowerline 12"
+    #font4: "TamzenForPowerline"
 
     #drift
     #font1: "-artwiz-drift-medium-r-normal--10-100-75-75-n-60-iso10646-1"
@@ -47,6 +48,12 @@ fonts:
     #font3: "benis uushi 8"
     #font4: "benis uushi"  
 
+    #tewi
+    font1: "-lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1"
+    font2: "lucy tewi:size=8"
+    font3: "lucy tewi 8"
+    font4: "lucy tewi"
+
     #tewii
     #font1: "-lucy-tewii-medium-r-normal-*-11-90-100-100-c-60-iso10646-1"
     #font2: "lucy tewii:size=8"
@@ -64,11 +71,11 @@ colors:
     wmbf:          "#333435"
     wmbu:          "#242528"
 
-    primary:      "white"
-    secondary:    "green"
     background:   "#1C1D1F"
     foreground:   "#F5F5F5"
-    
+
+    hint:         "#AADB0F"
+
     black:
         normal:     "#202124"
         bold:       "#242529"
@@ -126,15 +133,7 @@ b_cyan:     "{{ colors.cyan.bold }}"
 n_white:    "{{ colors.white.normal }}"
 b_white:    "{{ colors.white.bold }}"
 
-n_primary:  "{{ colors[colors.primary].normal }}"
-b_primary:  "{{ colors[colors.primary].bold }}"
-n_secondary:  "{{ colors[colors.secondary].normal }}"
-b_secondary:  "{{ colors[colors.secondary].bold }}"
-
-text_primary:         "{{ colors.primary }}"
-text_secondary:       "{{ colors.secondary }}"
-ncmpcpp_primary_n:    "{{ colornumbers[colors.primary] + 1 }}"
-ncmpcpp_secondary_n:  "{{ colornumbers[colors.secondary] + 1 }}"
+hint: "{{ colors.hint }}"
 
 wmf:  "{{ colors.wmbf }}"
 wmu:  "{{ colors.wmbu }}"

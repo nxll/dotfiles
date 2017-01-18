@@ -4,10 +4,6 @@
 
 name: "hotline"
 
-#WALLPAPER
-wallpaper:  "minimal_sunset.jpg"
-wtype:      "center"
-
 #COLORS
 colors:
     wmbf:       "#F2014C"
@@ -17,6 +13,8 @@ colors:
     secondary:  "red"
     background: "#001F25"
     foreground: "#F2E6DB"
+
+    hint: "#E00146"
 
     black:
         normal: "#002930"

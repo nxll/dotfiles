@@ -4,19 +4,15 @@
 
 name: "mono"
 
-#WALLPAPER
-wallpaper:  "000tile.png"
-wtype:      "tile"
-
 #COLORS
 colors:
     wmbf:       "#FFFFFF"
     wmbu:       "#EEEEEE"
 
-    primary:    "white"
-    secondary:  "white"
     background: "#000000"
     foreground: "#FFFFFF"
+
+    hint: "#FFFFFF"
 
     black:
         normal: "#050505"

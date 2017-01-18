@@ -4,20 +4,15 @@
 
 name: "nightrun"
 
-#WALLPAPER
-wallpaper:  "mountains_bw.png"
-wtype:      "fill"
-wblur:      "0"
-
 #COLORS
 colors:
     wmbf:       "#D6D6D6"
     wmbu:       "#262624"
 
-    primary:    "white"
-    secondary:  "blue"
     background: "#21211F"
     foreground: "#D4D4D4"
+
+    hint: "#9AC70E"
 
     black:
         normal: "#292927"

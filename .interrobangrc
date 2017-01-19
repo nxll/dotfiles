@@ -9,8 +9,8 @@
 #SETTINGS
 set font      = -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
 set geometry  = 935x18+70+0
-set colors    = #B8B9B4 #242422 #B8B9B4 #242422 #9AC70A #242422
-set border    = 5px #242422
+set colors    = #B39A8F #261D18 #B39A8F #261D18 #C77E64 #261D18
+set border    = 5px #261D18
 set bangchar  = !
 set autocomp  = 1
 set list      = true

@@ -1,0 +1,40 @@
+# ZREL
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "zrel"
+
+#COLORS
+colors:
+    wmbf:       "#C77E64"
+    wmbu:       "#241B17"
+
+    background: "#261D18"
+    foreground: "#B39A8F"
+
+    hint: "#C77E64"
+
+    black:
+        normal: "#30251F"
+        bold:   "#3B2D26"
+    red:
+        normal: "#975542"
+        bold:   "#A15A46"
+    green:
+        normal: "#B3725A"
+        bold:   "#BD785F"
+    yellow:
+        normal: "#66493D"
+        bold:   "#705043"
+    blue:
+        normal: "#AD795C"
+        bold:   "#B88062"
+    magenta:
+        normal: "#965744"
+        bold:   "#A15D49"
+    cyan:
+        normal: "#4D372E"
+        bold:   "#573E34"
+    white:
+        normal: "#A37A68"
+        bold:   "#AE826F"

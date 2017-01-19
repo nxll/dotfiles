@@ -12,36 +12,36 @@
 *italicFont: -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1 
 
 !COLORS
-*highlightColor: #2E2E2C
-*cursorColor: 	 #AFB0AB
-*borderColor: 	 #242422
-*background:  	 #242422
-*foreground:  	 #B8B9B4
+*highlightColor: #3B2D26
+*cursorColor: 	 #AE826F
+*borderColor: 	 #261D18
+*background:  	 #261D18
+*foreground:  	 #B39A8F
 
 !BLACK
-*color0:  #292927
-*color8:  #2E2E2C
+*color0:  #30251F
+*color8:  #3B2D26
 !RED
-*color1:  #939490
-*color9:  #989995
+*color1:  #975542
+*color9:  #A15A46
 !GREEN
-*color2:  #9AC70E
-*color10: #C2FA11
+*color2:  #B3725A
+*color10: #BD785F
 !YELLOW
-*color3:  #B6B8B3
-*color11: #BBBDB8
+*color3:  #66493D
+*color11: #705043
 !BLUE
-*color4:  #727370
-*color12: #777875
+*color4:  #AD795C
+*color12: #B88062
 !MAGENTA
-*color5:  #D1D1CB
-*color13: #D6D6D0
+*color5:  #965744
+*color13: #A15D49
 !CYAN
-*color6:  #636361
-*color14: #696966
+*color6:  #4D372E
+*color14: #573E34
 !WHITE
-*color7:  #AAABA6
-*color15: #AFB0AB
+*color7:  #A37A68
+*color15: #AE826F
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
@@ -65,22 +65,22 @@ URxvt*matcher.button: 1
 !2BWM COLORS
 twobwm.border_width: 	   5
 twobwm.outer_border: 	   0
-twobwm.focus_color: 	   #999992
-twobwm.unfocus_color: 	   #262624
-twobwm.fixed_color: 	   #939490
-twobwm.unkill_color: 	   #9AC70A
-twobwm.outer_border_color: #242422
-twobwm.fixed_unkill_color: #989995
+twobwm.focus_color: 	   #C77E64
+twobwm.unfocus_color: 	   #241B17
+twobwm.fixed_color: 	   #975542
+twobwm.unkill_color: 	   #C77E64
+twobwm.outer_border_color: #261D18
+twobwm.fixed_unkill_color: #A15A46
 twobwm.inverted_colors:    false
 twobwm.enable_compton: 	   true
 
 !SXIV COLORS
 sxiv.font: 		   lucy tewi:size=8
-sxiv.win_bg_color: #242422
-sxiv.win_fs_color: #2E2E2C
-sxiv.sel_color:    #2E2E2C
-sxiv.bar_bg_color: #292927
-sxiv.bar_fg_color: #B8B9B4
+sxiv.win_bg_color: #261D18
+sxiv.win_fs_color: #3B2D26
+sxiv.sel_color:    #3B2D26
+sxiv.bar_bg_color: #30251F
+sxiv.bar_fg_color: #B39A8F
 sxiv.win_width:    460
 sxiv.win_height:   350
 

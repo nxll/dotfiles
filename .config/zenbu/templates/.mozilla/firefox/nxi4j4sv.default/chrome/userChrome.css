@@ -18,7 +18,7 @@
 
 :root {
     /* TAB VARIABLES */
-    --bg-light: {{ n_black }}; --bg-dark: {{ bgc }};
+    --bg-light: {{ b_black }}; --bg-dark: {{ bgc }};
     --fg-light: {{ fgc }}; --fg-dark: {{ fgc }};
     --tab-triangle-correction: -1px;
     --tab-height: 20px; --tab-icon-size: 0px; --tab-strip-margin: -12px; --tab-overlap: -5px;
@@ -27,7 +27,8 @@
     --tab-triangle: none;  /* block | none */
 
     /* URL VARIABLES */
-    --url-background: var(--bg-dark); --url-color: var(--fg-dark);
+    /*--url-background: var(--bg-dark); --url-color: var(--fg-dark);*/
+    --url-background: {{ n_black }}; --url-color: var(--fg-dark);
     --url-height: 20px; --url-right-margin: 6px;
     --url-fonts: "{{ font4 }}", "{{ font4 }}"; --url-font-size: 8pt;
     --url-text-align: center; /* left | center | right */

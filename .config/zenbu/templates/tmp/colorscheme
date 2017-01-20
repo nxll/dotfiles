@@ -1,0 +1,34 @@
+# scheme: {{ name }}
+# nxll <nxll@teknik.io>
+
+!COLORS
+*highlightColor: {{ b_black  }}
+*cursorColor: 	 {{ b_white  }}
+*borderColor: 	 {{ bgc  }}
+*background:  	 {{ bgc  }}
+*foreground:  	 {{ fgc  }}
+
+!BLACK
+*color0:  {{ n_black  }}
+*color8:  {{ b_black  }}
+!RED
+*color1:  {{ n_red  }}
+*color9:  {{ b_red  }}
+!GREEN
+*color2:  {{ n_green  }}
+*color10: {{ b_green  }}
+!YELLOW
+*color3:  {{ n_yellow  }}
+*color11: {{ b_yellow  }}
+!BLUE
+*color4:  {{ n_blue  }}
+*color12: {{ b_blue  }}
+!MAGENTA
+*color5:  {{ n_magenta  }}
+*color13: {{ b_magenta  }}
+!CYAN
+*color6:  {{ n_cyan  }}
+*color14: {{ b_cyan  }}
+!WHITE
+*color7:  {{ n_white  }}
+*color15: {{ b_white  }}

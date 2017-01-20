@@ -17,7 +17,7 @@ set list      = true
 set last      = true
 set margin    = -80
 set shell     = /usr/bin/zsh
-set run_hook  = %s || notify-send "ERROR"
+set run_hook  = %s || notify-send "NOT FOUND"
 
 #BANGS
 bang !        = urxvtc -e %s

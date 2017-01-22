@@ -2,19 +2,17 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "hotline"
+name:           "hotline"
 
 #COLORS
 colors:
     wmbf:       "#F2014C"
     wmbu:       "#088064"
 
-    primary:    "white"
-    secondary:  "red"
     background: "#001F25"
     foreground: "#F2E6DB"
 
-    hint: "#E00146"
+    hint:       "#E00146"
 
     black:
         normal: "#002930"

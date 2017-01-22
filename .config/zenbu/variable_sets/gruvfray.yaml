@@ -1,22 +1,22 @@
-# LTFR
+# GRUVFRAY
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "ltfr"
+name:           "gruvfray"
 
 #COLORS
 colors:
     wmbf:       "#F2ECEC"
-    wmbu:       "#202124"
+    wmbu:       "#2B2F30"
     
-    background: "#1C1D1F"
+    background: "#1D2021"
     foreground: "#F2ECEC"
 
-    hint: "#AADB0F"
+    hint:       "#AADB0F"
 
     black:
-        normal: "#202124" 
-        bold:   "#242529"
+        normal: "#222526" 
+        bold:   "#272A2B"
     red:
         normal: "#E8E2E2"
         bold:   "#FCFCFC"

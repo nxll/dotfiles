@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "dk5725"
+name:           "dk5725"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#363334"
     foreground: "#C3C1B8"
 
-    hint: "#97544D"
+    hint:       "#97544D"
 
     black:
         normal: "#393638"

@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "grass"
+name:           "grass"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#1F2621"
     foreground: "#E2FFE6"
 
-    hint: "#47845F"
+    hint:       "#47845F"
 
     black:
         normal: "#242B25"

@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "nxmunk"
+name:           "nxmunk"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#181818"
     foreground: "#AFAFAF"
 
-    hint: "#689ED9"
+    hint:       "#689ED9"
 
     black:
         normal: "#222222"

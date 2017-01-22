@@ -1,0 +1,22 @@
+[general]
+mode = normal
+framerate = 60
+sensitivity = 150
+; bars = 0
+bar_width = 2
+bar_spacing = 1
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = ncurses
+
+[color]
+foreground = white
+
+[smoothing]
+integral = 0.6
+monstercat = 1
+gravity = 1

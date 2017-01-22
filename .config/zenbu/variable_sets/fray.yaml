@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "fray"
+name:           "fray"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#121314"
     foreground: "#F2ECEC"
 
-    hint: "#AADB0F"
+    hint:       "#AADB0F"
 
     black:
         normal: "#161718" 

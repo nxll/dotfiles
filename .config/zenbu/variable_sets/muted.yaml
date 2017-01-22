@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "muted"
+name:           "muted"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#141A20"
     foreground: "#EEEEEE"
 
-    hint: "#4FACA1"
+    hint:       "#4FACA1"
 
     black:
         normal: "#181F26" 

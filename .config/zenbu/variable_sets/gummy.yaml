@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "gummy"
+name:           "gummy"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#2A1F2A"
     foreground: "#F2D5F2"
 
-    hint: "#34C7F8"
+    hint:       "#34C7F8"
 
     black:
         normal: "#332633" 

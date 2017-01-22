@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "ir"
+name:           "ir"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#2A2F36"
     foreground: "#DCDCDC"
 
-    hint: "#729597"
+    hint:       "#729597"
 
     black:
         normal: "#323740"

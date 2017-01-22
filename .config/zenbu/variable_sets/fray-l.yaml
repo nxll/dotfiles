@@ -1,22 +1,22 @@
-# GVFR
+# FRAY-L
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "gvfr"
+name:           "fray-l"
 
 #COLORS
 colors:
     wmbf:       "#F2ECEC"
-    wmbu:       "#2B2F30"
+    wmbu:       "#202124"
     
-    background: "#1D2021"
+    background: "#1C1D1F"
     foreground: "#F2ECEC"
 
-    hint: "#AADB0F"
+    hint:       "#AADB0F"
 
     black:
-        normal: "#222526" 
-        bold:   "#272A2B"
+        normal: "#202124" 
+        bold:   "#242529"
     red:
         normal: "#E8E2E2"
         bold:   "#FCFCFC"

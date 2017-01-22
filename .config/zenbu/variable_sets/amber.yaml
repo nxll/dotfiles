@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "amber"
+name:           "amber"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#801800"
     foreground: "#ff3000"
 
-    hint: "#F22C00"
+    hint:       "#F22C00"
 
     black:
         normal: "#8C1A00"

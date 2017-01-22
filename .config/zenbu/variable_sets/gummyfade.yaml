@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "gummyfade"
+name:           "gummyfade"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#291F28"
     foreground: "#E0CEDF"
 
-    hint: "#F8C6C8"
+    hint:       "#F8C6C8"
 
     black:
         normal: "#332732"

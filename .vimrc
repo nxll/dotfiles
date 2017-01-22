@@ -46,7 +46,7 @@ set t_Co=256
 set tabstop=4
 set shiftwidth=4
 
-colors fray
+colors noctu
 syntax on
 
 " NERDTree settings and autohide/close

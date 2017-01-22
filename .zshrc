@@ -18,7 +18,7 @@ export RHISK_COMM="zenbu"
 export LS_COLORS
 
 source $HOME/.ioup_token
-source $HOME/.urxvt/completions/rhisk-comp.zsh
+source $HOME/.zsh/completions/rhisk-comp.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #SCRIPTS

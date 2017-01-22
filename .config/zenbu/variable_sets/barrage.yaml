@@ -2,7 +2,7 @@
 # for zenbu
 # original by Shinryuu <https://github.com/Shinryuu>
 
-name: "barrage"
+name:           "barrage"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#1D1F21"
     foreground: "#7B8695"
 
-    hint: "#785561"
+    hint:       "#785561"
 
     black:
         normal: "#26292B"

@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "gruvbox"
+name:           "gruvbox"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#1D2021"
     foreground: "#FBF1C7"
 
-    hint: "#D79921"
+    hint:       "#D79921"
 
     black:
         normal: "#262A2B"

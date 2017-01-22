@@ -2,7 +2,7 @@
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name: "zrel"
+name:           "zrel"
 
 #COLORS
 colors:
@@ -12,7 +12,7 @@ colors:
     background: "#261D18"
     foreground: "#B39A8F"
 
-    hint: "#C77E64"
+    hint:       "#C77E64"
 
     black:
         normal: "#30251F"

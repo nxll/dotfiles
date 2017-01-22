@@ -6,8 +6,8 @@ name: "rg982"
 
 #COLORS
 colors:
-    wmbf:       "#999992"
-    wmbu:       "#262624"
+    wmbf:       "#9AC70E"
+    wmbu:       "#2E2E2B"
 
     background: "#242422"
     foreground: "#B8B9B4"
@@ -15,8 +15,8 @@ colors:
     hint:       "#9AC70A"
 
     black:
-        normal: "#292927"
-        bold:   "#2E2E2C"
+        normal: "#2E2E2B"
+        bold:   "#383834"
     red:
         normal: "#939490"
         bold:   "#989995"

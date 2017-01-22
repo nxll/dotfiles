@@ -10,9 +10,12 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
+LS_COLORS='di=31:fi=32:ln=36:pi=1;33:so=1;34:bd=1;35:cd=34:or=30:mi=30:ex=1;32'
+
 export EDITOR="vim"
 export BROWSER="firefox"
 export RHISK_COMM="zenbu"
+export LS_COLORS
 
 source $HOME/.ioup_token
 source $HOME/.urxvt/completions/rhisk-comp.zsh
@@ -60,7 +63,7 @@ ZSH_HIGHLIGHT_STYLES[assign]=fg=white,bold
 alias ..='cd ..'
 alias q='exit'
 alias c='clear'
-alias ls='ls -alhF'
+alias ls='ls -alhF --color=auto'
 alias mv='mv -v'
 alias cp='cp -v'
 alias df='df -h'

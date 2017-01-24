@@ -97,25 +97,25 @@ alias highlight='highlight --out-format=ansi'
 alias qr='qrencode -t UTF8'
 
 #FUNCTIONS
-ioup_clear()
-{
+ioup_clear() {
 	for file in `ioup -l | awk '{print $1}'`; do
 		ioup -r $file
 	done
 }
 
-ix()
-{
+ix() {
 	cat "$1" | curl -F 'f:1=<-' -F 'read:1=2' ix.io 
 }
 
-mtp-mount()
-{
+getip() {
+	w3m -no-cookie -dump "https://duckduckgo.com/?q=what+is+my+ip+address&t=ffab&ia=answer" | awk '/address is/ {print $5}' | head -1
+}
+
+mtp-mount() {
 	gvfs-mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gvfs-mount "$2)}'
 }
 
-separator()
-{
+separator() {
 	for ((x = 0; x < $(tput cols); x++)); do
 		printf %s "$(tput setaf 0)█$(tput sgr0)"
 	done

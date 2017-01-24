@@ -8,9 +8,8 @@
 [general]
 mode               = normal
 framerate          = 60
-sensitivity        = 40
-autosens           = 1
-overshoot          = 60
+sensitivity        = 5
+autosens           = 0
 lower_cutoff_freq  = 40
 higher_cutoff_freq = 10000
 bar_width          = 2
@@ -22,8 +21,9 @@ method = pulse
 source = auto
 
 [output]
-method = ncurses
-style  = mono
+method     = ncurses
+style      = mono
+raw_target = /dev/stdout
 
 [color]
 foreground = white

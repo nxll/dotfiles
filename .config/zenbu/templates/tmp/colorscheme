@@ -1,7 +1,10 @@
-# scheme: {{ name }}
-# nxll <nxll@teknik.io>
+! scheme: {{ name }}
+! nxll <nxll@teknik.io>
 
 !COLORS
+! focused:   {{ wmf }}
+! unfocused: {{ wmu }}
+
 *highlightColor: {{ b_black  }}
 *cursorColor: 	 {{ b_white  }}
 *borderColor: 	 {{ bgc  }}

@@ -10,7 +10,8 @@
 #EXEC
 setxkbmap -layout gb &
 xrdb -load $HOME/.Xresources &
-tt -r &
+#tt -r &
+hsetroot -fill $HOME/images/wallpapers/frost.png &
 udiskie -2 &
 mpd &
 urxvtd -q -o -f &

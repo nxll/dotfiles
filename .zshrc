@@ -12,6 +12,9 @@ compinit
 
 LS_COLORS='di=31:fi=32:ln=36:pi=1;33:so=1;34:bd=1;35:cd=34:or=30:mi=30:ex=1;32'
 
+#SCRIPTS
+export PATH=$HOME/bin:$PATH
+
 export EDITOR="vim"
 export BROWSER="firefox"
 export RHISK_COMM="zenbu"
@@ -20,9 +23,6 @@ export LS_COLORS
 source $HOME/.ioup_token
 source $HOME/.zsh/completions/rhisk-comp.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#SCRIPTS
-export PATH=$HOME/bin:$PATH
 
 #HISTORY
 HISTFILE=$HOME/.zhist

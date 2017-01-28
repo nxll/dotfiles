@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+font="{{ font1 }}"
+nb="{{ nbg }}"
+nf="{{ nfg }}"
+sb="{{ hint }}"
+sf="{{ nbg }}"
+w="860"
+h="18"
+x="83"
+y="5"
+opt="-fn "$font" -nb "$nb" -nf "$nf" -sb "$sb" -sf "$sf" -w "$w" -h "$h" -x "$x" -y "$y""
+
+dmenu $opt 

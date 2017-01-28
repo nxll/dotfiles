@@ -49,10 +49,10 @@ fonts:
     #font4: "benis uushi"  
 
     #tewi
-    font1: "-lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1"
-    font2: "lucy tewi:size=8"
-    font3: "lucy tewi 8"
-    font4: "lucy tewi"
+    #font1: "-lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1"
+    #font2: "lucy tewi:size=8"
+    #font3: "lucy tewi 8"
+    #font4: "lucy tewi"
 
     #tewii
     #font1: "-lucy-tewii-medium-r-normal-*-11-90-100-100-c-60-iso10646-1"
@@ -60,21 +60,33 @@ fonts:
     #font3: "lucy tewii 8"
     #font4: "lucy tewii"
 
+    #proggysquaresz
+    #font1: "-windows-proggysquaresz-medium-r-normal--11-80-96-96-c-70-iso8859-1"
+    #font2: "ProggySquareSZ:size=8"
+    #font3: "ProggySquareSZ 8"
+    #font4: "ProggySquareSZ"
+
+    #proggytinysz
+    #font1: "-windows-proggytinysz-medium-r-normal--10-80-96-96-c-60-iso8859-1"
+    #font2: "ProggyTinySZ:size=8"
+    #font3: "ProggyTinySZ 8"
+    #font4: "ProggyTinySZ"
+
     #gohufont
-    #font1: "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1"
-    #font2: "gohu gohufont:size=8"
-    #font3: "gohu gohufont 8"
-    #font4: "gohu gohufont"
+    font1: "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1"
+    font2: "gohu gohufont:size=8"
+    font3: "gohu gohufont 8"
+    font4: "gohu gohufont"
 
 #COLORS
 colors:
-    wmbf:          "#333435"
-    wmbu:          "#242528"
+    wmbf:           "#333435"
+    wmbu:           "#242528"
 
-    background:   "#1C1D1F"
-    foreground:   "#F5F5F5"
+    background:     "#1C1D1F"
+    foreground:     "#F5F5F5"
 
-    hint:         "#AADB0F"
+    hint:           "#AADB0F"
 
     black:
         normal:     "#202124"

@@ -39,7 +39,8 @@ font="{{ font1 }}"
 glyph="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 height=18
 border=5
-muslength=45
+muslength=60
+interface=wls1
 #actchar="+"
 #selchar="+"
 #actchar=""
@@ -51,8 +52,7 @@ bh=$(( $height + ($border * 2)))
 herbstclient pad $monitor $bh
 fi
 
-WRK()
-{
+WRK() {
 	wrkspce=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
 	if [ "${wrkspce}" = "0" ] ;
@@ -75,14 +75,12 @@ WRK()
 	fi
 }
 
-WIN()
-{
+WIN() {
     #echo -n "%{B$hint}%{F$bg}  %{F-}%{B-}"
 	echo -n "%{B$bblk}%{F$fg} $(wname $(pfw)) %{F-}%{B-}"
 }
 
-MUSIC()
-{
+MUSIC() {
 	playing=$(mpc status | sed -n 2p | cut -c1-9)
 	
 		if [ "${playing}" = "[playing]" ]; then
@@ -99,15 +97,13 @@ MUSIC()
     echo -n "${symbol}${song}"
 }
 
-VOL()
-{
+VOL() {
 	getvol=$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1  )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
 	
 	echo -n "%{B$bblk}  %{B$nblk} $getvol% %{B-}"
 }
 
-BAT()
-{
+BAT() {
     percent=$(cat /sys/class/power_supply/BAT0/capacity)
     status=$(cat /sys/class/power_supply/BAT0/status)
 
@@ -133,33 +129,29 @@ BAT()
 	echo -e "%{B$nblk} $percent% %{B-}"
 }
 
-NET()
-{
+NET() {
 	symbol="%{B$bblk}  %{B-}"
-	disconnected=$(iw wls1 link | awk '/Not/ {print $1}')
+	disconnected=$(iw $interface link | awk '/Not/ {print $1}')
 
 	ssid=$(
 	if [ "$disconnected" = "Not" ]; then
 		echo "NOT CONNECTED"
 	else
-		iw wls1 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
+		iw $interface link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//'
 	fi)
 
 	echo -n "${symbol}%{B$nblk} ${ssid} %{B-}"
 }
 
-DATE()
-{
-    echo -n "%{B$bblk} %{F$fg}$(date "+%d/%m " | tr [A-Z] [a-z])%{F-}%{B-}"
+DATE() {
+    echo -n "%{B$bblk} %{F$fg}$(date "+%a %d/%m")%{F-} %{B-}"
 }
 
-CLOCK()
-{
+CLOCK() {
     echo -n "%{B$hint}%{F$bg} $(date "+%H:%M") %{F-}%{B-}"
 }
 
-BAR()
-{ 
+BAR() {
     #ADD ALL THE THINGS
     while true; do
 		buf="$(WRK) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 

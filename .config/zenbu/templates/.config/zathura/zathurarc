@@ -16,7 +16,7 @@ set zoom-step 5
 set page-padding 0
 set pages-per-row 1
 set recolor true
-set adjust-open width
+set adjust-open best-fit
 
 #set font "lemon 8"
 set font "{{ font3 }}"

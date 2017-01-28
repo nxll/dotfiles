@@ -7,9 +7,9 @@
 !  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
 ! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
 !SETTINGS
-*font:       -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
-*boldFont:   -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
-*italicFont: -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1 
+*font:       -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+*boldFont:   -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+*italicFont: -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1 
 
 !COLORS
 *highlightColor: #3B2D26
@@ -75,7 +75,7 @@ twobwm.inverted_colors:    false
 twobwm.enable_compton: 	   true
 
 !SXIV COLORS
-sxiv.font: 		   lucy tewi:size=8
+sxiv.font: 		   gohu gohufont:size=8
 sxiv.win_bg_color: #261D18
 sxiv.win_fs_color: #3B2D26
 sxiv.sel_color:    #3B2D26

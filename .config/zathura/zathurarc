@@ -16,10 +16,10 @@ set zoom-step 5
 set page-padding 0
 set pages-per-row 1
 set recolor true
-set adjust-open width
+set adjust-open best-fit
 
 #set font "lemon 8"
-set font "lucy tewi 8"
+set font "gohu gohufont 8"
 set default-bg "#261D18"
 set default-fg "#B39A8F"
 set inputbar-bg "#30251F"

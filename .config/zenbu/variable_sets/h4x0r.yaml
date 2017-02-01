@@ -9,6 +9,8 @@ colors:
     wmbf:       "#C2FFA0"
     wmbu:       "#9BCC80"
 
+    rbf:        "A3D686 B2EB93 C2FFA0 B2EB93 A3D686"
+
     background: "#1A3020"
     foreground: "#C2FFA0"
 

@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# z3bra - 2015 (c) wtfpl
+# make the current window "rainbowish"... Awesome idea from xero@nixers.net !
+
+FREQ=${FREQ:-0.3}
+COLORS="{{ rbf }}"
+CUR=$(pfw)
+
+while :; do
+    for c in $COLORS; do
+        chwb -c $c $(pfw) 
+        sleep $FREQ
+    done
+done

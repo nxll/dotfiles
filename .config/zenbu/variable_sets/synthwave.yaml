@@ -1,0 +1,42 @@
+# SYNTHWAVE
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "synthwave"
+
+#COLORS
+colors:
+    wmbf:       "#AB5677"
+    wmbu:       "#3D313B"
+
+    rbf:        "82425B 964C69 AB5677 964C69 82425B"
+
+    background: "#332931"
+    foreground: "#B57E98"
+
+    hint:       "#AB5677"
+
+    black:
+        normal: "#3D313B"
+        bold:   "#473945"
+    red:
+        normal: "#AB2350"
+        bold:   "#DD2D67"
+    green:
+        normal: "#AB3966"
+        bold:   "#DD4983"
+    yellow:
+        normal: "#C0877A"
+        bold:   "#F2AA99"
+    blue:
+        normal: "#8B62AA"
+        bold:   "#B37EDC"
+    magenta:
+        normal: "#AB3E87"
+        bold:   "#DD50AE"
+    cyan:
+        normal: "#A87DA4"
+        bold:   "#DAA2D4"
+    white:
+        normal: "#C98CA9"
+        bold:   "#DE9BBB"

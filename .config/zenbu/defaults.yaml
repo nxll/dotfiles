@@ -49,10 +49,10 @@ fonts:
     #font4: "benis uushi"  
 
     #tewi
-    #font1: "-lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1"
-    #font2: "lucy tewi:size=8"
-    #font3: "lucy tewi 8"
-    #font4: "lucy tewi"
+    font1: "-lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1"
+    font2: "lucy tewi:size=8"
+    font3: "lucy tewi 8"
+    font4: "lucy tewi"
 
     #tewii
     #font1: "-lucy-tewii-medium-r-normal-*-11-90-100-100-c-60-iso10646-1"
@@ -73,15 +73,17 @@ fonts:
     #font4: "ProggyTinySZ"
 
     #gohufont
-    font1: "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1"
-    font2: "gohu gohufont:size=8"
-    font3: "gohu gohufont 8"
-    font4: "gohu gohufont"
+    #font1: "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1"
+    #font2: "gohu gohufont:size=8"
+    #font3: "gohu gohufont 8"
+    #font4: "gohu gohufont"
 
 #COLORS
 colors:
     wmbf:           "#333435"
     wmbu:           "#242528"
+
+    rbf:            "#2a2b2b 2f3030 333435 2f3030 2a2b2b"
 
     background:     "#1C1D1F"
     foreground:     "#F5F5F5"
@@ -149,6 +151,8 @@ hint: "{{ colors.hint }}"
 
 wmf:  "{{ colors.wmbf }}"
 wmu:  "{{ colors.wmbu }}"
+
+rbf:  "{{ colors.rbf }}"
 
 font1: "{{ fonts.font1 }}"
 font2: "{{ fonts.font2 }}"

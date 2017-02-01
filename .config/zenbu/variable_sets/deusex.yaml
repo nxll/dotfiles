@@ -1,0 +1,42 @@
+# DEUS EX
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "deus ex"
+
+#COLORS
+colors:
+    wmbf:       "#EFA625"
+    wmbu:       "#85622C"
+
+    rbf:        "C78A1F DB9822 EFA625 DB9822 C78A1F"
+
+    background: "#332616"
+    foreground: "#D8D0C5"
+
+    hint:       "#EFA625"
+
+    black:
+        normal: "#42311D"
+        bold:   "#523D24"
+    red:
+        normal: "#E9E9E9"
+        bold:   "#F2F2F2"
+    green:
+        normal: "#DF9F23"
+        bold:   "#E8A524"
+    yellow:
+        normal: "#D2D2D2"
+        bold:   "#DBDBDB"
+    blue:
+        normal: "#BFBFBF"
+        bold:   "#C9C9C9"
+    magenta:
+        normal: "#E69224"
+        bold:   "#F09826"
+    cyan:
+        normal: "#5E441F"
+        bold:   "#694C22"
+    white:
+        normal: "#88642a"
+        bold:   "#916B2D"

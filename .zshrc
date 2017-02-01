@@ -22,7 +22,6 @@ export LS_COLORS
 
 source $HOME/.ioup_token
 source $HOME/.zsh/completions/rhisk-comp.zsh
-#source $HOME/.zsh/functions/wsearch
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #HISTORY
@@ -93,6 +92,7 @@ alias scr='screenshot'
 alias vol='pulsemixer'
 alias tcli='transmission-cli'
 alias rsync='rsync -rtv'
+alias colorz='colorz -n 8'
 alias rec='yaxg -w -D 2 -f $HOME/videos/screencasts/%d%b2k%y-%H%M%S'
 alias highlight='highlight --out-format=ansi'
 alias qr='qrencode -t UTF8'

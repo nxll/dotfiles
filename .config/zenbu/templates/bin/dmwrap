@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+#dmwrap - dmenu wrapper
+
+font="{{ font1 }}"
+nb="{{ bgc }}"
+nf="{{ fgc }}"
+sb="{{ hint }}"
+sf="{{ bgc }}"
+w="880"
+h="18"
+x="83"
+y="5"
+opt="-fn "$font" -nb "$nb" -nf "$nf" -sb "$sb" -sf "$sf" -w "$w" -h "$h" -x "$x" -y "$y""
+
+dmenu $opt 

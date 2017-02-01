@@ -6,23 +6,25 @@ name:           "rg982"
 
 #COLORS
 colors:
-    wmbf:       "#9AC70E"
-    wmbu:       "#2E2E2B"
+    wmbf:       "#A8A8A6"
+    wmbu:       "#353533"
 
-    background: "#242422"
+    rbf:        "80807E 949492 A8A8A6 949492 80807E"
+
+    background: "#21211F"
     foreground: "#B8B9B4"
 
-    hint:       "#9AC70A"
+    hint:       "#9AC70E"
 
     black:
-        normal: "#2E2E2B"
-        bold:   "#383834"
+        normal: "#262624"
+        bold:   "#2B2B29"
     red:
         normal: "#939490"
         bold:   "#989995"
     green:
         normal: "#9AC70E"
-        bold:   "#C2FA11"   
+        bold:   "#C2FA11"
     yellow:
         normal: "#B6B8B3"
         bold:   "#BBBDB8"

@@ -144,7 +144,7 @@ NET() {
 }
 
 DATE() {
-    echo -n "%{B$bblk} %{F$fg}$(date "+%a %d/%m")%{F-} %{B-}"
+    echo -n "%{B$bblk} %{F$fg}$(date "+%d/%m")%{F-} %{B-}"
 }
 
 CLOCK() {

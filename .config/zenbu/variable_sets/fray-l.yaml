@@ -8,6 +8,8 @@ name:           "fray-l"
 colors:
     wmbf:       "#F2ECEC"
     wmbu:       "#202124"
+
+    rbf:        "C9C4C4 DED8D8 F2ECEC DED8D8 C9C4C4"
     
     background: "#1C1D1F"
     foreground: "#F2ECEC"

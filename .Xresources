@@ -7,41 +7,41 @@
 !  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
 ! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
 !SETTINGS
-*font:       -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
-*boldFont:   -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
-*italicFont: -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1 
+*font:       -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
+*boldFont:   -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
+*italicFont: -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1 
 
 !COLORS
-*highlightColor: #3B2D26
-*cursorColor: 	 #AE826F
-*borderColor: 	 #261D18
-*background:  	 #261D18
-*foreground:  	 #B39A8F
+*highlightColor: #2B2B29
+*cursorColor: 	 #AFB0AB
+*borderColor: 	 #21211F
+*background:  	 #21211F
+*foreground:  	 #B8B9B4
 
 !BLACK
-*color0:  #30251F
-*color8:  #3B2D26
+*color0:  #262624
+*color8:  #2B2B29
 !RED
-*color1:  #975542
-*color9:  #A15A46
+*color1:  #939490
+*color9:  #989995
 !GREEN
-*color2:  #B3725A
-*color10: #BD785F
+*color2:  #5E5E5C
+*color10: #636361
 !YELLOW
-*color3:  #66493D
-*color11: #705043
+*color3:  #B6B8B3
+*color11: #BBBDB8
 !BLUE
-*color4:  #AD795C
-*color12: #B88062
+*color4:  #727370
+*color12: #777875
 !MAGENTA
-*color5:  #965744
-*color13: #A15D49
+*color5:  #D1D1CB
+*color13: #D6D6D0
 !CYAN
-*color6:  #4D372E
-*color14: #573E34
+*color6:  #636361
+*color14: #696966
 !WHITE
-*color7:  #A37A68
-*color15: #AE826F
+*color7:  #AAABA6
+*color15: #AFB0AB
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
@@ -65,22 +65,22 @@ URxvt*matcher.button: 1
 !2BWM COLORS
 twobwm.border_width: 	   5
 twobwm.outer_border: 	   0
-twobwm.focus_color: 	   #C77E64
-twobwm.unfocus_color: 	   #241B17
-twobwm.fixed_color: 	   #975542
-twobwm.unkill_color: 	   #C77E64
-twobwm.outer_border_color: #261D18
-twobwm.fixed_unkill_color: #A15A46
+twobwm.focus_color: 	   #A8A8A6
+twobwm.unfocus_color: 	   #353533
+twobwm.fixed_color: 	   #939490
+twobwm.unkill_color: 	   #5E5E5C
+twobwm.outer_border_color: #21211F
+twobwm.fixed_unkill_color: #989995
 twobwm.inverted_colors:    false
 twobwm.enable_compton: 	   true
 
 !SXIV COLORS
-sxiv.font: 		   gohu gohufont:size=8
-sxiv.win_bg_color: #261D18
-sxiv.win_fs_color: #3B2D26
-sxiv.sel_color:    #3B2D26
-sxiv.bar_bg_color: #30251F
-sxiv.bar_fg_color: #B39A8F
+sxiv.font: 		   lucy tewi:size=8
+sxiv.win_bg_color: #21211F
+sxiv.win_fs_color: #2B2B29
+sxiv.sel_color:    #2B2B29
+sxiv.bar_bg_color: #262624
+sxiv.bar_fg_color: #B8B9B4
 sxiv.win_width:    460
 sxiv.win_height:   350
 

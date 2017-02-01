@@ -9,10 +9,12 @@ colors:
     wmbf:       ""
     wmbu:       ""
 
+    rbf:        ""
+
     background: ""
     foreground: ""
 
-    hint: ""
+    hint:       ""
 
     black:
         normal: ""

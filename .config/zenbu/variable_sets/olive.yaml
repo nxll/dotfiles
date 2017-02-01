@@ -1,0 +1,42 @@
+# OLIVE
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "olive"
+
+#COLORS
+colors:
+    wmbf:       "#99A848"
+    wmbu:       "#3B3D28"
+
+    rbf:        "748036 87943F 99A848 87943F 748036"
+
+    background: "#3B3D28"
+    foreground: "#939741"
+
+    hint:       "#99A848"
+
+    black:
+        normal: "#45472F"
+        bold:   "#4F5236"
+    red:
+        normal: "#A8AC4A"
+        bold:   "#B4B94F"
+    green:
+        normal: "#909E44"
+        bold:   "#99A848"
+    yellow:
+        normal: "#9A9B46"
+        bold:   "#A3A44A"
+    blue:
+        normal: "#A99A44"
+        bold:   "#B6A649"
+    magenta:
+        normal: "#8E9E38"
+        bold:   "#96A73B"
+    cyan:
+        normal: "#759E42"
+        bold:   "#7DA947"
+    white:
+        normal: "#C1D290"
+        bold:   "#DCF0A3"

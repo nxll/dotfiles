@@ -8,6 +8,8 @@ name:           "gruvfray"
 colors:
     wmbf:       "#F2ECEC"
     wmbu:       "#2B2F30"
+
+    rbf:        "C9C4C4 DED8D8 F2ECEC DED8D8 C9C4C4"
     
     background: "#1D2021"
     foreground: "#F2ECEC"

@@ -7,9 +7,9 @@
 !  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
 ! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
 !SETTINGS
-*font:       -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
-*boldFont:   -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1
-*italicFont: -lucy-tewi-medium-r-normal--11-90-100-100-c-60-iso10646-1 
+*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*boldFont:   -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
 *highlightColor: #2B2B29
@@ -45,7 +45,7 @@
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
-URxvt.internalBorder:  20
+URxvt.internalBorder:  15
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
 URxvt.geometry:        74x16
@@ -66,7 +66,7 @@ URxvt*matcher.button: 1
 twobwm.border_width: 	   5
 twobwm.outer_border: 	   0
 twobwm.focus_color: 	   #A8A8A6
-twobwm.unfocus_color: 	   #353533
+twobwm.unfocus_color: 	   #262624
 twobwm.fixed_color: 	   #939490
 twobwm.unkill_color: 	   #5E5E5C
 twobwm.outer_border_color: #21211F
@@ -75,7 +75,7 @@ twobwm.inverted_colors:    false
 twobwm.enable_compton: 	   true
 
 !SXIV COLORS
-sxiv.font: 		   lucy tewi:size=8
+sxiv.font: 		   kakwa kakwafont:size=8
 sxiv.win_bg_color: #21211F
 sxiv.win_fs_color: #2B2B29
 sxiv.sel_color:    #2B2B29

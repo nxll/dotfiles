@@ -9,7 +9,7 @@ colors:
     wmbf:       "#A8A8A6"
     wmbu:       "#353533"
 
-    rbf:        "80807E 949492 A8A8A6 949492 80807E"
+    rbf:        "80807E 8A8A88 949492 9E9E9C A8A8A6 A8A8A6 9E9E9C 949492 8A8A88 80807E"
 
     background: "#21211F"
     foreground: "#B8B9B4"

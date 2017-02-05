@@ -3,7 +3,7 @@
 # z3bra - 2015 (c) wtfpl
 # make the current window "rainbowish"... Awesome idea from xero@nixers.net !
 
-FREQ=${FREQ:-0.3}
+FREQ=${FREQ:-0.1}
 COLORS="{{ rbf }}"
 CUR=$(pfw)
 

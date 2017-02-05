@@ -8,7 +8,7 @@
 #  ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░     ░░  ░░░     ░░░░░  
 #
 [global]
-font = lucy tewi 8  
+font = kakwa kakwafont 8  
 allow_markup = yes
 format = "%s %b"
 sort = yes
@@ -40,7 +40,7 @@ icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16
 
 [frame]
 width = 0
-color = "#353533"
+color = "#262624"
 
 [shortcuts]
 close = ctrl+space

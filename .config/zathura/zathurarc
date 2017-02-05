@@ -19,7 +19,7 @@ set recolor true
 set adjust-open best-fit
 
 #set font "lemon 8"
-set font "lucy tewi 8"
+set font "kakwa kakwafont 8"
 set default-bg "#21211F"
 set default-fg "#B8B9B4"
 set inputbar-bg "#262624"

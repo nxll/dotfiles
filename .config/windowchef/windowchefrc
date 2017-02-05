@@ -1,7 +1,7 @@
 #!/bin/sh
 waitron wm_config border_width 5
-waitron wm_config color_focused 0xa8a8a6
-waitron wm_config color_unfocused 0x353533
+waitron wm_config color_focused 0xA8A8A6
+waitron wm_config color_unfocused 0x262624
 waitron wm_config gap_width all 3
 waitron wm_config cursor_position middle
 waitron wm_config groups_nr 4

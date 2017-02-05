@@ -154,7 +154,7 @@ CLOCK() {
 BAR() {
     #ADD ALL THE THINGS
     while true; do
-		buf="$(WRK) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
+		buf="$(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
 		echo "$buf"	
         sleep 0.1
     done | lemonbar -f $glyph \

@@ -1,79 +1,76 @@
-gtk-color-scheme =
-"bg_color:{{ bgc }}\nfg_color:{{ fgc }}\nbase_color:{{ bgc }}\ntext_color:{{ fgc }}\nselected_fg_color:#F9F9F9\nselected_bg_color:{{ n_black }}"
+gtk-color-scheme = "bg_color:{{ bgc }}\nfg_color:{{ fgc }}\nbase_color:{{ bgc }}\ntext_color:{{ fgc }}\nselected_fg_color:{{ hint }}\nselected_bg_color:{{ b_black }}"
 
 style "default"
 {
-        fg[NORMAL]              = "{{ fgc }}"
-        fg[ACTIVE]              = "{{ fgc }}"
-        fg[INSENSITIVE]         = "{{ fgc }}"
-        fg[PRELIGHT]            = "{{ b_white }}"
-        fg[SELECTED]            = "{{ hint }}"
-        
-        bg[ACTIVE]              = "{{ bgc }}"
-		bg[NORMAL]              = "{{ bgc }}"
-        bg[INSENSITIVE]         = "{{ bgc }}"
-        bg[PRELIGHT]            = "{{ b_black }}"
-        bg[SELECTED]            = "{{ b_black }}"
+    fg[NORMAL]              = @fg_color
+    fg[ACTIVE]              = @fg_color
+    fg[INSENSITIVE]         = mix (0.4, @fg_color, shade (0.85, @bg_color)) #shaded to bg[INSENSITIVE]
 
-        base[NORMAL]            = "{{ n_black }}"
-        base[ACTIVE]            = "{{ n_black }}"
-        base[INSENSITIVE]       = "{{ n_black }}"
-        base[PRELIGHT]          = "{{ b_black }}"
-		base[SELECTED]          = "{{ b_black }}"
-        
-        text[NORMAL]            = "{{ fgc }}"
-        text[ACTIVE]            = "{{ fgc }}"
-        text[PRELIGHT]          = "{{ b_white }}"
-        text[SELECTED]          = "{{ hint }}"
-        text[INSENSITIVE]       = mix (0.5, @text_color, @base_color)
-	
+    fg[PRELIGHT]            = @fg_color
+    fg[SELECTED]            = @selected_fg_color
+    bg[ACTIVE]              = shade (0.9, @bg_color)
+    bg[NORMAL]              = @bg_color
+    bg[INSENSITIVE]         = shade (0.95, @bg_color)
+    bg[PRELIGHT]            = shade (1.03, @bg_color)
+    bg[SELECTED]            = @selected_bg_color
 
-	GtkRange::trough_border = 0
-	GtkRange::slider_width = 5
-	GtkRange::stepper_size = 10
+    base[NORMAL]            = @base_color
+    base[ACTIVE]            = shade (0.9, @selected_bg_color)
+    base[INSENSITIVE]       = shade (0.95, @base_color)
+    base[PRELIGHT]          = @bg_color
+    base[SELECTED]          = @selected_bg_color
+    text[NORMAL]            = @text_color
+    text[ACTIVE]            = @text_color
+    text[PRELIGHT]          = @text_color
+    text[SELECTED]          = @selected_fg_color
+    text[INSENSITIVE]       = mix (0.5, @text_color, @base_color)
 
-	GtkEntry::progress-border = { 0, 0, 0, 0 }
+    GtkRange::trough_border = 0
+    GtkRange::slider_width = 15
+    GtkRange::stepper_size = 15
 
-	GtkScrollbar::min_slider_length = 10
-	GtkCheckButton::indicator_size=10
-	GtkCheckMenuItem::indicator_size=10
-	GtkRadioButton::indicator_size=10
+    GtkEntry::progress-border = { 0, 0, 0, 0 }
 
-	GtkNotebook::tab_vborder = 0
-	GtkNotebook::tab_hborder = 0
-	xthickness = 1
-	ythickness = 1
+    GtkScrollbar::min_slider_length = 15
+    GtkCheckButton::indicator_size = 10
+    GtkCheckMenuItem::indicator_size = 10
+    GtkRadioButton::indicator_size = 12
 
-	NautilusIconContainer::dark_info_color  = "{{ b_white }}"
-	NautilusIconContainer::light_info_color = "{{ n_white }}"
-	NautilusIconContainer::highlight_alpha=200
+    GtkNotebook::tab_vborder = 1
+    GtkNotebook::tab_hborder = 1
+    xthickness = 1
+    ythickness = 1
 
-	GtkMenu::horizontal_padding=2
-	GtkMenu::vertical_padding=2
+    NautilusIconContainer::dark_info_color = "{{ fgc }}"
+    NautilusIconContainer::light_info_color = "{{ bgc }}"
+    NautilusIconContainer::highlight_alpha = 200
 
-	engine "mist"
- 	{
-	}
+    GtkMenu::horizontal_padding = 0
+    GtkMenu::vertical_padding = 0
+
+    engine "mist"
+    {
+    }
 }
 
 style "menuitem"
 {
-	ythickness = 2
-	xthickness = 2
+    ythickness = 2
+    xthickness = 2
 
-        fg[PRELIGHT] = "{{ fgc }}"
+    fg[PRELIGHT] = @selected_fg_color
 }
 
-style "menu" 
+style "menu"
 {
-	ythickness = 2
-	xthickness = 2
-} 
+    ythickness = 2
+    xthickness = 2
+}
 
 style "entry"
 {
-	bg[SELECTED] = "{{ n_black }}"
-	fg[SELECTED] = "{{ hint }}"
+    bg[SELECTED] = mix(0.35, @selected_bg_color, @base_color)
+    fg[SELECTED] = @text_color
 }
 
 class "GtkWidget" style "default"
@@ -82,8 +79,6 @@ class "GtkEntry" style "entry"
 
 widget_class "*<GtkMenuItem>*" style "menuitem"
 
-
-
 # Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
 # Note that the work around assumes that the combobox is _not_ in
 # appears-as-list mode.
@@ -91,34 +86,34 @@ widget_class "*<GtkMenuItem>*" style "menuitem"
 # on comboboxes in appears-as-list mode though.
 style "mist-text-is-fg-color-workaround"
 {
-        text[NORMAL]              = "{{ fgc }}"
-        text[ACTIVE]              = "{{ fgc }}"
-        text[INSENSITIVE]         = "{{ fgc }}"
-        text[PRELIGHT]            = "{{ b_white }}"
-        text[SELECTED]            = "{{ hint }}"
+    text[NORMAL]            = @fg_color
+    text[ACTIVE]            = @fg_color
+    text[INSENSITIVE]       = mix (0.4, @fg_color, shade (0.85, @bg_color)) #shaded to bg[INSENSITIVE]
+    text[PRELIGHT]          = @fg_color
+    text[SELECTED]          = @selected_fg_color
 }
-widget_class "*.<GtkComboBox>.<GtkCellView>"   style "mist-text-is-fg-color-workaround"
+widget_class "*.<GtkComboBox>.<GtkCellView>" style "mist-text-is-fg-color-workaround"
 
 style "mist-menuitem-text-is-fg-color-workaround"
 {
-        text[NORMAL]              = "{{ fgc }}"
-        text[ACTIVE]              = "{{ fgc }}"
-        text[INSENSITIVE]         = "{{ fgc }}"
-        text[PRELIGHT]            = "{{ b_white }}"
-        text[SELECTED]            = "{{ hint }}"
+    text[NORMAL]            = @fg_color
+    text[ACTIVE]            = @fg_color
+    text[INSENSITIVE]       = mix (0.4, @fg_color, shade (0.85, @bg_color)) #shaded to bg[INSENSITIVE]
+    text[PRELIGHT]          = @selected_fg_color
+    text[SELECTED]          = @selected_fg_color
 }
-widget "*.gtk-combobox-popup-menu.*"   style "mist-menuitem-text-is-fg-color-workaround"
+widget "*.gtk-combobox-popup-menu.*" style "mist-menuitem-text-is-fg-color-workaround"
 
 # Work around the usage of GtkLabel inside GtkListItems to display text.
 # This breaks because the label is shown on a background that is based on the
 # base color set.
 style "mist-fg-is-text-color-workaround"
 {
-        fg[NORMAL]            = "{{ fgc }}"
-        fg[ACTIVE]            = "{{ fgc }}"
-        fg[INSENSITIVE]       = "{{ fgc }}"
-        fg[PRELIGHT]          = "{{ b_white }}"
-        fg[SELECTED]          = "{{ hint }}"
+    fg[NORMAL]              = @text_color
+    fg[ACTIVE]              = @text_color
+    fg[PRELIGHT]            = @text_color
+    fg[SELECTED]            = @selected_fg_color
+    fg[INSENSITIVE]         = mix (0.5, @text_color, @base_color)
 }
 widget_class "*<GtkListItem>*" style "mist-fg-is-text-color-workaround"
 # The same problem also exists for GtkCList and GtkCTree

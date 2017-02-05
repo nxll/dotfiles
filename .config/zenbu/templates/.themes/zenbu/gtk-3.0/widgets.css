@@ -4,13 +4,15 @@
     /*-GtkWidget-focus-line-pattern: "\0"; use CSS outline-style*/
 
     /* START: Deprecated in GTK 3.20 */
-    -GtkCheckButton-indicator-size: 5;
-    -GtkCheckMenuItem-indicator-size: 5;
-    -GtkCellRendererToggle-indicator-size: 5;
+    -GtkCheckButton-indicator-size: 12;
+    -GtkCheckMenuItem-indicator-size: 12;
+    -GtkCellRendererToggle-indicator-size: 12;
 
-    -GtkToolItemGroup-expander-size: 5;
-    -GtkExpander-expander-size: 5;
-    -GtkTreeView-expander-size: 5;
+    -GtkToolItemGroup-expander-size: 9;
+    -GtkExpander-expander-size: 9;
+    -GtkTreeView-expander-size: 9;
+
+    -GtkMenuItem-arrow-scaling: 0.7;
 
     /*-GtkButton-child-displacement-x: 0; default*/
     /*-GtkButton-child-displacement-y: 0; default*/
@@ -22,6 +24,7 @@
     /*-GtkRange-stepper-spacing: -1; should be >=0*/
 
     /*-GtkNotebook-initial-gap: 0; default*/
+    -GtkNotebook-tab-curvature: 0;
     /*-GtkNotebook-tab-overlap: 2; default*/
 
     /*-GtkPaned-handle-size: 5; default*/
@@ -37,41 +40,41 @@
 .view:selected,
 .entry:selected
 {
-    background-color: @selected_bg_color;
+    background-color: @selected_bg_color1;
     color: @fg_color;
 }
 
-*:selected:focus,
-.view:selected:focus,
-.entry:selected:focus
+*:selected:focused,
+.view:selected:focused,
+.entry:selected:focused
 {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
 }
 
-*:focus
+*:focused
 {
     color: @border_color;
 }
 
-.view:focus,
-.entry:focus,
-label:focus
+.view:focused,
+.entry:focused,
+label:focused
 {
     color: @fg_color;
 }
 
-treeview.view:focus
+treeview.view:focused
 {
     color: @border_color;
 }
 
-treeview.view:focus *
+treeview.view:focused *
 {
     color: @fg_color;
 }
 
-*:disabled
+*:insensitive
 {
     background-color: shade(@bg_color, 0.95);
     border-color: @insensitive_border_color;
@@ -89,10 +92,10 @@ treeview.view:focus *
 /**********************************************/
 label,
 label:active,
-label:disabled,
+label:insensitive,
 image,
 image:active,
-image:disabled
+image:insensitive
 {
     background-color: transparent;
     border-width: 0;
@@ -103,7 +106,7 @@ image:disabled
 /**********************************************/
 statusbar *
 {
-    border-width: 0px 0 0 0;
+    border-width: 1px 0 0 0;
 }
 
 statusbar label
@@ -116,7 +119,7 @@ statusbar label
 /**********************************************/
 tooltip
 {
-    border: 0px solid @fg_color;
+    border: 1px solid @fg_color;
     background-color: @bg_color;
 }
 /**********************************************/
@@ -153,7 +156,7 @@ trough,
 trough > row,
 trough > row:hover,
 trough > row:selected,
-trough > row:selected:focus
+trough > row:selected:focused
 {
     background-color: mix(@fg_color, @bg_color, 0.9);
     border-width: 0px;
@@ -164,7 +167,7 @@ trough > row:selected
     border-color: @fg_color;
 }
 
-trough > row:selected:focus
+trough > row:selected:focused
 {
     border-color: @selected_fg_color;
 }
@@ -182,10 +185,10 @@ scrollbar slider
     background-color: @bg_color;
     border-left-color: @base_color;
     border-top-color: @base_color;
-    border-width: 0px;
-    padding: 2px;
+    border-width: 1px;
+    padding: 1px;
     min-height: 10px;
-    min-width: 5px;
+    min-width: 10px;
 }
 
 progressbar > trough
@@ -195,8 +198,8 @@ progressbar > trough
 
 scale > contents > trough
 {
-    border-width: 0px;
-    border-color: @border_color;
+    border-width: 1px;
+    border-color: @border_color1;
     border-right-color: @base_color;
     border-bottom-color: @base_color;
 }
@@ -206,10 +209,10 @@ scale > contents > trough > slider
     background-color: @bg_color;
     border-left-color: @base_color;
     border-top-color: @base_color;
-    border-width: 0px;
-    padding: 2px;
+    border-width: 1px;
+    padding: 1px;
     min-height: 10px;
-    min-width: 5px;
+    min-width: 10px;
 }
 
 scrolledwindow
@@ -221,7 +224,7 @@ scrolledwindow
 
 /**********************************************/
 switch {
-    border-width: 0px;
+    border-width: 1px;
 }
 
 switch trough
@@ -235,7 +238,7 @@ switch trough:active
     color: @selected_fg_color;
 }
 
-switch trough:disabled
+switch trough:insensitive
 {
     background-color: shade(@bg_color, 0.95);
 }
@@ -245,11 +248,11 @@ switch trough:disabled
 /**********************************************/
 slider
 {
-    border-width: 0px;
+    border-width: 1px;
     background-color: @bg_color;
 }
 
-slider:disabled
+slider:insensitive
 {
 }
 /**********************************************/
@@ -261,10 +264,10 @@ separator
     background-color: @border_color;
     min-height: 1px;
     min-width: 1px;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 /**********************************************/
 
@@ -272,7 +275,7 @@ separator
 /**********************************************/
 pane-separator
 {
-    border-width: 0;
+    border-width: 2;
     background-color: @bg_color;
 }
 
@@ -289,14 +292,14 @@ button
     background-color: @bg_color;
     border-left-color: @base_color;
     border-top-color: @base_color;
-    border-width: 0px;
-    padding: 2px;
+    border-width: 1px;
+    padding: 1px;
 }
 
 text-button
 {
-    border-width: 0px;
-    padding: 2px;
+    border-width: 1px;
+    padding: 4px;
 }
 
 button:hover
@@ -307,10 +310,10 @@ button:hover
 button:active
 {
     background-color: shade(@bg_color, 0.9);
-    border-right-color: {{ n_black }};
-    border-bottom-color: {{ n_black }};
-    border-left-color: {{ n_black }};
-    border-top-color: {{ n_black }};
+    border-right-color:  {{ bgc }};
+    border-bottom-color: {{ bgc }};
+    border-left-color:   {{ bgc }};
+    border-top-color:    {{ bgc }};
 }
 
 button:active:hover
@@ -318,7 +321,7 @@ button:active:hover
     background-color: shade(@bg_color, 1.03);
 }
 
-button:disabled
+button:insensitive
 {
     background-color: shade(@bg_color, 0.95);
     border-color: @insensitive_border_color;
@@ -330,7 +333,7 @@ spinbutton button
     border: none;
 }
 
-spinbutton button:focus
+spinbutton button:focused
 {
     color: @fg_color;
 }
@@ -341,11 +344,11 @@ spinbutton button:focus
 entry
 {
     background-color: @base_color;
-    padding: 2px;
-    border-width: 0px;
+    padding: 2px 2px 3px 2px;
+    border-width: 1px;
 }
 
-entry:disabled
+entry:insensitive
 {
     background-color: shade(@base_color, 0.95);
 }
@@ -355,42 +358,41 @@ entry:disabled
 /**********************************************/
 checkbutton,
 checkbutton:selected,
-checkbutton:selected:focus,
-checkbutton:disabled
+checkbutton:selected:focused,
+checkbutton:insensitive
 {
-    background-color: @base_color;
-	color: @selected-fg-color;
+    background-color: transparent;
 }
 
 radio,
 radio:selected,
-radio:selected:focus
+radio:selected:focused
 {
     background-color: @base_color;
-    color: @selected_fg_color;
+    color: @selected_bg_color;
 }
 
 check,
 check:selected,
-check:selected:focus
+check:selected:focused
 {
     background-color: @base_color;
-    color: @selected_fg_color;
+    color: shade(@selected_bg_color, 0.9);
 }
 
 radio:hover,
 check:hover,
-radio:hover:focus,
-.check:hover:focus
+radio:hover:focused,
+.check:hover:focused
 {
-    background-color: @base_color;
-    border-color: @selected_fg_color;
+    background-color: shade(@base_color, 1.03);
+    border-color: @selected_bg_color;
 }
 
-radio:disabled,
-radio:disabled:selected,
-check:disabled,
-check:disabled:selected
+radio:insensitive,
+radio:insensitive:selected,
+check:insensitive,
+check:insensitive:selected
 {
     background-color: shade(@base_color, 0.95);
     color: mix(@fg_color, @base_color, 0.5);
@@ -400,7 +402,7 @@ check row,
 radio row
 {
     background-color: @base_color;
-    border-width: 0px;
+    border-width: 1px;
 }
 /**********************************************/
 
@@ -412,14 +414,14 @@ combobox
     border-width: 0;
 }
 
-combobox:disabled
+combobox:insensitive
 {
     background-color: shade(@bg_color, 0.95);
 }
 
 combobox button
 {
-    padding: 2px;
+    padding: 0;
 }
 /**********************************************/
 
@@ -427,8 +429,8 @@ combobox button
 /**********************************************/
 toolbar
 {
-    padding: 2px;
-    border-width: 0 0 0 0;
+    padding: 2px 0;
+    border-width: 0 0 1px 0;
 }
 /**********************************************/
 
@@ -440,7 +442,7 @@ progressbar progress .row:hover
 {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
-    border-width: 0px;
+    border-width: 1px;
 }
 
 progressbar progress .row:selected
@@ -448,7 +450,7 @@ progressbar progress .row:selected
     border-color: @fg_color;
 }
 
-progressbar progress .row:selected:focus
+progressbar progress .row:selected:focused
 {
     border-color: @selected_fg_color;
 }
@@ -458,19 +460,19 @@ progressbar progress .row:selected:focus
 /**********************************************/
 menubar
 {
-    border-width: 0 0 0 0;
+    border-width: 0 0 1px 0;
 }
 
 menu
 {
-    border-width: 0px;
+    border-width: 1px;
 }
 
 menuitem
 {
     border-width: 0;
     background-color: transparent;
-    padding: 2px;
+    padding: 3px 7px 2px 7px;
 }
 
 menuitem label
@@ -491,7 +493,7 @@ menuitem.radio
     background-color: @base_color;
     color: @selected_bg_color;
     border-color: @border_color;
-    border-width: 0px;
+    border-width: 1px;
 }
 
 menuitem.check
@@ -499,8 +501,8 @@ menuitem.check
     color: shade(@selected_bg_color, 0.9);
 }
 
-menuitem.check:disabled,
-menuitem.radio:disabled
+menuitem.check:insensitive,
+menuitem.radio:insensitive
 {
     background-color: shade(@base_color, 0.95);
     color: mix(@fg_color, @base_color, 0.5);
@@ -511,20 +513,20 @@ menuitem.radio:disabled
 /** configure tabs */
 notebook > stack
 {
-    padding: 2px;
+    padding: 4px;
     background-color: @bg_color;
 
     border-color: @base_color;
     border-right-color: @border_color;
     border-bottom-color: @border_color;
-    border-width: 0px;
+    border-width: 1px;
 }
 
 notebook > header > tabs > tab
 {
-    padding: 2px;
-    border-width: 0px;
-    border-right-color: @border_color;
+    padding: 4px;
+    border-width: 1px;
+    border-right-color: @border_color1;
     border-left-color: @base_color;
     border-top-color: @base_color;
     background-color: mix(@fg_color, @bg_color, 0.9);
@@ -582,12 +584,12 @@ sidebar row:selected:hover
 
 /**********************************************/
 textview {
-    border-width: 0px;
+    border-width: 1px;
 }
 
 colorswatch
 {
-    border-width: 0px;
+    border-width: 1px;
     background-color: @bg_color;
 }
 
@@ -598,7 +600,7 @@ statusbar *
 
 popover
 {
-    border-width: 0px;
+    border-width: 1px;
 }
 /**********************************************/
 

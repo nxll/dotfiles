@@ -17,8 +17,8 @@ colors:
     hint:       "#5E5E5C"
 
     black:
-        normal: "#262624"
-        bold:   "#2B2B29"
+        normal: "#292927"
+        bold:   "#2E2E2C"
     red:
         normal: "#939490"
         bold:   "#989995"

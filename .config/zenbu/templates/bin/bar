@@ -47,9 +47,9 @@ interface=wls1
 #selchar=""
 
 if pgrep herbstluftwm; then
-monitor=${1:-0}
-bh=$(( $height + ($border * 2)))
-herbstclient pad $monitor $bh
+	monitor=${1:-0}
+	bh=$(( $height + ($border * 2)))
+	herbstclient pad $monitor $bh
 fi
 
 WRK() {
@@ -57,19 +57,19 @@ WRK() {
 	
 	if [ "${wrkspce}" = "0" ] ;
 	then 
-		echo "%{B$hint} %{F$bg}0%{F-} %{B$nblk} 1 2 3 4 %{B-}"
+		echo "%{B$hint} %{F$bg}000%{F-} %{B$nblk} 001 010 011 100 %{B-}"
 	elif [ "${wrkspce}" = "1" ] ;
 	then
-		echo "%{B$nblk} 0 %{B$hint} %{F$bg}1%{F-} %{B$nblk} 2 3 4 %{B-}"
+		echo "%{B$nblk} 000 %{B$hint} %{F$bg}001%{F-} %{B$nblk} 010 011 100 %{B-}"
 	elif [ "${wrkspce}" = "2" ] ;
 	then 
-		echo "%{B$nblk} 0 1 %{B$hint} %{F$bg}2%{F-} %{B$nblk} 3 4 %{B-}"
+		echo "%{B$nblk} 000 001 %{B$hint} %{F$bg}010%{F-} %{B$nblk} 011 100 %{B-}"
 	elif [ "${wrkspce}" = "3" ] ;
 	then 
-		echo "%{B$nblk} 0 1 2 %{B$hint} %{F$bg}3%{F-} %{B$nblk} 4 %{B-}"
+		echo "%{B$nblk} 000 001 010 %{B$hint} %{F$bg}011%{F-} %{B$nblk} 100 %{B-}"
 	elif [ "${wrkspce}" = "4" ] ;
 	then 
-		echo "%{B$nblk} 0 1 2 3 %{B$hint} %{F$bg}4%{F-} %{B-}"
+		echo "%{B$nblk} 000 001 010 011 %{B$hint} %{F$bg}100%{F-} %{B-}"
     else
 		echo "%{B$hint} %{F$bg}NONE%{F-} %{B-}"
 	fi
@@ -154,7 +154,7 @@ CLOCK() {
 BAR() {
     #ADD ALL THE THINGS
     while true; do
-		buf="$(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
+		buf="$(WRK) $(MUSIC)%{c}%{r}$(VOL) $(BAT) $(NET) $(DATE) $(CLOCK)" 
 		echo "$buf"	
         sleep 0.1
     done | lemonbar -f $glyph \

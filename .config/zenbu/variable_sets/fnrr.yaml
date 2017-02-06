@@ -1,13 +1,13 @@
-# RG982
+# FNRR
 # for zenbu
 # nxll <nxll@teknik.io>
 
-name:           "rg982"
+name:           "fnrr"
 
 #COLORS
 colors:
     wmbf:       "#A8A8A6"
-    wmbu:       "#353533"
+    wmbu:       "#292927"
 
     rbf:        "80807E 8A8A88 949492 9E9E9C A8A8A6 A8A8A6 9E9E9C 949492 8A8A88 80807E"
 
@@ -17,14 +17,14 @@ colors:
     hint:       "#9AC70E"
 
     black:
-        normal: "#262624"
-        bold:   "#2B2B29"
+        normal: "#292927"
+        bold:   "#2E2E2C"
     red:
         normal: "#939490"
         bold:   "#989995"
     green:
-        normal: "#9AC70E"
-        bold:   "#C2FA11"
+        normal: "#AADB0F"
+        bold:   "#B2E610"
     yellow:
         normal: "#B6B8B3"
         bold:   "#BBBDB8"

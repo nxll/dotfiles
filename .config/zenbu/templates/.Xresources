@@ -45,7 +45,7 @@
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
-URxvt.internalBorder:  15
+URxvt.internalBorder:  20
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
 URxvt.geometry:        74x16

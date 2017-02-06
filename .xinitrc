@@ -12,15 +12,15 @@ setxkbmap -layout gb &
 xrdb -load $HOME/.Xresources &
 xsetroot -cursor_name left_ptr &
 tt -r &
+bar &
 compton --config $HOME/.compton.conf &
 dunst &
-rnbw &
 urxvtd -q -o -f &
 pulseaudio --start &
 mpd &
 udiskie -2 &
 unclutter &
-#bar &
+rnbw &
 
 SESSION=2bwm
 case "$1" in

@@ -12,21 +12,21 @@
 *italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*highlightColor: #2B2B29
+*highlightColor: #2E2E2C
 *cursorColor: 	 #AFB0AB
 *borderColor: 	 #21211F
 *background:  	 #21211F
 *foreground:  	 #B8B9B4
 
 !BLACK
-*color0:  #262624
-*color8:  #2B2B29
+*color0:  #292927
+*color8:  #2E2E2C
 !RED
 *color1:  #939490
 *color9:  #989995
 !GREEN
-*color2:  #5E5E5C
-*color10: #636361
+*color2:  #AADB0F
+*color10: #B2E610
 !YELLOW
 *color3:  #B6B8B3
 *color11: #BBBDB8
@@ -45,7 +45,7 @@
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
-URxvt.internalBorder:  15
+URxvt.internalBorder:  20
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
 URxvt.geometry:        74x16
@@ -66,9 +66,9 @@ URxvt*matcher.button: 1
 twobwm.border_width: 	   5
 twobwm.outer_border: 	   0
 twobwm.focus_color: 	   #A8A8A6
-twobwm.unfocus_color: 	   #262624
+twobwm.unfocus_color: 	   #292927
 twobwm.fixed_color: 	   #939490
-twobwm.unkill_color: 	   #5E5E5C
+twobwm.unkill_color: 	   #9AC70E
 twobwm.outer_border_color: #21211F
 twobwm.fixed_unkill_color: #989995
 twobwm.inverted_colors:    false
@@ -77,9 +77,9 @@ twobwm.enable_compton: 	   true
 !SXIV COLORS
 sxiv.font: 		   kakwa kakwafont:size=8
 sxiv.win_bg_color: #21211F
-sxiv.win_fs_color: #2B2B29
-sxiv.sel_color:    #2B2B29
-sxiv.bar_bg_color: #262624
+sxiv.win_fs_color: #2E2E2C
+sxiv.sel_color:    #2E2E2C
+sxiv.bar_bg_color: #292927
 sxiv.bar_fg_color: #B8B9B4
 sxiv.win_width:    460
 sxiv.win_height:   350

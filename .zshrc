@@ -23,6 +23,7 @@ export LS_COLORS
 source $HOME/.ioup_token
 source $HOME/.zsh/completions/rhisk-comp.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #HISTORY
 HISTFILE=$HOME/.zhist

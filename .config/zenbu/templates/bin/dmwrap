@@ -8,8 +8,8 @@ sb="{{ hint }}"
 sf="{{ bgc }}"
 w="830"
 h="18"
-x="140"
-y="5"
+x="40"
+y="8"
 opt="-fn "$font" -nb "$nb" -nf "$nf" -sb "$sb" -sf "$sf" -w "$w" -h "$h" -x "$x" -y "$y""
 
 dmenu $opt 

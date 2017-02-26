@@ -20,7 +20,7 @@ pulseaudio --start &
 mpd &
 udiskie -2 &
 unclutter &
-rnbw &
+#rnbw &
 
 SESSION=2bwm
 case "$1" in

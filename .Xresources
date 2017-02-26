@@ -25,8 +25,8 @@
 *color1:  #939490
 *color9:  #989995
 !GREEN
-*color2:  #AADB0F
-*color10: #B2E610
+*color2:  #5E5E5C
+*color10: #636361
 !YELLOW
 *color3:  #B6B8B3
 *color11: #BBBDB8
@@ -63,12 +63,12 @@ URxvt*url-launcher:   firefox
 URxvt*matcher.button: 1
 
 !2BWM COLORS
-twobwm.border_width: 	   5
+twobwm.border_width: 	   10
 twobwm.outer_border: 	   0
 twobwm.focus_color: 	   #A8A8A6
-twobwm.unfocus_color: 	   #292927
+twobwm.unfocus_color: 	   #262624
 twobwm.fixed_color: 	   #939490
-twobwm.unkill_color: 	   #9AC70E
+twobwm.unkill_color: 	   #5E5E5C
 twobwm.outer_border_color: #21211F
 twobwm.fixed_unkill_color: #989995
 twobwm.inverted_colors:    false

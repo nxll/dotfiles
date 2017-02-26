@@ -38,7 +38,7 @@ bwht="{{ b_white }}"
 font="{{ font1 }}"
 glyph="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 height=18
-border=5
+border=8
 muslength=60
 interface=wls1
 #actchar="+"
@@ -52,7 +52,7 @@ if pgrep herbstluftwm; then
 	herbstclient pad $monitor $bh
 fi
 
-WRK() {
+WRKL() {
 	wrkspce=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
 	
 	if [ "${wrkspce}" = "0" ] ;
@@ -70,6 +70,29 @@ WRK() {
 	elif [ "${wrkspce}" = "4" ] ;
 	then 
 		echo "%{B$nblk} 000 001 010 011 %{B$hint} %{F$bg}100%{F-} %{B-}"
+    else
+		echo "%{B$hint} %{F$bg}NONE%{F-} %{B-}"
+	fi
+}
+
+WRK() {
+	wrkspce=$(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //')
+	
+	if [ "${wrkspce}" = "0" ] ;
+	then 
+		echo "%{B$hint} %{F$bg}0:0%{F-} %{B-}"
+	elif [ "${wrkspce}" = "1" ] ;
+	then
+		echo "%{B$hint} %{F$bg}0:1%{F-} %{B-}"
+	elif [ "${wrkspce}" = "2" ] ;
+	then 
+		echo "%{B$hint} %{F$bg}0:2%{F-} %{B-}"
+	elif [ "${wrkspce}" = "3" ] ;
+	then 
+		echo "%{B$hint} %{F$bg}0:3%{F-} %{B-}"
+	elif [ "${wrkspce}" = "4" ] ;
+	then 
+		echo "%{B$hint} %{F$bg}0:4%{F-} %{B-}"
     else
 		echo "%{B$hint} %{F$bg}NONE%{F-} %{B-}"
 	fi
@@ -164,7 +187,7 @@ BAR() {
         -u "$border" \
 		-r "$border" \
 		-R "$bg" \
-        -g "1270x$height+0+0" | sh &
+        -g "1264x$height+0+0" | sh &
 }
 
 BAR > /dev/null

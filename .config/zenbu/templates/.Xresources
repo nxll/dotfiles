@@ -63,7 +63,7 @@ URxvt*url-launcher:   firefox
 URxvt*matcher.button: 1
 
 !2BWM COLORS
-twobwm.border_width: 	   5
+twobwm.border_width: 	   10
 twobwm.outer_border: 	   0
 twobwm.focus_color: 	   {{ wmf }}
 twobwm.unfocus_color: 	   {{ wmu }}

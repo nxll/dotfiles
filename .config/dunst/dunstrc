@@ -18,7 +18,7 @@ bounce_freq = 0
 show_age_threshold = 60
 word_wrap = no
 ignore_newline = yes
-geometry = "1280x18-0+28"
+geometry = "1280x18-0+34"
 shrink = yes
 transparency = 0
 idle_threshold = 120
@@ -40,7 +40,7 @@ icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16
 
 [frame]
 width = 0
-color = "#292927"
+color = "#262624"
 
 [shortcuts]
 close = ctrl+space

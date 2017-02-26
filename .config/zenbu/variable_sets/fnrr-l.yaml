@@ -12,6 +12,8 @@ colors:
     background: "#303030"
     foreground: "#CACCC6"
 
+    rbf:        "80807E 8A8A88 949492 9E9E9C A8A8A6 A8A8A6 9E9E9C 949492 8A8A88 80807E"
+
     hint:       "#9AC70E"
 
     black:

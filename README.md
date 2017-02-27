@@ -1,7 +1,7 @@
 # DOTFILES
 Backup all teh dots!
 
-![screeny](http://pub.iotek.org/p/g3c8c3O.png)
+![screeny](http://pub.iotek.org/p/1GW3Ttw.png)
 
 My dotfile repo is organized chaos. I am constantly cleaning and updating so these configurations may not be the same as the ones you have seen elsewhere, but will most likely be improved. Most of my configs are monochrome with color hints, however I try to keep the hint dynamic so I can easily change it. I hope you find what you are looking for.
 

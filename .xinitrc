@@ -23,9 +23,10 @@ unclutter &
 #rnbw &
 
 SESSION=2bwm
-case "$1" in
+case $1 in
 	hlwm) exec herbstluftwm ;;
 	2bwm) exec 2bwm ;;
+	cwm)  exec cwm ;;
 	wndwchf)
 		sxhkd &
 		workspace -i & 

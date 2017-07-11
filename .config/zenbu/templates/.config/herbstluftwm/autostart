@@ -30,9 +30,9 @@ hc keybind $Mod-t spawn ${xterm:-urxvt} # use your $TERMINAL with xterm as fallb
 #FILES
 hc keybind $Mod-f spawn urxvt -e ranger
 #WEB
-hc keybind $Mod-w spawn inox
+hc keybind $Mod-w spawn firefox
 #LAUNCHER
-hc keybind $Mod-p spawn interrobang
+hc keybind $Mod-p spawn $HOME/bin/menu
 #TOGGLE BAR
 hc keybind $Mod-b spawn $HOME/bin/togglebar
 #SCREENSHOT
@@ -136,8 +136,8 @@ hc attr theme.urgent.color          '{{ n_red }}'
 hc attr theme.inner_width           1
 hc attr theme.outer_width           0
 hc attr theme.inner_color           '{{ bgc }}'
-hc attr theme.border_width          5
-hc attr theme.floating.border_width 5
+hc attr theme.border_width          10
+hc attr theme.floating.border_width 10
 hc attr theme.floating.outer_width  0
 hc attr theme.floating.inner_width  1
 hc attr theme.floating.inner_color  '{{ bgc }}'

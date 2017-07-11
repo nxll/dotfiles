@@ -8,7 +8,7 @@
 #  ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░     ░░  ░░░     ░░░░░  
 #
 [global]
-font = kakwa kakwafont 8  
+font = UW Ttyp0 8  
 allow_markup = yes
 format = "%s %b"
 sort = yes
@@ -50,12 +50,12 @@ context = ctrl+shift+period
 
 [urgency_low]
 background = "#21211F"
-foreground = "#B8B9B4"
+foreground = "#D4D4D4"
 timeout = 20
 
 [urgency_normal]
 background = "#21211F"
-foreground = "#B8B9B4"
+foreground = "#D4D4D4"
 timeout = 20
 
 [urgency_critical]

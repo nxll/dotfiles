@@ -8,10 +8,10 @@
 # ░░ ░░░   ░░    ░░   ░░░░░░ ░░░    ░░░     ░░░░░░  ░░░░░    ░░░░░░░░ ░░░   ░░  ░░░░░   
 #SETTINGS
 set font      = fixed
-set font      = -uw-ttyp0-medium-r-normal--12-110-75-75-c-60-iso10646-1
+set font      = -uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1
 set geometry  = 935x18+70+0
-set colors    = #D4D4D4 #21211F #D4D4D4 #21211F #9AC70E #21211F
-set border    = 5px #21211F
+set colors    = #F2F3F5 #242529 #F2F3F5 #242529 #FB546E #242529
+set border    = 5px #242529
 set bangchar  = !
 set autocomp  = 1
 set list      = true

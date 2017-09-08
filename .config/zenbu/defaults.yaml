@@ -19,9 +19,9 @@ fonts:
     #font4: "kakwa kakwafont bold"
 
     #uw-ttyp0
-    font1: "-uw-ttyp0-medium-r-normal--12-110-75-75-c-60-iso10646-1"
-    font2: "UW Ttyp0:size=8"
-    font3: "UW Ttyp0 8"
+    font1: "-uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1"
+    font2: "UW Ttyp0:size=10"
+    font3: "UW Ttyp0 10"
     font4: "UW Ttyp0"
 
     #neep

@@ -36,21 +36,22 @@ visualizer_type                = "spectrum" (spectrum/wave)
 visualizer_look                = "┃┃"
 
 # COLORS
-header_window_color            = black
-volume_color   	      	       = cyan
-state_line_color      	       = black
-state_flags_color     	       = yellow
-color1                	       = default
-color2                         = green
-main_window_color      	       = white
-main_window_highlight_color    = white
-alternative_ui_separator_color = black
-active_window_border           = black
-progressbar_color   	       = black
-progressbar_elapsed_color      = green
-statusbar_color   	           = red
-active_column_color            = green
-visualizer_color               = white
+header_window_color                 = "black"
+volume_color                        = "cyan"
+state_line_color                    = "black"
+state_flags_color                   = "yellow"
+color1                              = "default"
+color2                              = "green"
+main_window_color                   = "white"
+current_item_prefix                 = "$(white)$r"
+current_item_suffix                 = "$/r$(end)"
+current_item_inactive_column_prefix = "$(green)$r"
+current_item_inactive_column_suffix = "$/r$(end)"
+alternative_ui_separator_color      = "black"
+progressbar_color                   = "black"
+progressbar_elapsed_color           = "green"
+statusbar_color                     = "red"
+visualizer_color                    = "white"
 
 # OTHER SETTINGS
 mpd_music_dir                  = "~/music"

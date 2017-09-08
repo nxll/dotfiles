@@ -1,0 +1,42 @@
+# FLRY
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name: "flry"
+
+#COLORS
+colors:
+    wmbf:       "#F8506A"
+    wmbu:       "#28292E"
+
+    rbf:        "F8506A F8506A F8506A F8506A F8506A F8506A F8506A F8506A"
+
+    background: "#242529"
+    foreground: "#F2F3F5"
+
+    hint:       "#FB546E"
+
+    black:
+        normal: "#2E2E33"
+        bold:   "#37373D"
+    red:
+        normal: "#FA536D"
+        bold:   "#FF556F"
+    green:
+        normal: "#E66C7F"
+        bold:   "#FF788D"
+    yellow:
+        normal: "#C3C5CC"
+        bold:   "#D6D9E0"
+    blue:
+        normal: "#E5E5E5"
+        bold:   "#F5F5F5"
+    magenta:
+        normal: "#D6D6D6"
+        bold:   "#EBEBEB"
+    cyan:
+        normal: "#E1E2E4"
+        bold:   "#E8E9EB"
+    white:
+        normal: "#EFF0F2"
+        bold:   "#FCFDFF"

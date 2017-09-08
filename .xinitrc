@@ -12,11 +12,11 @@ setxkbmap -layout gb &
 xrdb -load $HOME/.Xresources &
 xsetroot -cursor_name left_ptr &
 tt -r &
-bar &
 compton --config $HOME/.compton.conf &
+bar &
 dunst &
 urxvtd -q -o -f &
-pulseaudio --start &
+#pulseaudio --start &
 mpd &
 udiskie -2 &
 unclutter &

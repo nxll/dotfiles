@@ -8,7 +8,7 @@
 #  ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░     ░░  ░░░     ░░░░░  
 #
 [global]
-font = UW Ttyp0 8  
+font = UW Ttyp0 10  
 allow_markup = yes
 format = "%s %b"
 sort = yes
@@ -40,7 +40,7 @@ icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16
 
 [frame]
 width = 0
-color = "#262624"
+color = "#28292E"
 
 [shortcuts]
 close = ctrl+space
@@ -49,18 +49,18 @@ history = ctrl+grave
 context = ctrl+shift+period
 
 [urgency_low]
-background = "#21211F"
-foreground = "#D4D4D4"
+background = "#242529"
+foreground = "#F2F3F5"
 timeout = 20
 
 [urgency_normal]
-background = "#21211F"
-foreground = "#D4D4D4"
+background = "#242529"
+foreground = "#F2F3F5"
 timeout = 20
 
 [urgency_critical]
-background = "#939490"
-foreground = "#21211F"
+background = "#FA536D"
+foreground = "#242529"
 timeout = 30
 
 # vim: ft=cfg

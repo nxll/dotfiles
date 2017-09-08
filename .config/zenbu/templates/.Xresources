@@ -48,7 +48,7 @@ URxvt*dynamicColors:   on
 URxvt.internalBorder:  20
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
-URxvt.geometry:        74x16
+URxvt.geometry:        70x16
 URxvt*saveLines:       1000
 URxvt*cursorUnderline: false
 URxvt*cursorBlink:     true
@@ -59,7 +59,7 @@ URxvt*perl-lib:        /usr/lib/urxvt/perl/
 URxvt*perl-ext-common: default,matcher
 
 !CLICKABLE LINKS
-URxvt*url-launcher:   firefox
+URxvt*url-launcher:   google-chrome-stable
 URxvt*matcher.button: 1
 
 !2BWM COLORS

@@ -62,6 +62,8 @@ ZSH_HIGHLIGHT_STYLES[assign]=fg=white,bold
 
 #ALIAS
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias q='exit'
 alias c='clear'
 alias ls='ls -alhF --color=auto'

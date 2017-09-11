@@ -6,7 +6,7 @@ name:           "nightrun"
 
 #COLORS
 colors:
-    wmbf:       "#D6D6D6"
+    wmbf:       "#D0D0D0"
     wmbu:       "#262624"
 
     rbf:        "ADADAD C2C2C2 D6D6D6 C2C2C2 ADADAD"

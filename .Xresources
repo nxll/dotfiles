@@ -7,48 +7,48 @@
 !  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
 ! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
 !SETTINGS
-*font:       -uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1
-*boldFont:   -uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1
-*italicFont: -uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1 
+*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*boldFont:   -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
 
 !COLORS
-*highlightColor: #37373D
-*cursorColor: 	 #FCFDFF
-*borderColor: 	 #242529
-*background:  	 #242529
-*foreground:  	 #F2F3F5
+*highlightColor: #2E2E2C
+*cursorColor: 	 #AFB0AB
+*borderColor: 	 #21211F
+*background:  	 #21211F
+*foreground:  	 #B8B9B4
 
 !BLACK
-*color0:  #2E2E33
-*color8:  #37373D
+*color0:  #292927
+*color8:  #2E2E2C
 !RED
-*color1:  #FA536D
-*color9:  #FF556F
+*color1:  #939490
+*color9:  #989995
 !GREEN
-*color2:  #E66C7F
-*color10: #FF788D
+*color2:  #5E5E5C
+*color10: #636361
 !YELLOW
-*color3:  #C3C5CC
-*color11: #D6D9E0
+*color3:  #B6B8B3
+*color11: #BBBDB8
 !BLUE
-*color4:  #E5E5E5
-*color12: #F5F5F5
+*color4:  #727370
+*color12: #777875
 !MAGENTA
-*color5:  #D6D6D6
-*color13: #EBEBEB
+*color5:  #D1D1CB
+*color13: #D6D6D0
 !CYAN
-*color6:  #E1E2E4
-*color14: #E8E9EB
+*color6:  #636361
+*color14: #696966
 !WHITE
-*color7:  #EFF0F2
-*color15: #FCFDFF
+*color7:  #AAABA6
+*color15: #AFB0AB
 
 !URXVT SETTINGS
 URxvt*dynamicColors:   on
 URxvt.internalBorder:  20
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
-URxvt.geometry:        70x16
+URxvt.geometry:        72x16
 URxvt*saveLines:       1000
 URxvt*cursorUnderline: false
 URxvt*cursorBlink:     true
@@ -65,22 +65,22 @@ URxvt*matcher.button: 1
 !2BWM COLORS
 twobwm.border_width: 	   10
 twobwm.outer_border: 	   0
-twobwm.focus_color: 	   #F8506A
-twobwm.unfocus_color: 	   #28292E
-twobwm.fixed_color: 	   #FA536D
-twobwm.unkill_color: 	   #FB546E
-twobwm.outer_border_color: #242529
-twobwm.fixed_unkill_color: #FF556F
+twobwm.focus_color: 	   #A8A8A6
+twobwm.unfocus_color: 	   #262624
+twobwm.fixed_color: 	   #939490
+twobwm.unkill_color: 	   #5E5E5C
+twobwm.outer_border_color: #21211F
+twobwm.fixed_unkill_color: #989995
 twobwm.inverted_colors:    false
 twobwm.enable_compton: 	   true
 
 !SXIV COLORS
-sxiv.font: 		   UW Ttyp0:size=10
-sxiv.win_bg_color: #242529
-sxiv.win_fs_color: #37373D
-sxiv.sel_color:    #37373D
-sxiv.bar_bg_color: #2E2E33
-sxiv.bar_fg_color: #F2F3F5
+sxiv.font: 		   kakwafont:size=8
+sxiv.win_bg_color: #21211F
+sxiv.win_fs_color: #2E2E2C
+sxiv.sel_color:    #2E2E2C
+sxiv.bar_bg_color: #292927
+sxiv.bar_fg_color: #B8B9B4
 sxiv.win_width:    460
 sxiv.win_height:   350
 

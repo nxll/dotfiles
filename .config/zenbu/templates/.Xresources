@@ -48,7 +48,7 @@ URxvt*dynamicColors:   on
 URxvt.internalBorder:  20
 URxvt*lineSpace:       2
 URxvt*scrollBar:       false
-URxvt.geometry:        70x16
+URxvt.geometry:        72x16
 URxvt*saveLines:       1000
 URxvt*cursorUnderline: false
 URxvt*cursorBlink:     true

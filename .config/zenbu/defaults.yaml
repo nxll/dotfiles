@@ -7,10 +7,10 @@ name: "default"
 #FONTS
 fonts:
     #kakwafont
-    #font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
-    #font2: "kakwa kakwafont:size=8"
-    #font3: "kakwa kakwafont 8"
-    #font4: "kakwa kakwafont"
+    font1: "-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1"
+    font2: "kakwafont:size=8"
+    font3: "kakwafont 8"
+    font4: "kakwafont"
 
     #kakwafont bold
     #font1: "-kakwa-kakwafont-medium-r-bold--12-120-72-72-c-60-iso8859-1"
@@ -19,10 +19,16 @@ fonts:
     #font4: "kakwa kakwafont bold"
 
     #uw-ttyp0
-    font1: "-uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1"
-    font2: "UW Ttyp0:size=10"
-    font3: "UW Ttyp0 10"
-    font4: "UW Ttyp0"
+    #font1: "-uw-ttyp0-medium-r-normal--13-120-75-75-c-70-iso10646-1"
+    #font2: "UW Ttyp0:size=10"
+    #font3: "UW Ttyp0 10"
+    #font4: "UW Ttyp0"
+
+    #bleed2
+    #font1: "-vc-bleed2-medium-r-semicondensed--11-100-75-75-c-50-iso8859-15"
+    #font2: "vc bleed2:size=10"
+    #font3: "vc bleed2 10"
+    #font4: "vc bleed2"
 
     #neep
     #font1: "-jmk-neep-medium-r-semicondensed--11-100-75-75-c-50-iso8859-1"

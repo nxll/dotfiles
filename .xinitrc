@@ -23,6 +23,7 @@ unclutter &
 #rnbw &
 
 SESSION=2bwm
+
 case $1 in
 	hlwm) exec herbstluftwm ;;
 	2bwm) exec 2bwm ;;

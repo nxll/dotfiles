@@ -1,0 +1,42 @@
+# R982
+# for zenbu
+# nxll <nxll@teknik.io>
+
+name:           "r982"
+
+#COLORS
+colors:
+    wmbf:       "#2B2B29"
+    wmbu:       "#262624"
+
+    rbf:        "6B6B69 757573 80807E 8A8A88 949492 9E9E9C A8A8A6 A8A8A6 9E9E9C 949492 8A8A88 80807E 757573 6B6B69"
+
+    background: "#21211F"
+    foreground: "#B8B9B4"
+
+    hint:       "#5E5E5C"
+
+    black:
+        normal: "#292927"
+        bold:   "#2E2E2C"
+    red:
+        normal: "#939490"
+        bold:   "#989995"
+    green:
+        normal: "#5E5E5C"
+        bold:   "#636361"
+    yellow:
+        normal: "#B6B8B3"
+        bold:   "#BBBDB8"
+    blue:
+        normal: "#727370"
+        bold:   "#777875"
+    magenta:
+        normal: "#D1D1CB"
+        bold:   "#D6D6D0"
+    cyan:
+        normal: "#636361"
+        bold:   "#696966"
+    white:
+        normal: "#AAABA6"
+        bold:   "#AFB0AB"

@@ -1,0 +1,80 @@
+# System and Package Management (pacman)
+alias update="sudo pacman -Syu"                   # Update package database and upgrade system
+alias install="sudo pacman -S"                    # Install a package
+alias remove="sudo pacman -Rns"                   # Remove a package and its dependencies
+alias search="pacman -Ss"                         # Search for a package in repos
+alias localsearch="pacman -Qs"                    # List all installed packages
+alias pkginfo="pacman -Qi"                        # Show detailed package info
+alias orphaned="sudo pacman -Rns $(pacman -Qtdq)" # Remove orphaned packages
+alias clean="sudo pacman -Sc"                     # Clean cached packages
+
+# File Navigation and Operations
+alias ls="ls -alhF --color=auto"             # List with color
+alias cp="cp -iv"                            # Prompt before overwrite
+alias mv="mv -iv"                            # Prompt before overwrite
+alias rm="rm -i"                             # Prompt before delete
+alias mkdir="mkdir -pv"                      # Create directories with verbose output
+alias df="df -h"                             # Disk usage with human-readable sizes
+alias du="du -h --max-depth=1"               # Folder sizes in the current directory
+alias ps="ps -ef"                            # Show all running processes
+
+# Git Aliases
+#alias gst="git status"                       # Git status
+#alias gadd="git add"                         # Add files to staging
+#alias gcom="git commit -m"                   # Commit with a message
+#alias gpsh="git push"                        # Push changes
+#alias gpll="git pull"                        # Pull changes
+#alias gco="git checkout"                     # Checkout branches
+#alias gbr="git branch"                       # List branches
+#alias gdiff="git diff"                       # Show changes
+#alias glog="git log --oneline --graph --decorate" # Compact log
+
+# Networking
+alias myip="curl ifconfig.me"                # Show external IP address
+alias netstat="netstat -tuln"                # Show active listening ports
+alias ports="sudo lsof -i -P -n | grep LISTEN" # Show open ports
+
+# System Monitoring
+alias top="htop"                             # Use htop if installed
+alias free="free -h"                         # Memory usage in human-readable format
+alias psu="ps aux | grep"                    # Search processes by keyword
+alias uptime="uptime -p"                     # Human-readable uptime
+
+# Shortcuts for Common Tasks
+alias c="clear"                              # Clear terminal screen
+alias q="exit"                               # Exit the terminal
+alias v="nvim"                               # Quick file editing
+alias grep="grep --color=auto"               # Grep with color output
+alias ..="cd .."                             # Go up one directory
+alias ...="cd ../.."                         # Go up two directories
+alias ....="cd ../../.."                     # Go up three directories
+alias hist="history"                         # Show command history
+
+# Utilities
+alias extract="tar -xvf"                     # Extract tar files
+alias compress="tar -cvzf"                   # Compress files into tar
+
+# Docker (if installed)
+#alias dps="docker ps"                        # List running containers
+#alias dpa="docker ps -a"                     # List all containers
+#alias drm="docker rm"                        # Remove a container
+#alias drmi="docker rmi"                      # Remove an image
+#alias dbuild="docker build -t"               # Build an image
+#alias dup="docker-compose up"                # Docker Compose up
+
+# Custom Shortcuts (Replace paths with your own)
+alias docs="cd ~/documents"                  # Go to Documents
+alias dl="cd ~/downloads"                    # Go to Downloads
+alias mus="cd ~/music"                       # Go to Music
+alias vid="cd ~/videos"                      # Go to Videos
+alias pics="cd ~/pictures"                   # Go to Pictures
+
+# Other
+alias qr="qrencode -t UTF8"                  # Create QR codes
+alias bonsai="cbonsai -li"
+#alias nsxiv="nsxiv -a -sF -g 550x550"
+alias tmc="transmission-cli -ep -D"
+
+# ZSH Stuff
+alias aliases="nvim ~/.zsh_aliases"           # View this alias file
+alias reload="source ~/.zshrc"            # Reload zsh configuration

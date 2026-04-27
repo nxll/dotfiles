@@ -1,0 +1,20 @@
+wthr() {
+	curl wttr.in/"${1:-LOCATION}?T"
+}
+
+cht() {
+	curl cht.sh/"${1}"
+}
+
+unzip() {
+	for f in *.zip; do unzip -d "${f%*.zip}" "$f"; done
+}
+
+bl() {
+	echo;
+	echo "BAT0";
+	CHAR1="▓" CHAR2="▒" SEP="" SIZE="30" mkb $(cat /sys/class/power_supply/BAT0/capacity);
+	echo "BAT1";
+	CHAR1="▓" CHAR2="▒" SEP="" SIZE="30" mkb $(cat /sys/class/power_supply/BAT1/capacity);
+	echo
+}

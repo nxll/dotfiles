@@ -1,0 +1,76 @@
+!  ██     ██                                                                        
+! ░░██   ██                                                                         
+!  ░░██ ██   ██████  █████   ██████  ██████  ██   ██ ██████  █████   █████   ██████ 
+!   ░░███   ░░██░░█ ██░░░██ ██░░░░  ██░░░░██░██  ░██░░██░░█ ██░░░██ ██░░░██ ██░░░░  
+!    ██░██   ░██ ░ ░███████░░█████ ░██   ░██░██  ░██ ░██ ░ ░██  ░░ ░███████░░█████  
+!   ██ ░░██  ░██   ░██░░░░  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░░░░░██ 
+!  ██   ░░██░███   ░░██████ ██████ ░░██████ ░░██████░███   ░░█████ ░░██████ ██████  
+! ░░     ░░ ░░░     ░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░░░░   
+!SETTINGS
+*font:       -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*boldFont:   -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+*italicFont: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1 
+
+!*font:        -uw-ttyp0-medium-r-normal--16-*-75-75-c-80-iso10646-1
+!*boldFont:    -uw-ttyp0-medium-r-normal--16-*-75-75-c-80-iso10646-1
+!*italicFont:  -uw-ttyp0-medium-r-normal--16-*-75-75-c-80-iso10646-1
+
+!*font:        -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+!*boldFont:    -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+!*italicFont:  -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+
+!COLORS
+*highlightColor: #2E2E2C
+*cursorColor: 	 #AFB0AB
+*borderColor: 	 #21211F
+*background:  	 #21211F
+*foreground:  	 #F0F0F0
+
+!BLACK
+*color0:  #292927
+*color8:  #2E2E2C
+!RED
+*color1:  #939490
+*color9:  #989995
+!GREEN
+*color2:  #5E5E5C
+*color10: #636361
+!YELLOW
+*color3:  #B6B8B3
+*color11: #BBBDB8
+!BLUE
+*color4:  #727370
+*color12: #777875
+!MAGENTA
+*color5:  #D1D1CB
+*color13: #D6D6D0
+!CYAN
+*color6:  #636361
+*color14: #696966
+!WHITE
+*color7:  #AAABA6
+*color15: #AFB0AB
+
+!2BWM COLORS
+!twobwm.border_width: 	   10
+!twobwm.outer_border: 	   0
+!twobwm.focus_color: 	   #A8A8A6
+!twobwm.unfocus_color: 	   #262624
+!twobwm.fixed_color: 	   #939490
+!twobwm.unkill_color: 	   #5E5E5C
+!twobwm.outer_border_color: #21211F
+!twobwm.fixed_unkill_color: #989995
+!twobwm.inverted_colors:    false
+!twobwm.enable_compton:	   true
+
+!SXIV COLORS
+!nsxiv.bar.font: FiraCode Nerd Font:size=10
+!nsxiv.window.background: #212121
+!nsxiv.window.foreground: #E9E9E9
+!nsxiv.win_fs_color: #2E2E2C
+!nsxiv.sel_color:    #2E2E2C
+!nsxiv.bar_bg_color: #292927
+!nsxiv.bar_fg_color: #B8B9B4
+
+!MISC
+Xcursor*size: 16

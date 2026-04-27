@@ -1,0 +1,57 @@
+#       ██                            ██                 
+#      ░██                           ░██                 
+#      ░██ ██   ██ ███████   ██████ ██████ ██████  █████ 
+#   ██████░██  ░██░░██░░░██ ██░░░░ ░░░██░ ░░██░░█ ██░░░██
+#  ██░░░██░██  ░██ ░██  ░██░░█████   ░██   ░██ ░ ░██  ░░ 
+# ░██  ░██░██  ░██ ░██  ░██ ░░░░░██  ░██   ░██   ░██   ██
+# ░░██████░░██████ ███  ░██ ██████   ░░██ ░███   ░░█████ 
+#  ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░     ░░  ░░░     ░░░░░  
+#
+[global]
+font = ttyp0 13  
+#allow_markup = yes
+format = "%s %b"
+sort = yes
+indicate_hidden = yes
+alignment = right
+#bounce_freq = 0
+show_age_threshold = 60
+word_wrap = no
+ignore_newline = yes
+#geometry = "1280x18-0+34"
+#shrink = yes
+#transparency = 0
+#idle_threshold = 60
+follow = mouse
+sticky_history = yes
+history_length = 100
+show_indicators = yes
+padding = 12
+#separator_color = frame
+#startup_notification = false
+browser = vivaldi-stable
+icon_position = off
+
+[frame]
+#color = "#262624"
+
+#[shortcuts]
+#close = ctrl+space
+#close_all = ctrl+shift+space
+#history = ctrl+grave
+#context = ctrl+shift+period
+
+[urgency_low]
+background = "{background}"
+foreground = "{foreground}"
+timeout = 20
+
+[urgency_normal]
+background = "{background}"
+foreground = "{foreground}"
+timeout = 20
+
+[urgency_critical]
+background = "{background}"
+foreground = "{foreground}"
+timeout = 30

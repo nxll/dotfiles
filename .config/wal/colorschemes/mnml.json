@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ulfr/pictures/wallpapers/sstalenhagflood.jpg",
+    "alpha": "100",
+    "special": {
+	"background": "#212121",
+	"foreground": "#ffffff",
+	"cursor": "#ffffff"
+  },
+  "colors": {
+    "color0": "#292927",
+    "color1": "#939490",
+    "color2": "#5e5e5e",
+    "color3": "#b6b8b3",
+    "color4": "#727370",
+    "color5": "#d1d1cb",
+    "color6": "#636361",
+    "color7": "#aaaba6",
+    "color8": "#2e2e2e",
+    "color9": "#989995",
+    "color10": "#636361",
+    "color11": "#bbbdbb",
+    "color12": "#777875",
+    "color13": "#d6d6d0",
+    "color14": "#696966",
+    "color15": "#afb0ab"
+  }
+}

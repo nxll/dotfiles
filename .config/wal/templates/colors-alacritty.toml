@@ -1,0 +1,31 @@
+[colors.normal]
+black = "{color0}"
+blue = "{color2}"
+cyan = "{color3}"
+green = "{color1}"
+magenta = "{color10}"
+red = "{color8}"
+white = "{color11}"
+yellow = "{color9}"
+
+[colors.bright]
+black = "{color4}"
+blue = "{color6}"
+cyan = "{color7}"
+green = "{color5}"
+magenta = "{color14}"
+red = "{color12}"
+white = "{color15}"
+yellow = "{color13}"
+
+[colors.selection]
+background = "{foreground}"
+text = "{background}"
+
+[colors.cursor]
+cursor = "{cursor}"
+text = "{cursor}"
+
+[colors.primary]
+background = "{background}"
+foreground = "{foreground}"

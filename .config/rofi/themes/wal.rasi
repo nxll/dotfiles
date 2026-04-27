@@ -1,0 +1,48 @@
+/* ==========================================================================
+   rofi wal theme
+
+   file: wal.rasi
+   desc: wal color theme for Rofi
+   author: nxll
+   source: https://github.com/nxll
+   ========================================================================== */
+
+* {
+    /* Theme settings */
+    highlight: bold;
+    scrollbar: false;
+
+    /* Theme colors */
+    background:                  @wal-bg;
+    background-color:            @wal-bg;
+    foreground:                  @wal-fg;
+    border-color:                @wal-border;
+    separatorcolor:              @wal-black-dark;
+    scrollbar-handle:            @wal-black-dark;
+
+    normal-background:           @wal-bg;
+    normal-foreground:           @wal-fg;
+    alternate-normal-background: @wal-black-dark;
+    alternate-normal-foreground: @wal-fg;
+    selected-normal-background:  @wal-black-light;
+    selected-normal-foreground:  @wal-green-light;
+
+    active-background:           @wal-black-light;
+    active-foreground:           @wal-green-dark;
+    alternate-active-background: @wal-black-dark;
+    alternate-active-foreground: @wal-fg;
+    selected-active-background:  @wal-black-light;
+    selected-active-foreground:  @wal-green-light;
+
+    urgent-background:           @wal-red-light;
+    urgent-foreground:           @wal-bg;
+    alternate-urgent-background: @wal-red-dark;
+    alternate-urgent-foreground: @wal-bg;
+    selected-urgent-background:  @wal-red-light;
+    selected-urgent-foreground:  @wal-bg;
+}
+
+{
+	@import "~/.cache/wal/colors-rofi.rasi"
+}
+@import "wal-common.rasi" 

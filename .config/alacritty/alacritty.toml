@@ -1,0 +1,62 @@
+general.live_config_reload = true
+
+#"window.dynamic_title" = true
+#"window.opacity" = 1.0
+
+general.import = ["/home/ulfr/.cache/wal/colors-alacritty.toml"]
+
+[env]
+TERM = "xterm-16color"
+
+[bell]
+animation = "EaseOutExpo"
+duration = 300
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font]
+size = 8
+
+[font.bold]
+#family = "FiraCode Nerd Font Mono"
+family = "ttyp0"
+style = "Bold"
+
+[font.bold_italic]
+#family = "FiraCode Nerd Font Mono"
+family = "ttyp0"
+style = "Bold Italic"
+
+[font.italic]
+#family = "FiraCode Nerd Font Mono"
+family = "ttyp0"
+style = "Italic"
+
+[font.normal]
+#family = "FiraCode Nerd Font Mono"
+family = "ttyp0"
+style = "Regular"
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window.padding]
+x = 15
+y = 15
+
+[window.dimensions]
+columns = 80
+lines = 22
+
+[terminal.shell]
+program = "/bin/zsh"

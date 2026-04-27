@@ -1,0 +1,67 @@
+/* ==========================================================================
+   rofi mnml theme
+
+   file: mnml.rasi
+   desc: mnml color theme for Rofi
+   author: nxll
+   source: https://github.com/nxll
+   ========================================================================== */
+
+* {
+    /* Theme settings */
+    highlight: bold;
+    scrollbar: false;
+
+    /* mnml colors */
+    mnml-bg:		#21211F;
+    mnml-fg:		#F0F0F0;
+    mnml-border:	#A8A8A6;
+
+    mnml-black-dark:	#292927;
+    mnml-black-light:	#2E2E2C;
+    mnml-red-dark:	#A4B19D;
+    mnml-red-light:	#B1BDAB;
+    mnml-green-dark:	#8A9B81;
+    mnml-green-light:	#97A68F;
+    mnml-yellow-dark:	#CCD3C8;
+    mnml-yellow-light:	#D9DFD6;
+    mnml-blue-dark:	#5B6853;
+    mnml-blue-light:	#6D7E65;
+    mnml-magenta-dark:	#E6EAE4;
+    mnml-magenta-light:	#F3F5F2;
+    mnml-cyan-dark:	#708267;
+    mnml-cyan-light:	#7C9073;
+    mnml-white-dark:	#E0E0E0;
+    mnml-white-dark:	#E9E9E9;
+
+    /* Theme colors */
+    background:                  @mnml-bg;
+    background-color:            @mnml-bg;
+    foreground:                  @mnml-fg;
+    border-color:                @mnml-border;
+    separatorcolor:              @mnml-black-dark;
+    scrollbar-handle:            @mnml-black-dark;
+
+    normal-background:           @mnml-bg;
+    normal-foreground:           @mnml-fg;
+    alternate-normal-background: @mnml-black-dark;
+    alternate-normal-foreground: @mnml-fg;
+    selected-normal-background:  @mnml-black-light;
+    selected-normal-foreground:  @mnml-green-light;
+
+    active-background:           @mnml-black-light;
+    active-foreground:           @mnml-green-dark;
+    alternate-active-background: @mnml-black-dark;
+    alternate-active-foreground: @mnml-fg;
+    selected-active-background:  @mnml-black-light;
+    selected-active-foreground:  @mnml-green-light;
+
+    urgent-background:           @mnml-red-light;
+    urgent-foreground:           @mnml-bg;
+    alternate-urgent-background: @mnml-red-dark;
+    alternate-urgent-foreground: @mnml-bg;
+    selected-urgent-background:  @mnml-red-light;
+    selected-urgent-foreground:  @mnml-bg;
+}
+
+@import "mnml-common.rasi" 

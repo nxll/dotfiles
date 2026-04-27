@@ -1,0 +1,37 @@
+# THEME
+hc attr theme.tiling.reset 		1
+hc attr theme.floating.reset 		1
+hc set frame_border_active_color	'{background}'
+hc set frame_border_normal_color	'{background}'
+hc set frame_bg_active_color		'{background}'
+hc set frame_bg_normal_color		'{background}'
+hc set frame_border_width 		0
+hc set always_show_frame		0
+hc set frame_bg_transparent 		1
+hc set frame_transparent_width 		0
+hc set frame_gap 			0
+
+hc attr theme.active.color		'{color13}'
+hc attr theme.normal.color		'{color11}'
+hc attr theme.urgent.color		'{foreground}'
+hc attr theme.inner_width 		2
+hc attr theme.inner_color 		'{background}'
+hc attr theme.outer_width		4
+hc attr theme.outer_color		'{background}'
+hc attr theme.border_width 		12
+hc attr theme.floating.border_width 	12
+hc attr theme.floating.inner_width 	2
+hc attr theme.floating.inner_color 	'{background}'
+hc attr theme.active.inner_color 	'{background}'
+hc attr theme.active_outer_color	'{background}'
+hc attr theme.urgent.inner_color 	'{background}'
+hc attr theme.background_color		'{color0}'
+#hc attr theme.padding_left		14
+hc attr theme.padding_top		14
+hc attr theme.padding			12
+
+hc set window_gap 			2
+hc set frame_padding 			0
+hc set smart_window_surroundings 	0
+hc set smart_frame_surroundings 	0
+hc set mouse_recenter_gap 		0

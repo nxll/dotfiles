@@ -1,0 +1,21 @@
+    /* wal colors */
+    wal-bg:		{background};
+    wal-fg:		{foreground};
+    wal-border:	        {color15};
+
+    wal-black-dark:	{color0};
+    wal-black-light:	{color4};
+    wal-red-dark:	{color8};
+    wal-red-light:	{color12};
+    wal-green-dark:	{color1};
+    wal-green-light:	{color5};
+    wal-yellow-dark:	{color9};
+    wal-yellow-light:	{color13};
+    wal-blue-dark:	{color2};
+    wal-blue-light:	{color6};
+    wal-magenta-dark:	{color10};
+    wal-magenta-light:	{color14};
+    wal-cyan-dark:	{color3};
+    wal-cyan-light:	{color7};
+    wal-white-dark:	{color11};
+    wal-white-dark:	{color15};

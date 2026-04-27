@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ulfr/pictures/wallpapers/maena-paillet-scape.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0D1013",
+        "foreground": "#d4d9da",
+        "cursor": "#d4d9da"
+    },
+    "colors": {
+        "color0": "#0D1013",
+        "color1": "#777E81",
+        "color2": "#7B8386",
+        "color3": "#8D9497",
+        "color4": "#969EA1",
+        "color5": "#9BA3A6",
+        "color6": "#A8B1B4",
+        "color7": "#d4d9da",
+        "color8": "#949798",
+        "color9": "#777E81",
+        "color10": "#7B8386",
+        "color11": "#8D9497",
+        "color12": "#969EA1",
+        "color13": "#9BA3A6",
+        "color14": "#A8B1B4",
+        "color15": "#d4d9da"
+    }
+}

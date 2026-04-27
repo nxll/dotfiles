@@ -1,0 +1,39 @@
+## ~/.config/zathura/zathurarc
+#set uri-command "jumanji %s"
+
+map normal J scroll full_down
+map normal K scroll full_up
+map <C-+> zoom in
+map <C--> zoom out
+
+set show-scrollbars false
+set n-completion-items 10
+set zoom-step 5
+set page-padding 0
+set pages-per-row 1
+set recolor true
+set adjust-open best-fit
+
+set font "FiraCode Nerd Font 11"
+set default-bg "{background}"
+set default-fg "{foreground}"
+set inputbar-bg "{background}"
+set inputbar-fg "{foreground}"
+set statusbar-bg "{background}"
+set statusbar-fg "{color15}"
+set tabbar-bg "{background}"
+set tabbar-fg "{foreground}"
+set tabbar-focus-bg "{color4}"
+set tabbar-focus-fg "{background}"
+set completion-bg "{background}"
+set completion-fg "{color8}"
+set completion-group-bg "{background}"
+set completion-group-fg "{color4}"
+set completion-highlight-bg "{foreground}"
+set completion-highlight-fg "{background}"
+set notification-error-bg "{color6}"
+set notification-error-fg "{background}"
+set notification-warning-bg "{background}"
+set notification-warning-fg "{color7}"
+set recolor-darkcolor "{foreground}"
+set recolor-lightcolor "{background}"

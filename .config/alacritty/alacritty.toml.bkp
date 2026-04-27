@@ -1,0 +1,105 @@
+general.live_config_reload = true
+#"window.dynamic_title" = true
+#"window.opacity" = 1.0
+
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 300
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[colors.indexed_colors]]
+color = "0xdc9656"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xa16946"
+index = 17
+
+[[colors.indexed_colors]]
+color = "0x282828"
+index = 18
+
+[[colors.indexed_colors]]
+color = "0x383838"
+index = 19
+
+[[colors.indexed_colors]]
+color = "0xb8b8b8"
+index = 20
+
+[[colors.indexed_colors]]
+color = "0xe8e8e8"
+index = 21
+
+[colors.bright]
+black = "0x2e2e2e"
+blue = "0x6d7e65"
+cyan = "0x7c9073"
+green = "0x97a68f"
+magenta = "0xf3f5f2"
+red = "0xb1bdab"
+white = "0xe9e9e9"
+yellow = "0xd9dfd6"
+
+[colors.cursor]
+cursor = "0xafb0ab"
+text = "0x181818"
+
+[colors.normal]
+black = "0x292927"
+blue = "0x5b6853"
+cyan = "0x708267"
+green = "0x8a9b81"
+magenta = "0xe6eae4"
+red = "0xa4b19d"
+white = "0xe0e0e0"
+yellow = "0xccd3c8"
+
+[colors.primary]
+background = "0x21211f"
+foreground = "0xf0f0f0"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font]
+size = 6.5
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window.padding]
+x = 15
+y = 15
+
+[window.dimensions]
+columns = 90
+lines = 22
+
+[terminal.shell]
+program = "/bin/zsh"

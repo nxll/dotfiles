@@ -1,0 +1,132 @@
+/* ==========================================================================
+   file: mnml-common.rasi
+   desc: shared rules between mnml themes
+   author: nxll
+   source: https://github.com/nxll
+   ========================================================================== */
+
+window {
+    background-color:	@mnml-bg;
+    width:		35%;
+    height:		30%;
+    border:		12;
+    padding:		4;
+}
+
+mainbox {
+    border:  0;
+    padding: 4;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @mnml-black-dark;
+    padding:      1px;
+}
+
+textbox {
+    highlight:  @mnml-black-light;
+    text-color: @mnml-fg;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      0px 0 0;
+    border-color: @mnml-black-dark;
+    spacing:      2px;
+    scrollbar:    @mnml-black-dark;
+}
+
+element {
+    border:  0;
+    padding: 2px;
+}
+
+element.normal.normal {
+    background-color: @mnml-bg;
+    text-color:       @mnml-fg;
+}
+
+element.normal.urgent {
+    background-color: @mnml-red-light;
+    text-color:       @mnml-bg;
+}
+
+element.normal.active {
+    background-color: @mnml-black-light;
+    text-color:       @mnml-green-light;
+}
+
+element.selected.normal {
+    background-color: @mnml-black-light;
+    text-color:       @mnml-green-dark;
+}
+
+element.selected.urgent {
+    background-color: @mnml-red-light;
+    text-color:       @mnml-bg;
+}
+
+element.selected.active {
+    background-color: @mnml-black-light;
+    text-color:       @mnml-green-light;
+}
+
+element.alternate.normal {
+    background-color: @mnml-black-dark;
+    text-color:       @mnml-fg;
+}
+
+element.alternate.urgent {
+    background-color: @mnml-red-dark;
+    text-color:       @mnml-bg;
+}
+
+element.alternate.active {
+    background-color: @mnml-black-light;
+    text-color:       @mnml-green-dark;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @mnml-border;
+    handle-width: 8px;
+    padding:      0;
+}
+
+mode-switcher {
+    border:       2px 0 0;
+    border-color: @mnml-black-dark;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @mnml-fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @mnml-fg;
+}
+
+button.selected {
+    background-color: @mnml-black-light;
+    text-color:       @mnml-green-light;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @mnml-bg;
+    margin:     0 0.3em 0 0;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

@@ -1,0 +1,132 @@
+/* ==========================================================================
+   file: wal-common.rasi
+   desc: shared rules for wal theme
+   author: nxll
+   source: https://github.com/nxll
+   ========================================================================== */
+
+window {
+    background-color:	@wal-bg;
+    width:		35%;
+    height:		30%;
+    border:		12;
+    padding:		4;
+}
+
+mainbox {
+    border:  0;
+    padding: 4;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @wal-black-dark;
+    padding:      1px;
+}
+
+textbox {
+    highlight:  @wal-black-light;
+    text-color: @wal-fg;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      0px 0 0;
+    border-color: @wal-black-dark;
+    spacing:      2px;
+    scrollbar:    @wal-black-dark;
+}
+
+element {
+    border:  0;
+    padding: 2px;
+}
+
+element.normal.normal {
+    background-color: @wal-bg;
+    text-color:       @wal-fg;
+}
+
+element.normal.urgent {
+    background-color: @wal-red-light;
+    text-color:       @wal-bg;
+}
+
+element.normal.active {
+    background-color: @wal-black-light;
+    text-color:       @wal-green-light;
+}
+
+element.selected.normal {
+    background-color: @wal-black-light;
+    text-color:       @wal-green-dark;
+}
+
+element.selected.urgent {
+    background-color: @wal-red-light;
+    text-color:       @wal-bg;
+}
+
+element.selected.active {
+    background-color: @wal-black-light;
+    text-color:       @wal-green-light;
+}
+
+element.alternate.normal {
+    background-color: @wal-black-dark;
+    text-color:       @wal-fg;
+}
+
+element.alternate.urgent {
+    background-color: @wal-red-dark;
+    text-color:       @wal-bg;
+}
+
+element.alternate.active {
+    background-color: @wal-black-light;
+    text-color:       @wal-green-dark;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @wal-border;
+    handle-width: 8px;
+    padding:      0;
+}
+
+mode-switcher {
+    border:       2px 0 0;
+    border-color: @wal-black-dark;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @wal-fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @wal-fg;
+}
+
+button.selected {
+    background-color: @wal-black-light;
+    text-color:       @wal-green-light;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @wal-bg;
+    margin:     0 0.3em 0 0;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
